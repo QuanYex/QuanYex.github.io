@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="web安全入门,白帽子讲web安全," />
+  <meta name="keywords" content="白帽子讲web安全,web安全入门——基础知识," />
 
 
 
@@ -79,15 +79,17 @@
 
 
 
+<meta name="description" content="web流程：打开浏览器，浏览器向服务器发送请求，服务器与数据库进行交互，服务器向浏览器返回请求结果，浏览器显示。 浏览器工作原理：输入网址，浏览器通过域名获取到web服务器的ip地址（DNS解析），收到对应的ip地址后，想web服务器发送http请求，服务器返回http响应。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web安全入门">
 <meta property="og:url" content="http://yoursite.com/2020/02/03/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
+<meta property="og:description" content="web流程：打开浏览器，浏览器向服务器发送请求，服务器与数据库进行交互，服务器向浏览器返回请求结果，浏览器显示。 浏览器工作原理：输入网址，浏览器通过域名获取到web服务器的ip地址（DNS解析），收到对应的ip地址后，想web服务器发送http请求，服务器返回http响应。">
 <meta property="article:published_time" content="2020-02-03T06:05:29.000Z">
-<meta property="article:modified_time" content="2020-02-03T06:09:24.608Z">
+<meta property="article:modified_time" content="2020-02-03T07:46:52.849Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="web安全入门">
 <meta property="article:tag" content="白帽子讲web安全">
+<meta property="article:tag" content="web安全入门——基础知识">
 <meta name="twitter:card" content="summary">
 
 
@@ -340,7 +342,71 @@
       
 
       
-        
+        <p>web流程：打开浏览器，浏览器向服务器发送请求，服务器与数据库进行交互，服务器向浏览器返回请求结果，浏览器显示。</p>
+<p>浏览器工作原理：输入网址，浏览器通过域名获取到web服务器的ip地址（DNS解析），收到对应的ip地址后，想web服务器发送http请求，服务器返回http响应。</p>
+<a id="more"></a>
+
+<p><font face="黑体" color=Crimson size=6>url：</font></p>
+<p>作用：定位服务器的资源，充当于web服务器收货地址</p>
+<p>格式：schema://host[:port#]/path/…/ [?query-string]  [#anchor]</p>
+<p>​            schema是底层协议（例如http，https，ftp）</p>
+<p>​            host是服务器的域名或者ip地址</p>
+<p>​            port是服务器端口，htto默认端口是80（可省略），其他端口需要指明</p>
+<p>​            /path/…/是访问资源的路径</p>
+<p>​            ？query-string是发送给http服务器的数据</p>
+<p>​            #anchor 是锚点（通常表示页面的特定位置）</p>
+<p>例如 http———-://dun.163.com——–/sj/test/test.jsp———?name=sviergn&amp;x=treu———-#stuff</p>
+<p>​    schema——————-host———————path————————-Query String—————–Anchor                     </p>
+<p><font face="黑体" color=Crimson size=6>http：</font></p>
+<ol>
+<li>是什么超文本传输协议，是web通信时使用的协议，是web的基础。</li>
+</ol>
+<p>类似于收快递 ：快递小哥——–方式：汽车———收件人地址：某某某———-快递公司：某某快递—–小区通行证———–收到（状态）+已签收（正文）</p>
+<p>  与之对应：——-浏览器———get、post请求等————-host———————user-agent——————cookie—————response：http200+正文。</p>
+<ol start="2">
+<li><p>http报文：</p>
+<p>请求报文：请求行（request line）+头部（headers）+数据体（body）//get请求无数据体，数据体和头部之间有一行空行。</p>
+<p>响应报文：状态行+消息报头+响应正文  // 响应头部和正文之间也有空行。</p>
+<p>有些时候在请求报文中含有cookie字段。</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>请求方式</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HEAD</td>
+<td>与GET请求类似，不同在于服务器只返回http头部信息，没有页面内容。</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>上传指定的URL的描述。</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除指定资源。</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>返回服务器支持的HTTP方法。</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>http请求——referer：</p>
+<p><font face="黑体" color=SpringGreen>http请求字段含义拓展：</font><a href="https://blog.csdn.net/ajdfhajdkfakr/article/details/78073580" target="_blank" rel="noopener">http协议常用字段</a>、<a href="https://my.oschina.net/u/3705388/blog/1784894" target="_blank" rel="noopener">HTTP协议头字段详解大全</a></p>
+<p>作用：告知服务器该请求的来源（浏览器自动加上）</p>
+<p>可以统计流量：CNZZ、百度统计  也可以判断来源合法性：防止盗链、防止CSRF漏洞。  </p>
+</li>
+<li><p>http响应：</p>
+<p>例如HTTP/1.1 302 Moved Temporarily     （跳转的状态码（301/302））</p>
+<p><font face="黑体" color=SpringGreen>状态码拓展：</font><a href="https://www.runoob.com/http/http-status-codes.html" target="_blank" rel="noopener">http状态码</a></p>
+<p>set-cookie 服务端要求浏览器设置cookie</p>
+<p>location：    表示跳转到的地址</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -357,9 +423,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8/" rel="tag"># web安全入门</a>
-          
             <a href="/tags/%E7%99%BD%E5%B8%BD%E5%AD%90%E8%AE%B2web%E5%AE%89%E5%85%A8/" rel="tag"># 白帽子讲web安全</a>
+          
+            <a href="/tags/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># web安全入门——基础知识</a>
           
         </div>
       
@@ -372,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/03/web%E4%BB%8B%E7%BB%8D/" rel="next" title="w’eb安全入门‘">
-                <i class="fa fa-chevron-left"></i> w’eb安全入门‘
+              <a href="/2020/02/03/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-%E4%B8%80/" rel="next" title="学习日志(一)">
+                <i class="fa fa-chevron-left"></i> 学习日志(一)
               </a>
             
           </div>
@@ -452,7 +518,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
