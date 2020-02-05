@@ -79,15 +79,18 @@
 
 
 
-<meta name="description" content="web服务器端概述 web动态页面时期工作原理 架构：操作系统——-web服务——-解释执行环境——-数据库服务">
+<meta name="description" content="web服务器端概述web服务端环境 web动态页面时期工作原理 架构：操作系统——-web服务——-解释执行环境——-数据库服务">
 <meta property="og:type" content="article">
 <meta property="og:title" content="web安全入门——后端开发基础">
 <meta property="og:url" content="http://yoursite.com/2020/02/04/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="web服务器端概述 web动态页面时期工作原理 架构：操作系统——-web服务——-解释执行环境——-数据库服务">
+<meta property="og:description" content="web服务器端概述web服务端环境 web动态页面时期工作原理 架构：操作系统——-web服务——-解释执行环境——-数据库服务">
 <meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gbkduhtujtj30op0ddwil.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/0061a6Ikly1gble63lf2wj30k6043myc.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/mw690/0061a6Ikly1gble81ybw7j30kn0a1n13.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/mw690/0061a6Ikly1gblhn02wl8j30pt08qjsi.jpg">
 <meta property="article:published_time" content="2020-02-04T05:51:20.000Z">
-<meta property="article:modified_time" content="2020-02-04T11:55:10.547Z">
+<meta property="article:modified_time" content="2020-02-05T08:34:10.188Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="白帽子讲web安全">
 <meta property="article:tag" content="web安全入门——基础知识">
@@ -303,8 +306,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-02-04T19:55:10+08:00">
-                2020-02-04
+              <time title="更新于" itemprop="dateModified" datetime="2020-02-05T16:34:10+08:00">
+                2020-02-05
               </time>
             
           </span>
@@ -359,7 +362,7 @@
       
 
       
-        <h1 id="web服务器端概述"><a href="#web服务器端概述" class="headerlink" title="web服务器端概述"></a>web服务器端概述</h1><ol>
+        <h1 id="web服务器端概述"><a href="#web服务器端概述" class="headerlink" title="web服务器端概述"></a>web服务器端概述</h1><h2 id="web服务端环境"><a href="#web服务端环境" class="headerlink" title="web服务端环境"></a>web服务端环境</h2><ol>
 <li><p>web动态页面时期工作原理</p>
 <p>架构：操作系统——-web服务——-解释执行环境——-数据库服务</p>
 </li>
@@ -381,6 +384,105 @@
 <p><font face="黑体" color=Fuchsia >如何自定义域名：</font>打开hosts文件，输入主机ip或者127.0.0.1   新域名。例</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1	quanyex.loacl.com</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;查看本机ip的方法：cmd  输入 ipconfig&#x2F;all</span><br></pre></td></tr></table></figure>
 
+
+</li>
+</ol>
+<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><ol>
+<li>数据库工作</li>
+</ol>
+<p><img src="https://wx3.sinaimg.cn/mw690/0061a6Ikly1gble63lf2wj30k6043myc.jpg" alt=""></p>
+<ol start="2">
+<li>数据库的组成</li>
+</ol>
+<p><img src="https://wx1.sinaimg.cn/mw690/0061a6Ikly1gble81ybw7j30kn0a1n13.jpg" alt=""></p>
+<ol start="3">
+<li><p>数据库操作</p>
+<ol>
+<li>创建数据库：create database websecurity；</li>
+<li>查看数据库：show databases；</li>
+<li>切换到数据库：use websecurity；</li>
+<li>删除数据库：drop database websecurity；</li>
+</ol>
+<p>注意：<font face="黑体" color=Fuchsia >SQL语句对大小写不敏感，分号作为语句的结束，程序中会自动补充</font></p>
+<ol start="5">
+<li><p>创建数据表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE teacher(</span><br><span class="line">	id int(4) not null primary key auto_increment,</span><br><span class="line">    name char(20) not null,</span><br><span class="line">    sex  char(10) not null，</span><br><span class="line">    addr char（20）not null</span><br><span class="line">)；</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看数据表：SHOW tables；</p>
+</li>
+<li><p>插入数据表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO teacher(name,sex,addr)</span><br><span class="line">			VALUES(&#39;Leo&#39;,&#39;Male&#39;,&#39;hangzhou&#39;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看：select * from teacher；</p>
+</li>
+<li><p>更新： update teacher set name = ‘ivan’ where id = 1；</p>
+</li>
+<li><p>删除：delete  from  teacher  where  name=‘ivan’； </p>
+</li>
+<li><p>where句子使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">select 你要的信息   from 数据表（或多个）  where 满足的条件（条件判断）</span><br><span class="line">例如找出teacher表中在杭州的男性：</span><br><span class="line">select * from teacher where addr&#x3D;&#39;hangzhou&#39; and sex&#x3D;&#39;Male&#39;;</span><br><span class="line"></span><br><span class="line">select name from teacher where addr&#x3D;&#39;hangzhou&#39; and sex&#x3D;&#39;Male&#39;;</span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia >    *号表示所有数据 ; where 也可以用于updata或者delete 中。      </font></p>
+</li>
+<li><p>order by句子使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 你要的信息 from 数据表（或多个） order by 字段  ASC（升序）&#x2F;DESC（降序）</span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia >可以使用order by “数字”，判断数据表的字段长度      </font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; select name from teacher where sex &#x3D; &#39;male&#39;union all select name from student where sex &#x3D; &#39;male&#39; order by 1;</span><br><span class="line">&#x2F;*  将学生表和教师表中为男性的筛选出来并排序  *&#x2F;</span><br><span class="line">+----------+</span><br><span class="line">| name     |</span><br><span class="line">+----------+</span><br><span class="line">| Able     |</span><br><span class="line">| huanglei |</span><br><span class="line">| John     |</span><br><span class="line">| John     |</span><br><span class="line">| Leo      |</span><br><span class="line">+----------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://wx3.sinaimg.cn/mw690/0061a6Ikly1gblhn02wl8j30pt08qjsi.jpg" alt=""></p>
+</li>
+<li><p>UNION 句子使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">select 你要的信息 from 数据表1  union select 你要的信息 from 数据表2</span><br><span class="line"></span><br><span class="line">例如：想合并teacher和student表中的“name”（名字重复不显示）</span><br><span class="line">select  name from teacher union select name from student；</span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia >要想显示重复的姓名使用  union all      </font></p>
+</li>
+<li><p>MySQL注释：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#...</span><br><span class="line">-- ...                         单行注释 --后有空格</span><br><span class="line">&#x2F;*  *&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导入sql文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source C:\\user\\.........\\student.sql;</span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia >mysql在插入时会自动去除转义符\ 所以要在路径中多加一个      </font></p>
+</li>
+</ol>
+</li>
+<li><p>常见的内置函数：</p>
+<p>database（）；数据库</p>
+<p>current_user ；显示当前用户</p>
+<p>version（）；数据库版本</p>
+<p>into+ outfile； 写入文件</p>
+<p>load_file（）；返回文件  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select load file(&#39;C:\\Windows\\System32\\drivers\\hosts&#39;);</span><br><span class="line">&#x2F;*             返回host文件内容                 *&#x2F;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><ol>
+<li><p>php可以包含HTNL、JavaScript、PHP代码，是一种使用广泛的开源脚本语言，常用于网页开发。PHP脚本在服务器上执行。</p>
+</li>
+<li><p>PHP语言基本组成：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">1</span>）脚本范围：<span class="meta">&lt;?php</span>   <span class="meta">?&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">（<span class="number">2</span>）注释：<span class="comment">// 、 #    （单行注释）                /*  多行注释   */</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">（<span class="number">3</span>）<span class="keyword">echo</span>和<span class="keyword">print</span>：  </span><br><span class="line">    $a = <span class="string">'welcome'</span>;</span><br><span class="line">    $b = <span class="string">'to my page'</span>;</span><br><span class="line">	$B = <span class="string">'to my home'</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">'echo语句：'</span>.$a,$b.<span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line"><span class="comment">//  echo 可以使用逗号分隔字符串变量来显示</span></span><br><span class="line">	<span class="keyword">print</span><span class="string">'print函数：'</span>.$a.$b.<span class="string">'&lt;br/&gt;'</span>;</span><br><span class="line"><span class="comment">//  print 不能使用逗号，只能用点号分隔。 例如print $a,$b.'&lt;br/&gt;' 这里使用逗号就会报错。</span></span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia > echo语句一次能输出多个，print为函数只能输出一个而且有返回值。</font></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">4</span>）串接： .  (点)   例如 $a.$b</span><br><span class="line">    </span><br><span class="line">（<span class="number">5</span>）函数： <span class="function"><span class="keyword">function</span> 函数名（）</span></span><br><span class="line"><span class="function"> </span></span><br><span class="line">（6）大小写： 变量的大小写敏感 $b 和 $B  不同。</span><br><span class="line"> </span><br><span class="line">（<span class="number">7</span>）$_post 和 $_get ：前后端请求方式要对应，除了这两者以为，还可以用$_request,</span><br><span class="line">	post 不会将数据显示在url当中，但是get会显示。</span><br><span class="line"> </span><br><span class="line">（<span class="number">8</span>）常用变量： $_server , $globals , $_env , $_request , $_cookie , $_session</span><br><span class="line">    </span><br><span class="line">（<span class="number">9</span>）如果想将两个php文件一同显示，其中一个文件需要  <span class="keyword">include</span> <span class="string">'****.php'</span>;</span><br></pre></td></tr></table></figure>
+
+<p><font face="黑体" color=Fuchsia >include/require都可以包含文件，但是include有警告时会继续执行脚本，而require有错误是会停止脚本。</font></p>
+</li>
+<li><p>制作一个表单提交例子：</p>
+<p>form_post.html代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span> = <span class="string">"welcome.php"</span> <span class="attr">method</span> = <span class="string">"post"</span>&gt;</span></span><br><span class="line">            姓名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">            邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"email"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">input</span> <span class="attr">tupe</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">form</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>welcome.php代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;?php echo $_POST[&quot;name&quot;];?&gt;，欢迎您&lt;br&gt;</span><br><span class="line">        您的邮箱地址是：&lt;?php echo $_POST[&quot;email&quot;];?&gt;</span><br><span class="line">    &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>制作包含页面：</p>
+<p>server.php代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=<span class="string">"UTF-8"</span>&gt;</span><br><span class="line"><span class="meta">&lt;?php</span>	</span><br><span class="line">	</span><br><span class="line">   	<span class="keyword">echo</span> <span class="string">"服务器名称："</span>.$_SERVER[<span class="string">'SERVER_NAME'</span>].<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"服务器名称："</span>.$_SERVER[<span class="string">'DOCUMENT_ROOT'</span>].<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"当前网页相对路径："</span>.$_SERVER[<span class="string">'PHP_SELF'</span>].<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"当前网页绝对路径："</span>.$_SERVER[<span class="string">'SCRIPT_FILENAME'</span>].<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">"服务器环境变量："</span>.$_SERVER[<span class="string">'PATH'</span>].<span class="string">"&lt;br&gt;"</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>upload_file.php代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;meta charset&#x3D;&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;title&gt;文件上传&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;form action&#x3D;&quot;&quot; method&#x3D;&quot;post&quot; enctype&#x3D;&quot;multipart&#x2F;form-data&quot;&gt;</span><br><span class="line">	&lt;label for&#x3D;&quot;file&quot;&gt;文件名：&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;file&quot; name&#x3D;&quot;file&quot; id&#x3D;&quot;file&quot;&gt;&lt;br&gt;</span><br><span class="line">	&lt;input type&#x3D;&quot;submit&quot; name&#x3D;&quot;submit&quot; value&#x3D;&quot;Submit&quot;&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br><span class="line">	</span><br><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">if(isset($_REQUEST[&quot;submit&quot;]))    </span><br><span class="line"> &#x2F;&#x2F;isset -- 检测变量是否设置</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#x2F;*</span><br><span class="line"> 允许上传的图片后缀</span><br><span class="line">$allowedExts &#x3D; array(&quot;gif&quot;, &quot;jpeg&quot;, &quot;jpg&quot;, &quot;png&quot;);</span><br><span class="line">$temp &#x3D; explode(&quot;.&quot;, $_FILES[&quot;file&quot;][&quot;name&quot;]);</span><br><span class="line">echo $_FILES[&quot;file&quot;][&quot;size&quot;];</span><br><span class="line">$extension &#x3D; end($temp);     &#x2F;&#x2F; 获取文件后缀名</span><br><span class="line">if ((($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;gif&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;jpeg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;jpg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;pjpeg&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;x-png&quot;)</span><br><span class="line">|| ($_FILES[&quot;file&quot;][&quot;type&quot;] &#x3D;&#x3D; &quot;image&#x2F;png&quot;))</span><br><span class="line">&amp;&amp; ($_FILES[&quot;file&quot;][&quot;size&quot;] &lt; 204800)   &#x2F;&#x2F; 小于 200 kb</span><br><span class="line">&amp;&amp; in_array($extension, $allowedExts))</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	if ($_FILES[&quot;file&quot;][&quot;error&quot;] &gt; 0)</span><br><span class="line">	&#123;</span><br><span class="line">		echo &quot;错误：: &quot; . $_FILES[&quot;file&quot;][&quot;error&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		echo &quot;上传文件名: &quot; . $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">		echo &quot;文件类型: &quot; . $_FILES[&quot;file&quot;][&quot;type&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">		echo &quot;文件大小: &quot; . ($_FILES[&quot;file&quot;][&quot;size&quot;] &#x2F; 1024) . &quot; kB&lt;br&gt;&quot;;</span><br><span class="line">		echo &quot;文件临时存储的位置: &quot; . $_FILES[&quot;file&quot;][&quot;tmp_name&quot;] . &quot;&lt;br&gt;&quot;;</span><br><span class="line">		</span><br><span class="line">		&#x2F;&#x2F; 判断当期目录下的 upload 目录是否存在该文件</span><br><span class="line">		&#x2F;&#x2F; 如果没有 upload 目录，你需要创建它，upload 目录权限为 777</span><br><span class="line">		if (file_exists(&quot;upload&#x2F;&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]))</span><br><span class="line">		&#123;</span><br><span class="line">			echo $_FILES[&quot;file&quot;][&quot;name&quot;] . &quot; 文件已经存在。 &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			&#x2F;&#x2F; 如果 upload 目录不存在该文件则将文件上传到 upload 目录下</span><br><span class="line">			move_uploaded_file($_FILES[&quot;file&quot;][&quot;tmp_name&quot;], &quot;upload&#x2F;&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;]);</span><br><span class="line">			echo &quot;文件存储在: &quot; . &quot;upload&#x2F;&quot; . $_FILES[&quot;file&quot;][&quot;name&quot;];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#x2F;*</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">	echo &quot;非法的文件格式&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在sever.php中添加 ：include ‘upload_file.php’ ;</p>
 </li>
 </ol>
 
@@ -565,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web服务器端概述"><span class="nav-number">1.</span> <span class="nav-text">web服务器端概述</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#web服务器端概述"><span class="nav-number">1.</span> <span class="nav-text">web服务器端概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web服务端环境"><span class="nav-number">1.1.</span> <span class="nav-text">web服务端环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL"><span class="nav-number">1.2.</span> <span class="nav-text">SQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">1.3.</span> <span class="nav-text">PHP</span></a></li></ol></li></ol></div>
             
 
           </div>
