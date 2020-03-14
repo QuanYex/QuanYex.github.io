@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="语法window.location方法window.location:window的location对象  window.location.href 　整个URl字符串(在浏览器中就是完整的地址栏)  window.location.protocol 　URL 的协议部分 　返回值：http:  window.location.host 　URL 的主机部分(带端口号)  window.locat">
+<meta name="description" content="问题基础类型问题GBK和UTF-8的区别GBK编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符，另外还有一种字符“gb2312”，这种字符仅能存储简体中文字符。 UTF-8编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言，那么建议你选择UTF-8编码。 UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习过程中语法问题">
 <meta property="og:url" content="http://yoursite.com/2020/03/12/%E5%AD%A6%E4%B9%A0%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="语法window.location方法window.location:window的location对象  window.location.href 　整个URl字符串(在浏览器中就是完整的地址栏)  window.location.protocol 　URL 的协议部分 　返回值：http:  window.location.host 　URL 的主机部分(带端口号)  window.locat">
+<meta property="og:description" content="问题基础类型问题GBK和UTF-8的区别GBK编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符，另外还有一种字符“gb2312”，这种字符仅能存储简体中文字符。 UTF-8编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言，那么建议你选择UTF-8编码。 UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速">
+<meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg">
 <meta property="article:published_time" content="2020-03-12T09:32:22.000Z">
-<meta property="article:modified_time" content="2020-03-12T09:39:04.305Z">
+<meta property="article:modified_time" content="2020-03-14T07:09:14.263Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg">
 
 
 
@@ -297,8 +299,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-12T17:39:04+08:00">
-                2020-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-14T15:09:14+08:00">
+                2020-03-14
               </time>
             
           </span>
@@ -353,24 +355,519 @@
       
 
       
-        <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h1 id="window-location方法"><a href="#window-location方法" class="headerlink" title="window.location方法"></a>window.location方法</h1><h3 id="window-location"><a href="#window-location" class="headerlink" title="window.location:"></a>window.location:</h3><p>window的location对象</p>
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><h2 id="基础类型问题"><a href="#基础类型问题" class="headerlink" title="基础类型问题"></a>基础类型问题</h2><h3 id="GBK和UTF-8的区别"><a href="#GBK和UTF-8的区别" class="headerlink" title="GBK和UTF-8的区别"></a>GBK和UTF-8的区别</h3><p>GBK编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符，另外还有一种字符“gb2312”，这种字符仅能存储简体中文字符。</p>
+<p>UTF-8编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言，那么建议你选择UTF-8编码。</p>
+<p>UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速度而言，也是有一定影响的。</p>
+<p>GBK编码格式，它的功能少，仅限于中文字符，当然它所占用的空间大小会随着它的功能而减少，打开网页的速度比较快。</p>
+<p>   　<a id="more"></a></p>
+<h3 id="基本类型和引用类型变量"><a href="#基本类型和引用类型变量" class="headerlink" title="基本类型和引用类型变量"></a>基本类型和引用类型变量</h3><p><strong>基本类型：</strong></p>
+<p>基本类型自然不用说了，它的值就是一个数字，一个字符或一个布尔值。</p>
+<p><strong>引用类型：</strong></p>
+<p>是一个对象类型，值是什么呢？它的值是指向内存空间的引用，就是地址，所指向的内存中保存着变量所表示的一个值或一组值。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$obj_1 = <span class="keyword">new</span> stdClass;</span><br><span class="line">$obj_2 = $obj_1;</span><br><span class="line">$obj_1-&gt;name = <span class="string">'Xavier'</span>;</span><br><span class="line"></span><br><span class="line">var_dump($obj_1-&gt;name, $obj_2-&gt;name);</span><br><span class="line">var_dump($obj_1, $obj_2);</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">string(<span class="number">6</span>) <span class="string">"Xavier"</span></span><br><span class="line"></span><br><span class="line">string(<span class="number">6</span>) <span class="string">"Xavier"</span></span><br><span class="line"></span><br><span class="line">object(stdClass)<span class="comment">#1 (1) &#123;</span></span><br><span class="line">  [<span class="string">"name"</span>]=&gt;</span><br><span class="line">  string(<span class="number">6</span>) <span class="string">"Xavier"</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">object(stdClass)<span class="comment">#1 (1) &#123;</span></span><br><span class="line">  [<span class="string">"name"</span>]=&gt;</span><br><span class="line">  string(<span class="number">6</span>) <span class="string">"Xavier"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们发现 <code>obj_2</code> 的 <code>name</code> 也发生的改变，原因是 <code>obj_1</code> 和 <code>obj_2</code> 指向同一个对象 <code>#1</code> ，因为在第二行中，我们将 <code>obj_1</code> 所指向的对象的地址赋给了 <code>obj_2</code> 。</p>
+<p><strong>传递参数</strong></p>
+<p>我们来看这段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function setName($obj) &#123;</span><br><span class="line">    $obj-&gt;name &#x3D; &#39;Xavier&#39;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$person &#x3D; new stdClass;</span><br><span class="line">setName($person);</span><br><span class="line">var_dump($person-&gt;name); &#x2F;&#x2F; 输出 string(6) &quot;Xavier&quot;</span><br></pre></td></tr></table></figure>
+
+<p>若变量为一个对象，那么当它作为参数传递给一个函数时，同样，传递的是一个对象地址，而不是拷贝了一个新的对象实体给参数 <code>$obj</code> 。这样，<code>函数内部并没有 return 新的东西出来但改变了外部的状态</code> 的这种情况就变得好理解了。</p>
+<p>接下来，请看这段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function setName($obj) &#123;</span><br><span class="line">    $obj-&gt;name &#x3D; &#39;Xavier&#39;;</span><br><span class="line">    $obj &#x3D; new stdClass;</span><br><span class="line">    $obj-&gt;name &#x3D; &#39;Zhao&#39;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$person &#x3D; new stdClass;</span><br><span class="line">setName($person);</span><br><span class="line">var_dump($person-&gt;name); &#x2F;&#x2F; 输出了 string(6) &quot;Xavier&quot; 而不是 string(6) &quot;Zhao&quot;</span><br></pre></td></tr></table></figure>
+
+<p>首先，我们应该明白，<code>将一个变量作为参数传递给函数</code> 可以理解为 <code>将那个变量保存的值 复制一份给 函数的参数（参数即函数范围的局部变量）</code> 。当函数执行时，<code>外部变量</code> 和 <code>函数参数（局部变量）</code> 是同时存在于内存中的，并且两者是相互独立的，虽然两者所保存的值是相同的；<code>函数参数（局部变量）</code> 会在函数执行完毕后被销毁。</p>
+<p>明白了上述原理，那么我们重新来看那段代码：</p>
+<ol>
+<li><p>函数的 <code>obj</code> 变量在函数内第一行保存的是函数外部 <code>person</code> 变量所保存的值，也就是外部对象的地址</p>
+</li>
+<li><p>但到了第二行，<code>obj</code> 变量所保存的值变成了新创建的对象的地址，<code>obj</code> 的指向发生了改变，而原来的外部对象依旧存在并且只被 <code>person</code> 一个变量引用，所以在第三行的行为并没有影响到 <code>person</code> 所指向的那个对象。新创建的对象在函数执行之后被销毁。</p>
+<h3 id="PHP中问号-和冒号-的作用"><a href="#PHP中问号-和冒号-的作用" class="headerlink" title="PHP中问号?和冒号: 的作用"></a>PHP中问号?和冒号: 的作用</h3></li>
+</ol>
+<p><img src="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg" alt=""></p>
+<h2 id="Js语法"><a href="#Js语法" class="headerlink" title="Js语法"></a>Js语法</h2><h3 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h3><p>Window 对象属性</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_closed.asp" target="_blank" rel="noopener">closed</a></td>
+<td align="left">返回窗口是否已被关闭。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_defaultstatus.asp" target="_blank" rel="noopener">defaultStatus</a></td>
+<td align="left">设置或返回窗口状态栏中的默认文本。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/dom_obj_document.asp" target="_blank" rel="noopener">document</a></td>
+<td align="left">对 Document 对象的只读引用。请参阅 <a href="https://www.w3school.com.cn/jsref/dom_obj_document.asp" target="_blank" rel="noopener">Document 对象</a>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="noopener">history</a></td>
+<td align="left">对 History 对象的只读引用。请参数 <a href="https://www.w3school.com.cn/jsref/dom_obj_history.asp" target="_blank" rel="noopener">History 对象</a>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp" target="_blank" rel="noopener">innerheight</a></td>
+<td align="left">返回窗口的文档显示区的高度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_innerheight_innerwidth.asp" target="_blank" rel="noopener">innerwidth</a></td>
+<td align="left">返回窗口的文档显示区的宽度。</td>
+</tr>
+<tr>
+<td align="left">length</td>
+<td align="left">设置或返回窗口中的框架数量。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="noopener">location</a></td>
+<td align="left">用于窗口或框架的 Location 对象。请参阅 <a href="https://www.w3school.com.cn/jsref/dom_obj_location.asp" target="_blank" rel="noopener">Location 对象</a>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_name.asp" target="_blank" rel="noopener">name</a></td>
+<td align="left">设置或返回窗口的名称。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="noopener">Navigator</a></td>
+<td align="left">对 Navigator 对象的只读引用。请参数 <a href="https://www.w3school.com.cn/jsref/dom_obj_navigator.asp" target="_blank" rel="noopener">Navigator 对象</a>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_opener.asp" target="_blank" rel="noopener">opener</a></td>
+<td align="left">返回对创建此窗口的窗口的引用。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_outerheight.asp" target="_blank" rel="noopener">outerheight</a></td>
+<td align="left">返回窗口的外部高度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_outerwidth.asp" target="_blank" rel="noopener">outerwidth</a></td>
+<td align="left">返回窗口的外部宽度。</td>
+</tr>
+<tr>
+<td align="left">pageXOffset</td>
+<td align="left">设置或返回当前页面相对于窗口显示区左上角的 X 位置。</td>
+</tr>
+<tr>
+<td align="left">pageYOffset</td>
+<td align="left">设置或返回当前页面相对于窗口显示区左上角的 Y 位置。</td>
+</tr>
+<tr>
+<td align="left">parent</td>
+<td align="left">返回父窗口。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/dom_obj_screen.asp" target="_blank" rel="noopener">Screen</a></td>
+<td align="left">对 Screen 对象的只读引用。请参数 <a href="https://www.w3school.com.cn/jsref/dom_obj_screen.asp" target="_blank" rel="noopener">Screen 对象</a>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_self.asp" target="_blank" rel="noopener">self</a></td>
+<td align="left">返回对当前窗口的引用。等价于 Window 属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_status.asp" target="_blank" rel="noopener">status</a></td>
+<td align="left">设置窗口状态栏的文本。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_win_top.asp" target="_blank" rel="noopener">top</a></td>
+<td align="left">返回最顶层的先辈窗口。</td>
+</tr>
+<tr>
+<td align="left">window</td>
+<td align="left">window 属性等价于 self 属性，它包含了对窗口自身的引用。</td>
+</tr>
+<tr>
+<td align="left">screenLeftscreenTopscreenXscreenY</td>
+<td align="left">只读整数。声明了窗口的左上角在屏幕上的的 x 坐标和 y 坐标。IE、Safari 和 Opera 支持 screenLeft 和 screenTop，而 Firefox 和 Safari 支持 screenX 和 screenY。</td>
+</tr>
+</tbody></table>
+<p>Window 对象方法</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_alert.asp" target="_blank" rel="noopener">alert()</a></td>
+<td align="left">显示带有一段消息和一个确认按钮的警告框。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_blur.asp" target="_blank" rel="noopener">blur()</a></td>
+<td align="left">把键盘焦点从顶层窗口移开。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_clearinterval.asp" target="_blank" rel="noopener">clearInterval()</a></td>
+<td align="left">取消由 setInterval() 设置的 timeout。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_cleartimeout.asp" target="_blank" rel="noopener">clearTimeout()</a></td>
+<td align="left">取消由 setTimeout() 方法设置的 timeout。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_close.asp" target="_blank" rel="noopener">close()</a></td>
+<td align="left">关闭浏览器窗口。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_confirm.asp" target="_blank" rel="noopener">confirm()</a></td>
+<td align="left">显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_createpopup.asp" target="_blank" rel="noopener">createPopup()</a></td>
+<td align="left">创建一个 pop-up 窗口。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_focus.asp" target="_blank" rel="noopener">focus()</a></td>
+<td align="left">把键盘焦点给予一个窗口。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_moveby.asp" target="_blank" rel="noopener">moveBy()</a></td>
+<td align="left">可相对窗口的当前坐标把它移动指定的像素。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_moveto.asp" target="_blank" rel="noopener">moveTo()</a></td>
+<td align="left">把窗口的左上角移动到一个指定的坐标。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_open.asp" target="_blank" rel="noopener">open()</a></td>
+<td align="left">打开一个新的浏览器窗口或查找一个已命名的窗口。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_print.asp" target="_blank" rel="noopener">print()</a></td>
+<td align="left">打印当前窗口的内容。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_prompt.asp" target="_blank" rel="noopener">prompt()</a></td>
+<td align="left">显示可提示用户输入的对话框。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_resizeby.asp" target="_blank" rel="noopener">resizeBy()</a></td>
+<td align="left">按照指定的像素调整窗口的大小。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_resizeto.asp" target="_blank" rel="noopener">resizeTo()</a></td>
+<td align="left">把窗口的大小调整到指定的宽度和高度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_scrollby.asp" target="_blank" rel="noopener">scrollBy()</a></td>
+<td align="left">按照指定的像素值来滚动内容。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_scrollto.asp" target="_blank" rel="noopener">scrollTo()</a></td>
+<td align="left">把内容滚动到指定的坐标。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_setinterval.asp" target="_blank" rel="noopener">setInterval()</a></td>
+<td align="left">按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_win_settimeout.asp" target="_blank" rel="noopener">setTimeout()</a></td>
+<td align="left">在指定的毫秒数后调用函数或计算表达式。</td>
+</tr>
+</tbody></table>
+<h4 id="window-location"><a href="#window-location" class="headerlink" title="window.location:"></a>window.location:</h4><p>window的location对象</p>
 <ol>
 <li><p>window.location.href<br> 　整个URl字符串(在浏览器中就是完整的地址栏)</p>
 </li>
-<li><p>window.location.protocol<br> 　URL 的协议部分<br> 　返回值：http:</p>
-</li>
+<li><p>window.location.protocol<br> 　URL 的协议部分</p>
+<pre><code> 　返回值：http:</code></pre></li>
 <li><p>window.location.host<br> 　URL 的主机部分(带端口号)</p>
 </li>
-<li><p>window.location.port<br> 　URL 的端口部分。<br> 5.window.location.pathname<br> 　URL 的路径部分(就是文件地址)</p>
+<li><p>window.location.port<br>  URL 的端口部分。<br>  5.window.location.pathname<br>  　URL 的路径部分(就是文件地址)</p>
 </li>
-<li><p>window.location.search<br> 　查询(参数)部分。得到的是url中？部分。除了给动态语言赋值以外，我们同样可以给静态页面,并使用javascript来获得相信应的参数值。</p>
+<li><p>window.location.search<br>  查询(参数)部分。得到的是url中？部分。除了给动态语言赋值以外，我们同样可以给静态页面,并使用javascript来获得相信应的参数值。</p>
 </li>
-<li><p>window.location.hash<br> 　锚点。得到的是url中#部分。</p>
-<a id="more"></a>
-
+<li><p>window.location.hash<br>锚点。得到的是url中#部分。</p>
+<p>注意：</p>
 </li>
 </ol>
-<h3 id="substr"><a href="#substr" class="headerlink" title="substr()"></a>substr()</h3><p>​    返回一个从指定位置开始的指定长度的子字符串，这里设置为1，是为了把url中的?号去掉。substr() 方法可在字符串中抽取从 <em>start</em> 下标开始的指定数目的字符。</p>
+<p>​     window  是指你打开的窗口， document是指你打开的文档。 形象一点，window是指你的浏览器。<br>     document是指去掉菜单栏，滚动条，状态栏这些部分。</p>
+<p>​    doucment是window的一个属性。</p>
+<p>​    document 和 windows 对象</p>
+<p>​    document表示的是一个文档对象，window表示的是一个窗口对象，一个窗口下可以有多个文档对象。</p>
+<p>​    所以一个窗口下只有一个window.location.href，但是可能有多个document.URL、    document.location.href</p>
+<p>​    window 对象<br> 　它是一个顶层对象,而不是另一个对象的属性即浏览器的窗口。</p>
+<p>​    document 对象<br>​     该对象是window和frames对象的一个属性,是显示于窗口或框架内的一个文档。</p>
+<p>​    document 只是属于window 的一个子对像。</p>
+<p>​    window.location 包含 href 属性，直接取值赋值时相当于 window.location.href</p>
+<p>​    window.location.href  当前页面完整 URL</p>
+<p>​    document.location 包含 href 属性，直接取值赋值时相当于 document.location.href</p>
+<p>​    document.location.href 当前页面完整 URL</p>
+<p>​    document.href 没有这个属性</p>
+<p>​    document.URL 取值时等价于 window.location.href 或 document.location.href。在某些浏览器中    通过对 document.URL 赋值来实现页面跳转，但某些浏览器中不行。</p>
+<h3 id="document对象"><a href="#document对象" class="headerlink" title="document对象"></a>document对象</h3><p>Document 对象属性</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">body</td>
+<td align="left">提供对 <body> 元素的直接访问。对于定义了框架集的文档，该属性引用最外层的 <frameset>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_cookie.asp" target="_blank" rel="noopener">cookie</a></td>
+<td align="left">设置或返回与当前文档有关的所有 cookie。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_domain.asp" target="_blank" rel="noopener">domain</a></td>
+<td align="left">返回当前文档的域名。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_lastmodified.asp" target="_blank" rel="noopener">lastModified</a></td>
+<td align="left">返回文档被最后修改的日期和时间。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_referrer.asp" target="_blank" rel="noopener">referrer</a></td>
+<td align="left">返回载入当前文档的文档的 URL。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_title.asp" target="_blank" rel="noopener">title</a></td>
+<td align="left">返回当前文档的标题。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_doc_url.asp" target="_blank" rel="noopener">URL</a></td>
+<td align="left">返回当前文档的 URL。</td>
+</tr>
+</tbody></table>
+<p>Document 对象方法</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_close.asp" target="_blank" rel="noopener">close()</a></td>
+<td align="left">关闭用 document.open() 方法打开的输出流，并显示选定的数据。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_getelementbyid.asp" target="_blank" rel="noopener">getElementById()</a></td>
+<td align="left">返回对拥有指定 id 的第一个对象的引用。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_getelementsbyname.asp" target="_blank" rel="noopener">getElementsByName()</a></td>
+<td align="left">返回带有指定名称的对象集合。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_getelementsbytagname.asp" target="_blank" rel="noopener">getElementsByTagName()</a></td>
+<td align="left">返回带有指定标签名的对象集合。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_open.asp" target="_blank" rel="noopener">open()</a></td>
+<td align="left">打开一个流，以收集来自任何 document.write() 或 document.writeln() 方法的输出。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_write.asp" target="_blank" rel="noopener">write()</a></td>
+<td align="left">向文档写 HTML 表达式 或 JavaScript 代码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/met_doc_writeln.asp" target="_blank" rel="noopener">writeln()</a></td>
+<td align="left">等同于 write() 方法，不同的是在每个表达式之后写一个换行符。</td>
+</tr>
+</tbody></table>
+<h4 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h4><p>domain 属性可返回下载当前文档的服务器域名，该属性是一个只读的字符串，包含了载入当前文档的 web 服务器的主机名。</p>
+<h4 id="document-write（）"><a href="#document-write（）" class="headerlink" title="document.write（）"></a>document.write（）</h4><p>document.write是JavaScript中对document.open所开启的文档流(document stream操作的API方法，它能够直接在文档流中写入字符串，一旦文档流已经关闭，那document.write就会重新利用document.open打开新的文档流并写入，此时原来的文档流会被清空，已渲染好的页面就会被清除，浏览器将重新构建DOM并渲染新的页面。</p>
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">if</span> (document.location.href.indexOf(<span class="string">"default="</span>) &gt;= <span class="number">0</span>) </span><br><span class="line">      <span class="comment">#判断  "default=" 是否存在</span></span><br><span class="line">  <span class="keyword">var</span> lang = document.location.href.substring(document.location.href.indexOf(<span class="string">"default="</span>)+<span class="number">8</span>) </span><br><span class="line">	 <span class="comment"># 取出 default 的值  并 赋值给变量lang</span></span><br><span class="line"></span><br><span class="line">document.write(<span class="string">"&lt;option value='"</span> + lang + <span class="string">"'&gt;"</span> + decodeURI(lang) + <span class="string">"&lt;/option&gt;"</span>);</span><br><span class="line">写入&lt;option value=<span class="string">'"lang"'</span>&gt;<span class="string">"decodeURL(lang)&lt;/option&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="string对象"><a href="#string对象" class="headerlink" title="string对象"></a>string对象</h3><p>String 对象用于处理文本（字符串）。</p>
+<p>String 对象属性</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">constructor</td>
+<td align="left">对创建该对象的函数的引用</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_length_string.asp" target="_blank" rel="noopener">length</a></td>
+<td align="left">字符串的长度</td>
+</tr>
+<tr>
+<td align="left">prototype</td>
+<td align="left">允许您向对象添加属性和方法</td>
+</tr>
+</tbody></table>
+<p>String 对象方法</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_anchor.asp" target="_blank" rel="noopener">anchor()</a></td>
+<td align="left">创建 HTML 锚。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_big.asp" target="_blank" rel="noopener">big()</a></td>
+<td align="left">用大号字体显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_blink.asp" target="_blank" rel="noopener">blink()</a></td>
+<td align="left">显示闪动字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_bold.asp" target="_blank" rel="noopener">bold()</a></td>
+<td align="left">使用粗体显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_charAt.asp" target="_blank" rel="noopener">charAt()</a></td>
+<td align="left">返回在指定位置的字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_charCodeAt.asp" target="_blank" rel="noopener">charCodeAt()</a></td>
+<td align="left">返回在指定的位置的字符的 Unicode 编码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_concat_string.asp" target="_blank" rel="noopener">concat()</a></td>
+<td align="left">连接字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_fixed.asp" target="_blank" rel="noopener">fixed()</a></td>
+<td align="left">以打字机文本显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_fontcolor.asp" target="_blank" rel="noopener">fontcolor()</a></td>
+<td align="left">使用指定的颜色来显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_fontsize.asp" target="_blank" rel="noopener">fontsize()</a></td>
+<td align="left">使用指定的尺寸来显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_fromCharCode.asp" target="_blank" rel="noopener">fromCharCode()</a></td>
+<td align="left">从字符编码创建一个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_indexOf.asp" target="_blank" rel="noopener">indexOf()</a></td>
+<td align="left">检索字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_italics.asp" target="_blank" rel="noopener">italics()</a></td>
+<td align="left">使用斜体显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_lastIndexOf.asp" target="_blank" rel="noopener">lastIndexOf()</a></td>
+<td align="left">从后向前搜索字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_link.asp" target="_blank" rel="noopener">link()</a></td>
+<td align="left">将字符串显示为链接。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_localeCompare.asp" target="_blank" rel="noopener">localeCompare()</a></td>
+<td align="left">用本地特定的顺序来比较两个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_match.asp" target="_blank" rel="noopener">match()</a></td>
+<td align="left">找到一个或多个正则表达式的匹配。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_replace.asp" target="_blank" rel="noopener">replace()</a></td>
+<td align="left">替换与正则表达式匹配的子串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_search.asp" target="_blank" rel="noopener">search()</a></td>
+<td align="left">检索与正则表达式相匹配的值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_slice_string.asp" target="_blank" rel="noopener">slice()</a></td>
+<td align="left">提取字符串的片断，并在新的字符串中返回被提取的部分。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_small.asp" target="_blank" rel="noopener">small()</a></td>
+<td align="left">使用小字号来显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_split.asp" target="_blank" rel="noopener">split()</a></td>
+<td align="left">把字符串分割为字符串数组。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_strike.asp" target="_blank" rel="noopener">strike()</a></td>
+<td align="left">使用删除线来显示字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_sub.asp" target="_blank" rel="noopener">sub()</a></td>
+<td align="left">把字符串显示为下标。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_substr.asp" target="_blank" rel="noopener">substr()</a></td>
+<td align="left">从起始索引号提取字符串中指定数目的字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_substring.asp" target="_blank" rel="noopener">substring()</a></td>
+<td align="left">提取字符串中两个指定的索引号之间的字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_sup.asp" target="_blank" rel="noopener">sup()</a></td>
+<td align="left">把字符串显示为上标。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_toLocaleLowerCase.asp" target="_blank" rel="noopener">toLocaleLowerCase()</a></td>
+<td align="left">把字符串转换为小写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_toLocaleUpperCase.asp" target="_blank" rel="noopener">toLocaleUpperCase()</a></td>
+<td align="left">把字符串转换为大写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_toLowerCase.asp" target="_blank" rel="noopener">toLowerCase()</a></td>
+<td align="left">把字符串转换为小写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_toUpperCase.asp" target="_blank" rel="noopener">toUpperCase()</a></td>
+<td align="left">把字符串转换为大写。</td>
+</tr>
+<tr>
+<td align="left">toSource()</td>
+<td align="left">代表对象的源代码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_toString_string.asp" target="_blank" rel="noopener">toString()</a></td>
+<td align="left">返回字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/jsref_valueOf_string.asp" target="_blank" rel="noopener">valueOf()</a></td>
+<td align="left">返回某个字符串对象的原始值。</td>
+</tr>
+</tbody></table>
+<h4 id="substring-方法"><a href="#substring-方法" class="headerlink" title="substring() 方法"></a>substring() 方法</h4><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
+<p> substring(start,stop)</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>start   必需。</td>
+<td align="center">一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。</td>
+</tr>
+<tr>
+<td>stop    可选。</td>
+<td align="center">一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。</td>
+</tr>
+<tr>
+<td>如果省略该参数，那么返回的子串会一直到字符串的结尾。</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h4 id="substr"><a href="#substr" class="headerlink" title="substr()"></a>substr()</h4><p>​    返回一个从指定位置开始的指定长度的子字符串，这里设置为1，是为了把url中的?号去掉。substr() 方法可在字符串中抽取从 <em>start</em> 下标开始的指定数目的字符。</p>
 <p>​    语法：stringObject.substr(start,length)</p>
 <p>​    <em>start</em>：必需。要抽取的子串的起始下标。必须是数值。如果是负数，那么该参数声明从字符串的尾部开始算起的位置。也就是说，-1 指字符串中最后一个字符，-2 指倒数第二个字符，以此类推。</p>
 <p>​    <em>length*：可选。子串中的字符数。必须是数值。如果省略了该参数，那么返回从 *stringObject</em> 的开始位置到结尾的字串。</p>
@@ -379,11 +876,957 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str=<span class="string">"Hello world!"</span></span><br><span class="line"><span class="built_in">document</span>.write(str.substr(<span class="number">3</span>))</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>​    输出：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lo world!</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hallo world!</span><br></pre></td></tr></table></figure>
 
+<h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf()"></a>indexOf()</h4><p>定义和用法<br> indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。</p>
+<p>indexOf(searchvalue,fromindex)</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>searchvalue</td>
+<td align="center">必需。规定需检索的字符串值。</td>
+</tr>
+<tr>
+<td>fromindex</td>
+<td align="center">可选的整数参数。规定在字符串中开始检索的位置。它的合法取值是 0 到 stringObject.length - 1。如省略该参数，则将从字符串的首字符开始检索。</td>
+</tr>
+</tbody></table>
+<p>注释：indexOf() 方法对大小写敏感！<br> 注释：如果要检索的字符串值没有出现，则该方法返回 -1。</p>
+<h3 id="ActiveXObject"><a href="#ActiveXObject" class="headerlink" title="ActiveXObject"></a>ActiveXObject</h3><p>ActiveXObject对象详解<br>JavaScript中ActiveXObject对象是启用并返回 Automation对象的引用。<br>使用方法：newObj = new ActiveXObject( servername.typename[, location])<br>其中newObj是必选项。要赋值为 ActiveXObject 的变量名。<br>    servername是必选项。提供该对象的应用程序的名称。<br>    typename是必选项。要创建的对象的类型或类。<br>    location是可选项。创建该对象的网络服务器的名称。</p>
+<p>Automation服务器至少提供一类对象，例如字处理应用程序可能提供应用程序对象、文档对象和工具栏对象。通常先用window.ActiveXObject判断下浏览器是否支持ActiveXObject对象。</p>
+<p> 三、ActiveXObject的常用对象及用法：<br>（1）WScript.Network<br> [1]  取得机器名，登录域及登录用户名  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getusername</span>(<span class="params"></span>)     </span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">    <span class="keyword">var</span> WshNetwork = <span class="keyword">new</span> ActiveXObject(<span class="string">"WScript.Network"</span>);    </span><br><span class="line">    alert(<span class="string">"Domain = "</span> + WshNetwork.UserDomain);     </span><br><span class="line">    alert(<span class="string">"Computer Name = "</span> + WshNetwork.ComputerName);     </span><br><span class="line">    alert(<span class="string">"User Name = "</span> + WshNetwork.UserName);      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><p>eval() 函数可计算某个字符串，并执行其中的的 JavaScript 代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval(string)</span><br></pre></td></tr></table></figure>
 
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">string</td>
+<td align="left">必需。要计算的字符串，其中含有要计算的 JavaScript 表达式或要执行的语句。</td>
+</tr>
+</tbody></table>
+<p>该方法只接受原始字符串作为参数，如果 string 参数不是原始字符串，那么该方法将不作任何改变地返回。因此请不要为 eval() 函数传递 String 对象来作为参数。</p>
+<h3 id="decodeURI"><a href="#decodeURI" class="headerlink" title="decodeURI()"></a>decodeURI()</h3><p>decodeURI() 函数可对 encodeURI() 函数编码过的 URI 进行解码。</p>
+<h2 id="PHP语法"><a href="#PHP语法" class="headerlink" title="PHP语法"></a>PHP语法</h2><h3 id="isset"><a href="#isset" class="headerlink" title="isset"></a>isset</h3><p>isset — 检测变量是否已设置并且非 <strong><code>NULL</code></strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">isset</span> ( mixed $var [, mixed $... ] ) : bool</span><br></pre></td></tr></table></figure>
 
+<p>检测变量是否设置，并且不是 <strong><code>NULL</code></strong>。</p>
+<p>如果已经使用 <a href="https://www.php.net/manual/zh/function.unset.php" target="_blank" rel="noopener">unset()</a> 释放了一个变量之后，它将不再是 <strong>isset()</strong>。若使用 <strong>isset()</strong> 测试一个被设置成 <strong><code>NULL</code></strong> 的变量，将返回 <strong><code>FALSE</code></strong>。同时要注意的是 null 字符（*”\0”*）并不等同于 PHP 的<code>NULL</code>常量。</p>
+<p>如果一次传入多个参数，那么 <strong>isset()</strong> 只有在全部参数都以被设置时返回 <strong><code>TRUE</code></strong> 计算过程从左至右，中途遇到没有设置的变量时就会立即停止。</p>
+<h3 id="String函数"><a href="#String函数" class="headerlink" title="String函数"></a>String函数</h3><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_addcslashes.asp" target="_blank" rel="noopener">addcslashes()</a></td>
+<td align="left">返回在指定的字符前添加反斜杠的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_addslashes.asp" target="_blank" rel="noopener">addslashes()</a></td>
+<td align="left">返回在预定义的字符前添加反斜杠的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_bin2hex.asp" target="_blank" rel="noopener">bin2hex()</a></td>
+<td align="left">把 ASCII 字符的字符串转换为十六进制值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_chop.asp" target="_blank" rel="noopener">chop()</a></td>
+<td align="left">删除字符串右侧的空白字符或其他字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_chr.asp" target="_blank" rel="noopener">chr()</a></td>
+<td align="left">从指定的 ASCII 值返回字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_chunk_split.asp" target="_blank" rel="noopener">chunk_split()</a></td>
+<td align="left">把字符串分割为一系列更小的部分。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_convert_cyr_string.asp" target="_blank" rel="noopener">convert_cyr_string()</a></td>
+<td align="left">把字符串由一种 Cyrillic 字符集转换为另一种。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_convert_uudecode.asp" target="_blank" rel="noopener">convert_uudecode()</a></td>
+<td align="left">解码 uuencode 编码字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_convert_uuencode.asp" target="_blank" rel="noopener">convert_uuencode()</a></td>
+<td align="left">使用 uuencode 算法对字符串进行编码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_count_chars.asp" target="_blank" rel="noopener">count_chars()</a></td>
+<td align="left">返回有关字符串中所用字符的信息。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_crc32.asp" target="_blank" rel="noopener">crc32()</a></td>
+<td align="left">计算字符串的 32 位 CRC。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_crypt.asp" target="_blank" rel="noopener">crypt()</a></td>
+<td align="left">单向的字符串加密法（hashing）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_echo.asp" target="_blank" rel="noopener">echo()</a></td>
+<td align="left">输出一个或多个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_explode.asp" target="_blank" rel="noopener">explode()</a></td>
+<td align="left">把字符串打散为数组。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_fprintf.asp" target="_blank" rel="noopener">fprintf()</a></td>
+<td align="left">把格式化的字符串写入到指定的输出流。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_get_html_translation_table.asp" target="_blank" rel="noopener">get_html_translation_table()</a></td>
+<td align="left">返回由 htmlspecialchars() 和 htmlentities() 使用的翻译表。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_hebrev.asp" target="_blank" rel="noopener">hebrev()</a></td>
+<td align="left">把希伯来文本转换为可见文本。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_hebrevc.asp" target="_blank" rel="noopener">hebrevc()</a></td>
+<td align="left">把希伯来文本转换为可见文本，并把新行（\n）转换为 <br>。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_hex2bin.asp" target="_blank" rel="noopener">hex2bin()</a></td>
+<td align="left">把十六进制值的字符串转换为 ASCII 字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_html_entity_decode.asp" target="_blank" rel="noopener">html_entity_decode()</a></td>
+<td align="left">把 HTML 实体转换为字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_htmlentities.asp" target="_blank" rel="noopener">htmlentities()</a></td>
+<td align="left">把字符转换为 HTML 实体。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_htmlspecialchars_decode.asp" target="_blank" rel="noopener">htmlspecialchars_decode()</a></td>
+<td align="left">把一些预定义的 HTML 实体转换为字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_htmlspecialchars.asp" target="_blank" rel="noopener">htmlspecialchars()</a></td>
+<td align="left">把一些预定义的字符转换为 HTML 实体。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_implode.asp" target="_blank" rel="noopener">implode()</a></td>
+<td align="left">返回由数组元素组合成的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_join.asp" target="_blank" rel="noopener">join()</a></td>
+<td align="left">implode() 的别名。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_lcfirst.asp" target="_blank" rel="noopener">lcfirst()</a></td>
+<td align="left">把字符串的首字符转换为小写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_levenshtein.asp" target="_blank" rel="noopener">levenshtein()</a></td>
+<td align="left">返回两个字符串之间的 Levenshtein 距离。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_localeconv.asp" target="_blank" rel="noopener">localeconv()</a></td>
+<td align="left">返回本地数字及货币格式信息。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_ltrim.asp" target="_blank" rel="noopener">ltrim()</a></td>
+<td align="left">移除字符串左侧的空白字符或其他字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_md5.asp" target="_blank" rel="noopener">md5()</a></td>
+<td align="left">计算字符串的 MD5 散列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_md5_file.asp" target="_blank" rel="noopener">md5_file()</a></td>
+<td align="left">计算文件的 MD5 散列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_metaphone.asp" target="_blank" rel="noopener">metaphone()</a></td>
+<td align="left">计算字符串的 metaphone 键。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_money_format.asp" target="_blank" rel="noopener">money_format()</a></td>
+<td align="left">返回格式化为货币字符串的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_nl_langinfo.asp" target="_blank" rel="noopener">nl_langinfo()</a></td>
+<td align="left">返回特定的本地信息。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_nl2br.asp" target="_blank" rel="noopener">nl2br()</a></td>
+<td align="left">在字符串中的每个新行之前插入 HTML 换行符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_number_format.asp" target="_blank" rel="noopener">number_format()</a></td>
+<td align="left">以千位分组来格式化数字。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_ord.asp" target="_blank" rel="noopener">ord()</a></td>
+<td align="left">返回字符串中第一个字符的 ASCII 值。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_parse_str.asp" target="_blank" rel="noopener">parse_str()</a></td>
+<td align="left">把查询字符串解析到变量中。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_print.asp" target="_blank" rel="noopener">print()</a></td>
+<td align="left">输出一个或多个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_printf.asp" target="_blank" rel="noopener">printf()</a></td>
+<td align="left">输出格式化的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_quoted_printable_decode.asp" target="_blank" rel="noopener">quoted_printable_decode()</a></td>
+<td align="left">把 quoted-printable 字符串转换为 8 位字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_quoted_printable_encode.asp" target="_blank" rel="noopener">quoted_printable_encode()</a></td>
+<td align="left">把 8 位字符串转换为 quoted-printable 字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_quotemeta.asp" target="_blank" rel="noopener">quotemeta()</a></td>
+<td align="left">引用元字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_rtrim.asp" target="_blank" rel="noopener">rtrim()</a></td>
+<td align="left">移除字符串右侧的空白字符或其他字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_setlocale.asp" target="_blank" rel="noopener">setlocale()</a></td>
+<td align="left">设置地区信息（地域信息）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_sha1.asp" target="_blank" rel="noopener">sha1()</a></td>
+<td align="left">计算字符串的 SHA-1 散列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_sha1_file.asp" target="_blank" rel="noopener">sha1_file()</a></td>
+<td align="left">计算文件的 SHA-1 散列。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_similar_text.asp" target="_blank" rel="noopener">similar_text()</a></td>
+<td align="left">计算两个字符串的相似度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_soundex.asp" target="_blank" rel="noopener">soundex()</a></td>
+<td align="left">计算字符串的 soundex 键。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_sprintf.asp" target="_blank" rel="noopener">sprintf()</a></td>
+<td align="left">把格式化的字符串写入变量中。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_sscanf.asp" target="_blank" rel="noopener">sscanf()</a></td>
+<td align="left">根据指定的格式解析来自字符串的输入。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_getcsv.asp" target="_blank" rel="noopener">str_getcsv()</a></td>
+<td align="left">把 CSV 字符串解析到数组中。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_ireplace.asp" target="_blank" rel="noopener">str_ireplace()</a></td>
+<td align="left">替换字符串中的一些字符（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_pad.asp" target="_blank" rel="noopener">str_pad()</a></td>
+<td align="left">把字符串填充为新的长度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_repeat.asp" target="_blank" rel="noopener">str_repeat()</a></td>
+<td align="left">把字符串重复指定的次数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_replace.asp" target="_blank" rel="noopener">str_replace()</a></td>
+<td align="left">替换字符串中的一些字符（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_rot13.asp" target="_blank" rel="noopener">str_rot13()</a></td>
+<td align="left">对字符串执行 ROT13 编码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_shuffle.asp" target="_blank" rel="noopener">str_shuffle()</a></td>
+<td align="left">随机地打乱字符串中的所有字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_split.asp" target="_blank" rel="noopener">str_split()</a></td>
+<td align="left">把字符串分割到数组中。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_str_word_count.asp" target="_blank" rel="noopener">str_word_count()</a></td>
+<td align="left">计算字符串中的单词数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strcasecmp.asp" target="_blank" rel="noopener">strcasecmp()</a></td>
+<td align="left">比较两个字符串（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strchr.asp" target="_blank" rel="noopener">strchr()</a></td>
+<td align="left">查找字符串在另一字符串中的第一次出现。（strstr() 的别名。）</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strcmp.asp" target="_blank" rel="noopener">strcmp()</a></td>
+<td align="left">比较两个字符串（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strcoll.asp" target="_blank" rel="noopener">strcoll()</a></td>
+<td align="left">比较两个字符串（根据本地设置）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strcspn.asp" target="_blank" rel="noopener">strcspn()</a></td>
+<td align="left">返回在找到某些指定字符的任何部分之前，在字符串中查找的字符数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strip_tags.asp" target="_blank" rel="noopener">strip_tags()</a></td>
+<td align="left">剥去字符串中的 HTML 和 PHP 标签。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_stripcslashes.asp" target="_blank" rel="noopener">stripcslashes()</a></td>
+<td align="left">删除由 addcslashes() 函数添加的反斜杠。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_stripslashes.asp" target="_blank" rel="noopener">stripslashes()</a></td>
+<td align="left">删除由 addslashes() 函数添加的反斜杠。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_stripos.asp" target="_blank" rel="noopener">stripos()</a></td>
+<td align="left">返回字符串在另一字符串中第一次出现的位置（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_stristr.asp" target="_blank" rel="noopener">stristr()</a></td>
+<td align="left">查找字符串在另一字符串中第一次出现的位置（大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strlen.asp" target="_blank" rel="noopener">strlen()</a></td>
+<td align="left">返回字符串的长度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strnatcasecmp.asp" target="_blank" rel="noopener">strnatcasecmp()</a></td>
+<td align="left">使用一种”自然排序”算法来比较两个字符串（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strnatcmp.asp" target="_blank" rel="noopener">strnatcmp()</a></td>
+<td align="left">使用一种”自然排序”算法来比较两个字符串（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strncasecmp.asp" target="_blank" rel="noopener">strncasecmp()</a></td>
+<td align="left">前 n 个字符的字符串比较（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strncmp.asp" target="_blank" rel="noopener">strncmp()</a></td>
+<td align="left">前 n 个字符的字符串比较（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strpbrk.asp" target="_blank" rel="noopener">strpbrk()</a></td>
+<td align="left">在字符串中查找一组字符的任何一个字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strpos.asp" target="_blank" rel="noopener">strpos()</a></td>
+<td align="left">返回字符串在另一字符串中第一次出现的位置（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strrchr.asp" target="_blank" rel="noopener">strrchr()</a></td>
+<td align="left">查找字符串在另一个字符串中最后一次出现。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strrev.asp" target="_blank" rel="noopener">strrev()</a></td>
+<td align="left">反转字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strripos.asp" target="_blank" rel="noopener">strripos()</a></td>
+<td align="left">查找字符串在另一字符串中最后一次出现的位置（对大小写不敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strrpos.asp" target="_blank" rel="noopener">strrpos()</a></td>
+<td align="left">查找字符串在另一字符串中最后一次出现的位置（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strspn.asp" target="_blank" rel="noopener">strspn()</a></td>
+<td align="left">返回在字符串中包含的特定字符的数目。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strstr.asp" target="_blank" rel="noopener">strstr()</a></td>
+<td align="left">查找字符串在另一字符串中的第一次出现（对大小写敏感）。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strtok.asp" target="_blank" rel="noopener">strtok()</a></td>
+<td align="left">把字符串分割为更小的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strtolower.asp" target="_blank" rel="noopener">strtolower()</a></td>
+<td align="left">把字符串转换为小写字母。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strtoupper.asp" target="_blank" rel="noopener">strtoupper()</a></td>
+<td align="left">把字符串转换为大写字母。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_strtr.asp" target="_blank" rel="noopener">strtr()</a></td>
+<td align="left">转换字符串中特定的字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_substr.asp" target="_blank" rel="noopener">substr()</a></td>
+<td align="left">返回字符串的一部分。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_substr_compare.asp" target="_blank" rel="noopener">substr_compare()</a></td>
+<td align="left">从指定的开始位置（二进制安全和选择性区分大小写）比较两个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_substr_count.asp" target="_blank" rel="noopener">substr_count()</a></td>
+<td align="left">计算子串在字符串中出现的次数。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_substr_replace.asp" target="_blank" rel="noopener">substr_replace()</a></td>
+<td align="left">把字符串的一部分替换为另一个字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_trim.asp" target="_blank" rel="noopener">trim()</a></td>
+<td align="left">移除字符串两侧的空白字符和其他字符。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_ucfirst.asp" target="_blank" rel="noopener">ucfirst()</a></td>
+<td align="left">把字符串中的首字符转换为大写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_ucwords.asp" target="_blank" rel="noopener">ucwords()</a></td>
+<td align="left">把字符串中每个单词的首字符转换为大写。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_vfprintf.asp" target="_blank" rel="noopener">vfprintf()</a></td>
+<td align="left">把格式化的字符串写到指定的输出流。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_vprintf.asp" target="_blank" rel="noopener">vprintf()</a></td>
+<td align="left">输出格式化的字符串。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_vsprintf.asp" target="_blank" rel="noopener">vsprintf()</a></td>
+<td align="left">把格式化字符串写入变量中。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/php/func_string_wordwrap.asp" target="_blank" rel="noopener">wordwrap()</a></td>
+<td align="left">打断字符串为指定数量的字串</td>
+</tr>
+</tbody></table>
+<h4 id="trim-函数"><a href="#trim-函数" class="headerlink" title="trim() 函数"></a>trim() 函数</h4><p>trim() 函数移除字符串两侧的空白字符或其他预定义字符。</p>
+<p>移除字符串两侧的字符（”Hello” 中的 “He” 以及 “World” 中的 “d!”）：</p>
+<p>例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$str &#x3D; &quot;Hello World!&quot;;</span><br><span class="line">echo $str . &quot;&lt;br&gt;&quot;;</span><br><span class="line">echo trim($str,&quot;Hed!&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p>语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trim(string,charlist)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>string</em></td>
+<td align="left">必需。规定要检查的字符串。</td>
+</tr>
+<tr>
+<td align="left"><em>charlist</em></td>
+<td align="left">可选。规定从字符串中删除哪些字符。如果被省略，则移除以下所有字符：”\0” - NULL             “\t” - 制表符                                “\n” - 换行                        “\x0B” - 垂直制表符                                   “\r” - 回车                                                “ “ - 空格</td>
+</tr>
+</tbody></table>
+<h4 id="strip-tags-函数"><a href="#strip-tags-函数" class="headerlink" title="strip_tags() 函数"></a>strip_tags() 函数</h4><p><strong>定义</strong></p>
+<p>strip_tags() 函数剥去字符串中的 HTML、XML 以及 PHP 的标签。</p>
+<p>注释：该函数始终会剥离 HTML 注释。这点无法通过 <em>allow</em> 参数改变。</p>
+<p>注释：该函数是二进制安全的。</p>
+<p><strong>实例</strong></p>
+<p>剥去字符串中的 HTML 标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo strip_tags(&quot;Hello &lt;b&gt;world!&lt;&#x2F;b&gt;&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strip_tags(string,allow)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>string</em></td>
+<td align="left">必需。规定要检查的字符串。</td>
+</tr>
+<tr>
+<td align="left"><em>allow</em></td>
+<td align="left">可选。规定允许的标签。这些标签不会被删除。</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong>strip_tags()函数，虽然可以过滤HTML标签，但对于&nbsp;(空格)不能过滤。</p>
+<p>解决方法：可以利用str_replace()函数先去掉&nbsp;，再过滤利用strip_tags()函数过滤HTML标签，很好的一个小技巧</p>
+<p>修改代码如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">//飞鸟慕鱼博客</span></span><br><span class="line">$str = <span class="string">'收拾&amp;nbsp;&amp;nbsp;&amp;nbsp;收拾'</span>;</span><br><span class="line"><span class="keyword">echo</span> strip_tags(str_replace(<span class="string">'&amp;nbsp;'</span>,<span class="string">''</span>,$str));</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="addslashes-函数"><a href="#addslashes-函数" class="headerlink" title="addslashes() 函数"></a>addslashes() 函数</h4><p><strong>实例</strong></p>
+<p>在每个双引号（”）前添加反斜杠：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$str = addslashes(<span class="string">'Shanghai is the "biggest" city in China.'</span>);</span><br><span class="line"><span class="keyword">echo</span>($str);</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">结果：Shanghai is the \<span class="string">"biggest\" city in China.</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>定义和用法</strong></p>
+<p>addslashes() 函数返回在预定义字符之前添加反斜杠的字符串。</p>
+<p>预定义字符是：</p>
+<ul>
+<li>单引号（’）</li>
+<li>双引号（”）</li>
+<li>反斜杠（\）</li>
+<li>NULL</li>
+</ul>
+<p><strong>提示：</strong>该函数可用于为存储在数据库中的字符串以及数据库查询语句准备字符串。</p>
+<p><strong>注释：</strong>默认地，PHP 对所有的 GET、POST 和 COOKIE 数据自动运行 addslashes()。所以您不应对已转义过的字符串使用 addslashes()，因为这样会导致双层转义。遇到这种情况时可以使用函数 get_magic_quotes_gpc() 进行检测。</p>
+<p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">addslashes(string)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>string</em></td>
+<td align="left">必需。规定要转义的字符串。</td>
+</tr>
+</tbody></table>
+<h4 id="htmlspecialchars-函数"><a href="#htmlspecialchars-函数" class="headerlink" title="htmlspecialchars() 函数"></a>htmlspecialchars() 函数</h4><p><strong>定义和用法</strong></p>
+<p>htmlspecialchars() 函数把预定义的字符转换为 HTML 实体。</p>
+<p>预定义的字符是：</p>
+<ul>
+<li>&amp; （和号）成为 &amp;</li>
+<li>“ （双引号）成为 “</li>
+<li>‘ （单引号）成为 ‘</li>
+<li>&lt; （小于）成为 &lt;</li>
+<li>&gt; （大于）成为 &gt;</li>
+</ul>
+<p>提示：如需把特殊的 HTML 实体转换回字符，请使用 <a href="https://www.w3school.com.cn/php/func_string_htmlspecialchars_decode.asp" target="_blank" rel="noopener">htmlspecialchars_decode()</a> 函数。</p>
+<p><strong>语法</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">htmlspecialchars(string,flags,character-set,double_encode)</span><br></pre></td></tr></table></figure>
+
+<p><strong>实例</strong></p>
+<p>把预定义的字符 “&lt;” （小于）和 “&gt;” （大于）转换为 HTML 实体：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$str = <span class="string">"This is some &lt;b&gt;bold&lt;/b&gt; text."</span>;</span><br><span class="line"><span class="keyword">echo</span> htmlspecialchars($str);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码的 HTML 输出如下（查看源代码）：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">This is some <span class="tag">&lt;<span class="name">b</span>&gt;</span>bold<span class="tag">&lt;/<span class="name">b</span>&gt;</span> text.</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码的浏览器输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is some &lt;b&gt;bold&lt;&#x2F;b&gt; text.</span><br></pre></td></tr></table></figure>
+
+<h4 id="str-replace-函数"><a href="#str-replace-函数" class="headerlink" title="str_replace() 函数"></a>str_replace() 函数</h4><p><strong>定义和用法</strong></p>
+<p>str_replace() 函数以其他字符替换字符串中的一些字符（区分大小写）。</p>
+<p>该函数必须遵循下列规则：</p>
+<ul>
+<li>如果搜索的字符串是数组，那么它将返回数组。</li>
+<li>如果搜索的字符串是数组，那么它将对数组中的每个元素进行查找和替换。</li>
+<li>如果同时需要对数组进行查找和替换，并且需要执行替换的元素少于查找到的元素的数量，那么多余元素将用空字符串进行替换</li>
+<li>如果查找的是数组，而替换的是字符串，那么替代字符串将对所有查找到的值起作用。</li>
+</ul>
+<p>注释：该函数区分大小写。请使用 <a href="https://www.w3school.com.cn/php/func_string_str_ireplace.asp" target="_blank" rel="noopener">str_ireplace()</a> 函数执行不区分大小写的搜索。</p>
+<p>注释：该函数是二进制安全的。</p>
+<p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str_replace(find,replace,string,count)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>find</em></td>
+<td align="left">必需。规定要查找的值。</td>
+</tr>
+<tr>
+<td align="left"><em>replace</em></td>
+<td align="left">必需。规定替换 <em>find</em> 中的值的值。</td>
+</tr>
+<tr>
+<td align="left"><em>string</em></td>
+<td align="left">必需。规定被搜索的字符串。</td>
+</tr>
+<tr>
+<td align="left"><em>count</em></td>
+<td align="left">可选。对替换数进行计数的变量。</td>
+</tr>
+</tbody></table>
+<p><strong>实例</strong></p>
+<p>把字符串 “Hello world!” 中的字符 “world” 替换为 “Shanghai”：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo str_replace(&quot;world&quot;,&quot;Shanghai&quot;,&quot;Hello world!&quot;);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="is-object-函数"><a href="#is-object-函数" class="headerlink" title="is_object()函数"></a>is_object()函数</h3><p><strong>用法</strong>：is_object函数用于检测变量是否是一个对象。</p>
+<p><strong>语法</strong>：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool is_object ( mixed $var )</span><br></pre></td></tr></table></figure>
+
+<p>如果指定变量为对象，则返回 TRUE，否则返回 FALSE。</p>
+<p><strong>实例:</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_subjects</span><span class="params">($obj_name)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!is_object($obj_name))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span>(<span class="keyword">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>($obj_name-&gt;subjects);</span><br><span class="line">&#125;</span><br><span class="line">$obj_name = <span class="keyword">new</span> stdClass;</span><br><span class="line">$obj_name-&gt;subjects = <span class="keyword">Array</span>(<span class="string">'Google'</span>, <span class="string">'Runoob'</span>, <span class="string">'Facebook'</span>);</span><br><span class="line">var_dump(get_subjects(<span class="keyword">NULL</span>));</span><br><span class="line">var_dump(get_subjects($obj_name));</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    结果为：</span><br><span class="line">    bool(<span class="keyword">false</span>)</span><br><span class="line">	<span class="keyword">array</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  		[<span class="number">0</span>]=&gt;</span><br><span class="line">  		string(<span class="number">6</span>) <span class="string">"Google"</span></span><br><span class="line">  		[<span class="number">1</span>]=&gt;</span><br><span class="line"> 		string(<span class="number">6</span>) <span class="string">"Runoob"</span></span><br><span class="line"> 		[<span class="number">2</span>]=&gt;</span><br><span class="line">  		string(<span class="number">8</span>) <span class="string">"Facebook"</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="var-dump-函数"><a href="#var-dump-函数" class="headerlink" title="var_dump() 函数"></a>var_dump() 函数</h3><p><strong>用法：</strong></p>
+<p>var_dump() 函数用于输出变量的相关信息。</p>
+<p>var_dump() 函数显示关于一个或多个表达式的结构信息，包括表达式的类型与值。数组将递归展开值，通过缩进显示其结构。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void var_dump ( mixed $expression [, mixed $... ] )</span><br><span class="line">    </span><br><span class="line">    $expression: 你要输出的变量。</span><br></pre></td></tr></table></figure>
+
+<p><strong>实例：</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$a = <span class="keyword">array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="keyword">array</span>(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>));</span><br><span class="line">var_dump($a);</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br><span class="line">输出结果：</span><br><span class="line"><span class="keyword">array</span>(<span class="number">3</span>) &#123;</span><br><span class="line">  [<span class="number">0</span>]=&gt;</span><br><span class="line">  int(<span class="number">1</span>)</span><br><span class="line">  [<span class="number">1</span>]=&gt;</span><br><span class="line">  int(<span class="number">2</span>)</span><br><span class="line">  [<span class="number">2</span>]=&gt;</span><br><span class="line">  <span class="keyword">array</span>(<span class="number">3</span>) &#123;</span><br><span class="line">    [<span class="number">0</span>]=&gt;</span><br><span class="line">    string(<span class="number">1</span>) <span class="string">"a"</span></span><br><span class="line">    [<span class="number">1</span>]=&gt;</span><br><span class="line">    string(<span class="number">1</span>) <span class="string">"b"</span></span><br><span class="line">    [<span class="number">2</span>]=&gt;</span><br><span class="line">    string(<span class="number">1</span>) <span class="string">"c"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="mysqli函数"><a href="#mysqli函数" class="headerlink" title="mysqli函数"></a>mysqli函数</h3><table>
+<thead>
+<tr>
+<th align="left">函数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">mysqli_affected_rows()</td>
+<td align="left">返回前一个 Mysql 操作的受影响行数。</td>
+</tr>
+<tr>
+<td align="left">mysqli_autocommit()</td>
+<td align="left">打开或关闭自动提交数据库修改功能。</td>
+</tr>
+<tr>
+<td align="left">mysqli_change_user()</td>
+<td align="left">更改指定数据库连接的用户。</td>
+</tr>
+<tr>
+<td align="left">mysqli_character_set_name()</td>
+<td align="left">返回数据库连接的默认字符集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_close()</td>
+<td align="left">关闭先前打开的数据库连接。</td>
+</tr>
+<tr>
+<td align="left">mysqli_commit()</td>
+<td align="left">提交当前事务。</td>
+</tr>
+<tr>
+<td align="left">mysqli_connect_errno()</td>
+<td align="left">返回最后一次连接调用的错误代码。</td>
+</tr>
+<tr>
+<td align="left">mysqli_connect_error()</td>
+<td align="left">返回上一次连接错误的错误描述。</td>
+</tr>
+<tr>
+<td align="left">mysqli_connect()</td>
+<td align="left">打开到 Mysql 服务器的新连接。</td>
+</tr>
+<tr>
+<td align="left">mysqli_data_seek()</td>
+<td align="left">调整结果指针到结果集中的一个任意行。</td>
+</tr>
+<tr>
+<td align="left">mysqli_debug()</td>
+<td align="left">执行调试操作。</td>
+</tr>
+<tr>
+<td align="left">mysqli_dump_debug_info()</td>
+<td align="left">转储调试信息到日志中。</td>
+</tr>
+<tr>
+<td align="left">mysqli_errno()</td>
+<td align="left">返回最近的函数调用产生的错误代码。</td>
+</tr>
+<tr>
+<td align="left">mysqli_error_list()</td>
+<td align="left">返回最近的函数调用产生的错误列表。</td>
+</tr>
+<tr>
+<td align="left">mysqli_error()</td>
+<td align="left">返回字符串描述的最近一次函数调用产生的错误代码。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_all()</td>
+<td align="left">抓取所有的结果行并且以关联数据，数值索引数组，或者两者皆有的方式返回结果集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_array()</td>
+<td align="left">以一个关联数组，数值索引数组，或者两者皆有的方式抓取一行结果。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_assoc()</td>
+<td align="left">以一个关联数组方式抓取一行结果。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_field_direct()</td>
+<td align="left">以对象返回结果集中单字段的元数据。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_field()</td>
+<td align="left">以对象返回结果集中的下一个字段。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_fields()</td>
+<td align="left">返回代表结果集中字段的对象数组。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_lengths()</td>
+<td align="left">返回结果集中当前行的列长度。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_object()</td>
+<td align="left">以对象返回结果集的当前行。</td>
+</tr>
+<tr>
+<td align="left">mysqli_fetch_row()</td>
+<td align="left">从结果集中抓取一行并以枚举数组的形式返回它。</td>
+</tr>
+<tr>
+<td align="left">mysqli_field_count()</td>
+<td align="left">返回最近一次查询获取到的列的数目。</td>
+</tr>
+<tr>
+<td align="left">mysqli_field_seek()</td>
+<td align="left">设置字段指针到特定的字段开始位置。</td>
+</tr>
+<tr>
+<td align="left">mysqli_field_tell()</td>
+<td align="left">返回字段指针的位置。</td>
+</tr>
+<tr>
+<td align="left">mysqli_free_result()</td>
+<td align="left">释放与某个结果集相关的内存。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_charset()</td>
+<td align="left">返回字符集对象。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_client_info()</td>
+<td align="left">返回字符串类型的 Mysql 客户端版本信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_client_stats()</td>
+<td align="left">返回每个客户端进程的统计信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_client_version()</td>
+<td align="left">返回整型的 Mysql 客户端版本信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_connection_stats()</td>
+<td align="left">返回客户端连接的统计信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_host_info()</td>
+<td align="left">返回 MySQL 服务器主机名和连接类型。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_proto_info()</td>
+<td align="left">返回 MySQL 协议版本。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_server_info()</td>
+<td align="left">返回 MySQL 服务器版本。</td>
+</tr>
+<tr>
+<td align="left">mysqli_get_server_version()</td>
+<td align="left">返回整型的 MySQL 服务器版本信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_info()</td>
+<td align="left">返回最近一次执行的查询的检索信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_init()</td>
+<td align="left">初始化 mysqli 并且返回一个由 mysqli_real_connect() 使用的资源类型。</td>
+</tr>
+<tr>
+<td align="left">mysqli_insert_id()</td>
+<td align="left">返回最后一次查询中使用的自动生成 id。</td>
+</tr>
+<tr>
+<td align="left">mysql_kill()</td>
+<td align="left">请求服务器终结某个 MySQL 线程。</td>
+</tr>
+<tr>
+<td align="left">mysqli_more_results()</td>
+<td align="left">检查一个多语句查询是否还有其他查询结果集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_multi_query()</td>
+<td align="left">在数据库上执行一个或多个查询。</td>
+</tr>
+<tr>
+<td align="left">mysqli_next_result()</td>
+<td align="left">从 mysqli_multi_query() 中准备下一个结果集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_num_fields()</td>
+<td align="left">返回结果集中的字段数。</td>
+</tr>
+<tr>
+<td align="left">mysqli_num_rows()</td>
+<td align="left">返回结果集中的行数。</td>
+</tr>
+<tr>
+<td align="left">mysqli_options()</td>
+<td align="left">设置选项。</td>
+</tr>
+<tr>
+<td align="left">mysqli_ping()</td>
+<td align="left">Ping 一个服务器连接，或者如果那个连接断了尝试重连。</td>
+</tr>
+<tr>
+<td align="left">mysqli_prepare()</td>
+<td align="left">准备一条用于执行的 SQL 语句。</td>
+</tr>
+<tr>
+<td align="left">mysqli_query()</td>
+<td align="left">在数据库上执行查询。</td>
+</tr>
+<tr>
+<td align="left">mysqli_real_connect()</td>
+<td align="left">打开一个到 Mysql 服务端的新连接。</td>
+</tr>
+<tr>
+<td align="left">mysqli_real_escape_string()</td>
+<td align="left">转义在 SQL 语句中使用的字符串中的特殊字符。</td>
+</tr>
+<tr>
+<td align="left">mysqli_real_query()</td>
+<td align="left">执行 SQL 查询。</td>
+</tr>
+<tr>
+<td align="left">mysqli_reap_async_query()</td>
+<td align="left">返回异步查询的结果。</td>
+</tr>
+<tr>
+<td align="left">mysqli_refresh()</td>
+<td align="left">刷新表或缓存，或者重置复制服务器信息。</td>
+</tr>
+<tr>
+<td align="left">mysqli_rollback()</td>
+<td align="left">回滚当前事务。</td>
+</tr>
+<tr>
+<td align="left">mysqli_select_db()</td>
+<td align="left">改变连接的默认数据库。</td>
+</tr>
+<tr>
+<td align="left">mysqli_set_charset()</td>
+<td align="left">设置默认客户端字符集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_set_local_infile_default()</td>
+<td align="left">清除用户为 load local infile 命令定义的处理程序。</td>
+</tr>
+<tr>
+<td align="left">mysqli_set_local_infile_handler()</td>
+<td align="left">设置 LOAD DATA LOCAL INFILE 命令执行的回调函数。</td>
+</tr>
+<tr>
+<td align="left">mysqli_sqlstate()</td>
+<td align="left">返回前一个 Mysql 操作的 SQLSTATE 错误代码。</td>
+</tr>
+<tr>
+<td align="left">mysqli_ssl_set()</td>
+<td align="left">使用 SSL 建立安装连接。</td>
+</tr>
+<tr>
+<td align="left">mysqli_stat()</td>
+<td align="left">返回当前系统状态。</td>
+</tr>
+<tr>
+<td align="left">mysqli_stmt_init()</td>
+<td align="left">初始化一条语句并返回一个由 mysqli_stmt_prepare() 使用的对象。</td>
+</tr>
+<tr>
+<td align="left">mysqli_store_result()</td>
+<td align="left">传输最后一个查询的结果集。</td>
+</tr>
+<tr>
+<td align="left">mysqli_thread_id()</td>
+<td align="left">返回当前连接的线程 ID。</td>
+</tr>
+<tr>
+<td align="left">mysqli_thread_safe()</td>
+<td align="left">返回是否设定了线程安全。</td>
+</tr>
+<tr>
+<td align="left">mysqli_use_result()</td>
+<td align="left">初始化一个结果集的取回。</td>
+</tr>
+<tr>
+<td align="left">mysqli_warning_count()</td>
+<td align="left">返回连接中最后一次查询的警告数量。</td>
+</tr>
+</tbody></table>
+<h4 id="mysqli-real-escape-string"><a href="#mysqli-real-escape-string" class="headerlink" title="mysqli_real_escape_string()"></a>mysqli_real_escape_string()</h4><p><strong>定义和用法：</strong>mysqli_real_escape_string() 函数转义在 SQL 语句中使用的字符串中的特殊字符。</p>
+<p><strong>语法：</strong>mysqli_real_escape_string(<em>connection,escapestring</em>)<em>;</em></p>
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>connection</em></td>
+<td align="left">必需。规定要使用的 MySQL 连接。</td>
+</tr>
+<tr>
+<td align="left"><em>escapestring</em></td>
+<td align="left">必需。要转义的字符串。编码的字符是 NUL（ASCII 0）、\n、\r、\、’、” 和 Control-Z。</td>
+</tr>
+</tbody></table>
+<p><strong>实例：</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="comment">// 假定数据库用户名：root，密码：123456，数据库：RUNOOB </span></span><br><span class="line">$con=mysqli_connect(<span class="string">"localhost"</span>,<span class="string">"root"</span>,<span class="string">"123456"</span>,<span class="string">"RUNOOB"</span>); </span><br><span class="line"><span class="keyword">if</span> (mysqli_connect_errno($con)) </span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">echo</span> <span class="string">"连接 MySQL 失败: "</span> . mysqli_connect_error(); </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">mysqli_query($con,<span class="string">"CREATE TABLE websites2 LIKE websites"</span>);</span><br><span class="line"></span><br><span class="line">$newname=<span class="string">"菜鸟'教程"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 没有转义 $newname 中特殊字符，执行失败</span></span><br><span class="line">mysqli_query($con,<span class="string">"INSERT into websites2 (name) VALUES ('$newname')"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转义特殊字符</span></span><br><span class="line">$newpers=mysqli_real_escape_string($con,$newname);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 转义后插入，执行成功</span></span><br><span class="line">mysqli_query($con,<span class="string">"INSERT into websites2 (name) VALUES ('$newname')"</span>);</span><br><span class="line"></span><br><span class="line">mysqli_close($con);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Error和logging函数"><a href="#Error和logging函数" class="headerlink" title="Error和logging函数"></a>Error和logging函数</h3><h4 id="trigger-error函数"><a href="#trigger-error函数" class="headerlink" title="trigger_error函数"></a>trigger_error函数</h4><p><strong>定义和用法：</strong></p>
+<p>trigger_error() 函数创建用户级别的错误消息。</p>
+<p>trigger_error() 函数能结合内置的错误处理器所关联，或者可以使用用户定义的函数作为新的错误处理程序(set_error_handler())。</p>
+<p><strong>语法：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trigger_error(errormsg,errortype);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>errormsg</em></td>
+<td align="left">必需。规定错误消息。最大长度 1024 字节。</td>
+</tr>
+<tr>
+<td align="left"><em>errortype</em></td>
+<td align="left">可选。规定错误类型。可能的值：E_USER_ERROR                                                                            E_USER_WARNING                                                                 E_USER_NOTICE（默认）</td>
+</tr>
+</tbody></table>
+<p><strong>实例：</strong></p>
+<p>如果 $usernum 大于 10，触发一个错误：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"> <span class="keyword">if</span> ($usernum&gt;<span class="number">10</span>) &#123;</span><br><span class="line">     trigger_error(<span class="string">"Number cannot be larger than 10"</span>);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码的输出类似这样：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Notice: Number cannot be larger than <span class="number">10</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -557,7 +2000,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#语法"><span class="nav-number">1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#window-location方法"><span class="nav-number">2.</span> <span class="nav-text">window.location方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#window-location"><span class="nav-number">2.0.1.</span> <span class="nav-text">window.location:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#substr"><span class="nav-number">2.0.2.</span> <span class="nav-text">substr()</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础类型问题"><span class="nav-number">1.1.</span> <span class="nav-text">基础类型问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBK和UTF-8的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">GBK和UTF-8的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型变量"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本类型和引用类型变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP中问号-和冒号-的作用"><span class="nav-number">1.1.3.</span> <span class="nav-text">PHP中问号?和冒号: 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Js语法"><span class="nav-number">1.2.</span> <span class="nav-text">Js语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window-location"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">window.location:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document对象"><span class="nav-number">1.2.2.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-domain"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write（）"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">document.write（）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.2.2.2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string对象"><span class="nav-number">1.2.3.</span> <span class="nav-text">string对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">substring() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ActiveXObject"><span class="nav-number">1.2.4.</span> <span class="nav-text">ActiveXObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.2.5.</span> <span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decodeURI"><span class="nav-number">1.2.6.</span> <span class="nav-text">decodeURI()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">1.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">String函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-函数"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">trim() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-tags-函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">strip_tags() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addslashes-函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">addslashes() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#htmlspecialchars-函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">htmlspecialchars() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str-replace-函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">str_replace() 函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-object-函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">is_object()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-dump-函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">var_dump() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqli函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">mysqli函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysqli-real-escape-string"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">mysqli_real_escape_string()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error和logging函数"><span class="nav-number">1.3.6.</span> <span class="nav-text">Error和logging函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trigger-error函数"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">trigger_error函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
