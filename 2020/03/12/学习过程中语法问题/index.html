@@ -87,7 +87,7 @@
 <meta property="og:description" content="问题基础类型问题GBK和UTF-8的区别GBK编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符，另外还有一种字符“gb2312”，这种字符仅能存储简体中文字符。 UTF-8编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言，那么建议你选择UTF-8编码。 UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速">
 <meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg">
 <meta property="article:published_time" content="2020-03-12T09:32:22.000Z">
-<meta property="article:modified_time" content="2020-03-18T02:44:25.347Z">
+<meta property="article:modified_time" content="2020-03-18T14:08:27.791Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary">
@@ -299,7 +299,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T10:44:25+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:08:27+08:00">
                 2020-03-18
               </time>
             
@@ -360,6 +360,46 @@
 <p>UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速度而言，也是有一定影响的。</p>
 <p>GBK编码格式，它的功能少，仅限于中文字符，当然它所占用的空间大小会随着它的功能而减少，打开网页的速度比较快。</p>
 <p>   　<a id="more"></a></p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="#说明"></a>#说明</h3><ol>
+<li><p>#的涵义</p>
+<pre><code>#代表网页中的一个位置。其右面的字符，就是该位置的标识符。比如，http://www.example.com/index.html#print就代表网页index.html的print位置。浏览器读取这个URL后，会自动将print位置滚动至可视区域。</code></pre><p>　　为网页位置指定标识符，有两个方法。一是使用锚点，比如<a name="print"></a>，二是使用id属性，比如<div id="print">。</p>
+</li>
+</ol>
+<p>就比如说，我们想到达页面中的某一个指定的位置，可以通过#来实现，我们经常也能看到这样的情况。</p>
+<pre><code>在VUE中，路由的实现方式有两种，其中一种就是通过#标识符进行页面内导航从而实现路由切换。</code></pre><ol start="2">
+<li>HTTP请求不包括#</li>
+</ol>
+<p>#是用来指导浏览器动作的，对服务器端完全无用。所以，HTTP请求中不包括#。<br>比如，访问下面的网址，<a href="http://www.example.com/index.html#print，浏览器实际发出的请求是这样的：" target="_blank" rel="noopener">http://www.example.com/index.html#print，浏览器实际发出的请求是这样的：</a></p>
+<p>GET /index.html HTTP/1.1</p>
+<p>Host: <a href="http://www.example.com" target="_blank" rel="noopener">www.example.com</a><br>也就是说，比如我们用vue去跳转一个指定的页面，那么我们向服务器端请求还是#号之前的内容，#后面的内容用来指导浏览器动作。</p>
+<p>这里遇到一个坑，在微信浏览器中，只存在于部分安卓机，如果你访问<a href="http://wx.thingcom.cn/#/，然后做微信授权，服务器后台重定向到http://wx.thingcom.cn/#/user。在这个时候，微信浏览器访问服务器资源，它认为同样的资源已经请求过，会从本地缓存中获取资源。按道理说，本地浏览器应该可以根据#之后的地址重新定向页面，但是部分机型不成功。原因可能是部分机型不支持当前页面的重定向，依旧加载原始页面，重定向不同于刷新。" target="_blank" rel="noopener">http://wx.thingcom.cn/#/，然后做微信授权，服务器后台重定向到http://wx.thingcom.cn/#/user。在这个时候，微信浏览器访问服务器资源，它认为同样的资源已经请求过，会从本地缓存中获取资源。按道理说，本地浏览器应该可以根据#之后的地址重新定向页面，但是部分机型不成功。原因可能是部分机型不支持当前页面的重定向，依旧加载原始页面，重定向不同于刷新。</a></p>
+<p>解决方法是在#之前加时间戳，<a href="http://wx.thingcom.cn/?time=2312234#/user，强制浏览器再次去服务器中获取资源。这里还有一个问题，如果你这么做了之后，那么接下来你的所有路由跳转，全部都是在#之后，也就是说http://wx.thingcom.cn/?time=2312234#/home这样的，#之前的内容不再改变，路由只改变#之后的内容。" target="_blank" rel="noopener">http://wx.thingcom.cn/?time=2312234#/user，强制浏览器再次去服务器中获取资源。这里还有一个问题，如果你这么做了之后，那么接下来你的所有路由跳转，全部都是在#之后，也就是说http://wx.thingcom.cn/?time=2312234#/home这样的，#之前的内容不再改变，路由只改变#之后的内容。</a></p>
+<ol start="3">
+<li>#后的字符</li>
+</ol>
+<p>在第一个#后面出现的任何字符，都会被浏览器解读为位置标识符。这意味着，这些字符都不会被发送到服务器端。<br>比如，下面URL的原意是指定一个颜色值：<a href="http://www.example.com/?color=#fff，但是，浏览器实际发出的请求是：" target="_blank" rel="noopener">http://www.example.com/?color=#fff，但是，浏览器实际发出的请求是：</a></p>
+<p>GET /?color= HTTP/1.1</p>
+<p>Host: <a href="http://www.example.com" target="_blank" rel="noopener">www.example.com</a><br>说明同上</p>
+<ol start="4">
+<li>改变#不触发网页重载</li>
+</ol>
+<p>单单改变#后的部分，浏览器只会滚动到相应位置，不会重新加载网页。<br>比如，从<a href="http://www.example.com/index.html#location1改成http://www.example.com/index.html#location2，浏览器不会重新向服务器请求index.html。" target="_blank" rel="noopener">http://www.example.com/index.html#location1改成http://www.example.com/index.html#location2，浏览器不会重新向服务器请求index.html。</a></p>
+<p>说明同第一个，例如单页面应用SPA一样，路由的切换，不会重新加载页面，只是切换位置，或者切换组件；第二种应用就是在单个页面里面通过name和id切换当前显示的位置。</p>
+<ol start="5">
+<li>改变#会改变浏览器的访问历史</li>
+</ol>
+<p>每一次改变#后的部分，都会在浏览器的访问历史中增加一个记录，使用”后退”按钮，就可以回到上一个位置。这对于ajax应用程序特别有用，可以用不同的#值，表示不同的访问状态，然后向用户给出可以访问某个状态的链接。值得注意的是，上述规则对IE 6和IE 7不成立，它们不会因为#的改变而增加历史记录。</p>
+<p>说明：通过#的切换，是算在浏览器的访问历史中的，前进和后退都是生效的。</p>
+<ol start="6">
+<li>onhashchange事件</li>
+</ol>
+<p>这是一个HTML 5新增的事件，当#值发生变化时，就会触发这个事件。IE8+、Firefox 3.6+、Chrome 5+、Safari 4.0+支持该事件。<br>　　它的使用方法有三种：</p>
+<ul>
+<li>window.onhashchange = func;</li>
+<li><body οnhashchange="func();"></li>
+<li>window.addEventListener(“hashchange”， func, false);<br>对于不支持onhashchange的浏览器，可以用setInterval监控location.hash的变化。</li>
+</ul>
+<p>说明：这是一个监听事件，监听#的变化，具体行为自定义完成。</p>
 <h3 id="基本类型和引用类型变量"><a href="#基本类型和引用类型变量" class="headerlink" title="基本类型和引用类型变量"></a>基本类型和引用类型变量</h3><p><strong>基本类型：</strong></p>
 <p>基本类型自然不用说了，它的值就是一个数字，一个字符或一个布尔值。</p>
 <p><strong>引用类型：</strong></p>
@@ -1372,6 +1412,41 @@
 <td align="left">可选。规定十六进制或二进制输出格式：TRUE - 原始 16 字符二进制格式FALSE - 默认。32 字符十六进制数</td>
 </tr>
 </tbody></table>
+<h4 id="stripos-函数"><a href="#stripos-函数" class="headerlink" title="stripos() 函数"></a>stripos() 函数</h4><p><strong>定义和用法</strong></p>
+<p>stripos() 函数查找字符串在另一字符串中第一次出现的位置（不区分大小写）。</p>
+<p><strong>注释：</strong>stripos() 函数是不区分大小写的。</p>
+<p><strong>注释：</strong>该函数是二进制安全的。</p>
+<p><strong>相关函数：</strong></p>
+<ul>
+<li><a href="https://www.w3school.com.cn/php/func_string_strpos.asp" target="_blank" rel="noopener">strpos()</a> - 查找字符串在另一字符串中第一次出现的位置（区分大小写）</li>
+<li><a href="https://www.w3school.com.cn/php/func_string_strripos.asp" target="_blank" rel="noopener">strripos()</a> - 查找字符串在另一字符串中最后一次出现的位置（不区分大小写）</li>
+<li><a href="https://www.w3school.com.cn/php/func_string_strrpos.asp" target="_blank" rel="noopener">strrpos()</a> - 查找字符串在另一字符串中最后一次出现的位置（区分大小写）</li>
+</ul>
+<p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stripos(string,find,start)</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><em>string</em></td>
+<td align="left">必需。规定要搜索的字符串。</td>
+</tr>
+<tr>
+<td align="left"><em>find</em></td>
+<td align="left">必需。规定要查找的字符。</td>
+</tr>
+<tr>
+<td align="left"><em>start</em></td>
+<td align="left">可选。规定开始搜索的位置。</td>
+</tr>
+</tbody></table>
+<p>返回值：返回字符串在另一字符串中第一次出现的位置，如果没有找到字符串则返回 FALSE。</p>
+<p><strong>注释：</strong>字符串位置从 0 开始，不是从 1 开始。</p>
 <h4 id="strip-tags-函数"><a href="#strip-tags-函数" class="headerlink" title="strip_tags() 函数"></a>strip_tags() 函数</h4><p><strong>定义</strong></p>
 <p>strip_tags() 函数剥去字符串中的 HTML、XML 以及 PHP 的标签。</p>
 <p>注释：该函数始终会剥离 HTML 注释。这点无法通过 <em>allow</em> 参数改变。</p>
@@ -2297,7 +2372,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础类型问题"><span class="nav-number">1.1.</span> <span class="nav-text">基础类型问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBK和UTF-8的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">GBK和UTF-8的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型变量"><span class="nav-number">1.1.2.</span> <span class="nav-text">基本类型和引用类型变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP中问号-和冒号-的作用"><span class="nav-number">1.1.3.</span> <span class="nav-text">PHP中问号?和冒号: 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Js语法"><span class="nav-number">1.2.</span> <span class="nav-text">Js语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window-location"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">window.location:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document对象"><span class="nav-number">1.2.2.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-domain"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write（）"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">document.write（）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.2.2.2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string对象"><span class="nav-number">1.2.3.</span> <span class="nav-text">string对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">substring() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ActiveXObject"><span class="nav-number">1.2.4.</span> <span class="nav-text">ActiveXObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.2.5.</span> <span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decodeURI"><span class="nav-number">1.2.6.</span> <span class="nav-text">decodeURI()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">1.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">String函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-函数"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">trim() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#md5-函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">md5() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-tags-函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">strip_tags() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addslashes-函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">addslashes() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#htmlspecialchars-函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">htmlspecialchars() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str-replace-函数"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">str_replace() 函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-object-函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">is_object()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-dump-函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">var_dump() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqli函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">mysqli函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysqli-real-escape-string"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">mysqli_real_escape_string()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error和logging函数"><span class="nav-number">1.3.6.</span> <span class="nav-text">Error和logging函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trigger-error函数"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">trigger_error函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式-PCRE"><span class="nav-number">1.3.7.</span> <span class="nav-text">正则表达式(PCRE)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分隔符"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.7.2.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preg-replace-函数"><span class="nav-number">1.3.7.3.</span> <span class="nav-text">preg_replace() 函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础类型问题"><span class="nav-number">1.1.</span> <span class="nav-text">基础类型问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBK和UTF-8的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">GBK和UTF-8的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明"><span class="nav-number">1.1.2.</span> <span class="nav-text">#说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">基本类型和引用类型变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP中问号-和冒号-的作用"><span class="nav-number">1.1.4.</span> <span class="nav-text">PHP中问号?和冒号: 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Js语法"><span class="nav-number">1.2.</span> <span class="nav-text">Js语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window-location"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">window.location:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document对象"><span class="nav-number">1.2.2.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-domain"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write（）"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">document.write（）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.2.2.2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string对象"><span class="nav-number">1.2.3.</span> <span class="nav-text">string对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">substring() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ActiveXObject"><span class="nav-number">1.2.4.</span> <span class="nav-text">ActiveXObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.2.5.</span> <span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decodeURI"><span class="nav-number">1.2.6.</span> <span class="nav-text">decodeURI()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">1.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">String函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-函数"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">trim() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#md5-函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">md5() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stripos-函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">stripos() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-tags-函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">strip_tags() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addslashes-函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">addslashes() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#htmlspecialchars-函数"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">htmlspecialchars() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str-replace-函数"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">str_replace() 函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-object-函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">is_object()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-dump-函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">var_dump() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqli函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">mysqli函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysqli-real-escape-string"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">mysqli_real_escape_string()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error和logging函数"><span class="nav-number">1.3.6.</span> <span class="nav-text">Error和logging函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trigger-error函数"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">trigger_error函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式-PCRE"><span class="nav-number">1.3.7.</span> <span class="nav-text">正则表达式(PCRE)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分隔符"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.7.2.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preg-replace-函数"><span class="nav-number">1.3.7.3.</span> <span class="nav-text">preg_replace() 函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
