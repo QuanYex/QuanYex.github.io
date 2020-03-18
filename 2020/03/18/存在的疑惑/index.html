@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="黑客大曝光——收集情报," />
+  <meta name="keywords" content="学习和实践问题," />
 
 
 
@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="​">
+<meta name="description" content="URL什么时候需要二次编码  在dom型 xss（high）中  输入代码&lt;&#x2F;option&gt;&lt;&#x2F;select&gt;&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt; 为什么检查源码时没有多余一个&lt;&#x2F;option&gt;(源代码中就含有&lt;&#x2F;option&gt;啊)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学习日志(一)">
-<meta property="og:url" content="http://yoursite.com/2020/02/03/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-%E4%B8%80/index.html">
+<meta property="og:title" content="存在的疑惑">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/%E5%AD%98%E5%9C%A8%E7%9A%84%E7%96%91%E6%83%91/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="​">
-<meta property="article:published_time" content="2020-02-03T03:26:48.000Z">
-<meta property="article:modified_time" content="2020-03-12T09:16:55.288Z">
+<meta property="og:description" content="URL什么时候需要二次编码  在dom型 xss（high）中  输入代码&lt;&#x2F;option&gt;&lt;&#x2F;select&gt;&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt; 为什么检查源码时没有多余一个&lt;&#x2F;option&gt;(源代码中就含有&lt;&#x2F;option&gt;啊)">
+<meta property="article:published_time" content="2020-03-18T14:23:18.000Z">
+<meta property="article:modified_time" content="2020-03-18T14:25:03.696Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="黑客大曝光——收集情报">
+<meta property="article:tag" content="学习和实践问题">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/03/学习日志-一/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/18/存在的疑惑/"/>
 
 
 
 
 
-  <title>学习日志(一) | QuanYex's Blog</title>
+  <title>存在的疑惑 | QuanYex's Blog</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/03/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%BF%97-%E4%B8%80/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/18/%E5%AD%98%E5%9C%A8%E7%9A%84%E7%96%91%E6%83%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QuanYex">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">学习日志(一)</h1>
+          <h1 class="post-title" itemprop="name headline">存在的疑惑</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-03T11:26:48+08:00">
-                2020-02-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-18T22:23:18+08:00">
+                2020-03-18
               </time>
             
 
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-12T17:16:55+08:00">
-                2020-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:25:03+08:00">
+                2020-03-18
               </time>
             
           </span>
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/%E9%97%AE%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">问题</span>
                   </a>
                 </span>
 
@@ -353,160 +353,13 @@
       
 
       
-        <p>​                 <a id="more"></a></p>
-<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="踩点"><a href="#踩点" class="headerlink" title="踩点"></a>踩点</h2><ol>
-<li>攻击者可以收集和确认的网络环境信息和其他重要信息</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">网络环境</th>
-<th align="center">需要确认的信息</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">因特网</td>
-<td align="center">域名</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">网络地址块和子网</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">可以直接从因特网进行访问的各个系统的具体ip地址</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">已被发现的各个系统上运行的TCP和UDP服务</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">系统体系结构（例如SPARC或X86）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">访问控制机制和相关的访问控制表（Access Control List，ACL）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">入侵侦测系统（IDS）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">各有关系统的细节信息（用户名和用户组名、系统标语、路由表、SNMP等）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">DNS主机名</td>
-</tr>
-<tr>
-<td align="center">内联网</td>
-<td align="center">组网协议（IP、IPX、DeeNET等）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">内部域名</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">网络地址块</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">可以直接从内联网进行访问的各个系统的具体IP地址</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">已被发现的各个系统上运行的TCP和UDP服务</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">已被发现的各个系统体系结构（例如SPARC或X86）</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">访问控制机制和相关的访问控制表</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">入侵侦测系统</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">各有关系统的细节信息（用户名和用户组名、系统标语、路由表、SNMP等）</td>
-</tr>
-<tr>
-<td align="center">远程访问</td>
-<td align="center">模拟/数字电话号码</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">远程系统的类型</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">身份认证机制</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">VPN和相关的协议（IPSec和PPTP）</td>
-</tr>
-<tr>
-<td align="center">外联网</td>
-<td align="center">连接的源地址和目标地址</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">连接的类型</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">访问控制机制</td>
-</tr>
-</tbody></table>
-<ol start="2">
-<li><p>从公开渠道获取信息</p>
-<p>OSC七层模型 ： </p>
-<p><a href="[https://baike.baidu.com/item/%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/1441391?fr=aladdin](https://baike.baidu.com/item/七层模型/1441391?fr=aladdin)">七层模型</a></p>
-<p>踩点捞针： </p>
+        <ul>
+<li><p>URL什么时候需要二次编码</p>
 </li>
-</ol>
-<ul>
-<li><p>公司的wenb网页</p>
-</li>
-<li><p>相关组织</p>
-</li>
-<li><p>地理位置细节</p>
-</li>
-<li><p>员工信息</p>
-</li>
-<li><p>近期重大事件</p>
-</li>
-<li><p>隐私和安全策略，现有信息安全机制的技术细节</p>
-</li>
-<li><p>已归档的信息</p>
-</li>
-<li><p>搜索引擎和数据关系</p>
-</li>
-<li><p>让人感兴趣的其他信息</p>
+<li><p>在dom型 xss（high）中  输入代码<code>&lt;/option&gt;&lt;/select&gt;&lt;script&gt;alert(/xss/)&lt;/script&gt;</code> 为什么检查源码时没有多余一个<code>&lt;/option&gt;</code>(源代码中就含有<code>&lt;/option&gt;</code>啊)</p>
 </li>
 </ul>
-<p><font face="黑体" color=SpringGreen>公司的web网页：</font>    以脱机的方式阅读代码，注意html注释标记（镜像web站点的工具tenmax）。    有时候需要穷举网页中包含的所有”潜在的“文件和目录（工具DirBuster）。有不少组织建立了自己的vpn网，可以尝试着访问<a href="http://vpn.company.com、" target="_blank" rel="noopener">http://vpn.company.com、</a> <a href="https://vpn.company.com或者http://www.company.com/vpn" target="_blank" rel="noopener">https://vpn.company.com或者http://www.company.com/vpn</a> </p>
-<p><font face="黑体" color=SpringGreen>相关组织：</font> 有些公司的web网站是外包的，这些合作公司可能会泄露其秘密</p>
-<p><font face="黑体" color=SpringGreen>员工信息：</font> 员工会用其姓名的变体作为用户名和电子邮件地址。</p>
-<p><font face="黑体" color=SpringGreen>已归档的信息：</font> WayBack Machine网站和Google的缓存</p>
-<ol start="3">
-<li><p>WHOIS和DNS查点</p>
-<p><a href="https://baike.baidu.com/item/whois/280037?fr=aladdin" target="_blank" rel="noopener">WHOIS</a>，是用来查询<a href="https://baike.baidu.com/item/域名/86062" target="_blank" rel="noopener">域名</a>的IP以及<a href="https://baike.baidu.com/item/所有者/2193463" target="_blank" rel="noopener">所有者</a>等信息的<a href="https://baike.baidu.com/item/传输协议/8048821" target="_blank" rel="noopener">传输协议</a>。简单说，whois就是一个用来查询<a href="https://baike.baidu.com/item/域名/86062" target="_blank" rel="noopener">域名</a>是否已经被注册，以及注册域名的详细信息的数据库（如域名所有人、<a href="https://baike.baidu.com/item/域名注册" target="_blank" rel="noopener">域名注册</a>商）。</p>
-<p><a href="[https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F%EF%BC%88%E6%9C%8D%E5%8A%A1%EF%BC%89%E5%8D%8F%E8%AE%AE/15134609?fromtitle=dns&fromid=427444](https://baike.baidu.com/item/域名系统（服务）协议/15134609?fromtitle=dns&fromid=427444)">DNS</a>，域名系统（服务）协议（DNS）<a href="https://baike.baidu.com/item/是" target="_blank" rel="noopener">是</a>一种<a href="https://baike.baidu.com/item/分布式网络/8951687" target="_blank" rel="noopener">分布式网络</a><a href="https://baike.baidu.com/item/目录服务/10413830" target="_blank" rel="noopener">目录服务</a>，主要用于域名与 IP 地址的相互转换，以及控制因特网的电子邮件的发送。大多数因特网服务依赖于 DNS 而工作，一旦 DNS 出错，就无法连接 Web 站点，电子邮件的发送也会中止。定义了命名语法和规范，以利于通过名称委派域名权限。基本语法是： local.group.site； 定义了如何实现一个<a href="https://baike.baidu.com/item/分布式计算机系统" target="_blank" rel="noopener">分布式计算机系统</a>，以便有效地将域名转换成 IP 地址,比如你输入新华电脑学校网址的时候就会连接到IP:202.106.199.34。 　在 DNS 命名方式中，采用了分散和分层的机制来实现域名空间的委派授权以及域名与地址相转换的授权。通过使用 DNS 的命名方式来为遍布全球的<a href="https://baike.baidu.com/item/网络设备" target="_blank" rel="noopener">网络设备</a>分配域名，而这则是由分散在世界各地的服务器实现的。</p>
-<p>​        理论上， DNS 协议中的域名标准阐述了一种可用任意标签值的分布式的抽象域名空间。任何组织都可以建立域名系统，为其所有分布结构选择标签，但大多数 DNS 协议用户遵循官方因特网域名系统使用的分级标签。常见的顶级域是： COM 、 EDU 、 GOV 、 NET 、 ORG 、 BIZ ，另外还有一些带国家代码的顶级域。</p>
-<p>​        DNS 的分布式机制支持有效且可靠的名字到 IP 地址的映射。多数名字可以在本地映射，不同站点的服务器相互合作能够解决大网络的名字与 IP 地址的映射问题。单个服务器的故障不会影响 DNS 的正确操作。 DNS 是一种通用协议，它并不仅限于网络设备名称。</p>
-<p>4.DNS查询</p>
-<p>5.网络侦察</p>
-</li>
-</ol>
-<h2 id="扫描"><a href="#扫描" class="headerlink" title="扫描"></a>扫描</h2>
+<a id="more"></a>
       
     </div>
     
@@ -523,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E9%BB%91%E5%AE%A2%E5%A4%A7%E6%9B%9D%E5%85%89%E2%80%94%E2%80%94%E6%94%B6%E9%9B%86%E6%83%85%E6%8A%A5/" rel="tag"># 黑客大曝光——收集情报</a>
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%92%8C%E5%AE%9E%E8%B7%B5%E9%97%AE%E9%A2%98/" rel="tag"># 学习和实践问题</a>
           
         </div>
       
@@ -536,8 +389,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/02/%E7%BB%88%E4%BA%8E%E6%90%9E%E5%AE%9A%E4%BA%86/" rel="next" title="终于搞定了">
-                <i class="fa fa-chevron-left"></i> 终于搞定了
+              <a href="/2020/03/14/DVWA%E5%AE%9E%E8%B7%B5/" rel="next" title="DVWA实践">
+                <i class="fa fa-chevron-left"></i> DVWA实践
               </a>
             
           </div>
@@ -545,10 +398,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/03/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8/" rel="prev" title="web安全入门">
-                web安全入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -600,17 +449,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -640,7 +480,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -674,22 +514,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#踩点"><span class="nav-number">1.1.</span> <span class="nav-text">踩点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫描"><span class="nav-number">1.2.</span> <span class="nav-text">扫描</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
