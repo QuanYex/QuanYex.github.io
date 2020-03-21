@@ -86,8 +86,9 @@
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
 <meta property="og:description" content="问题基础类型问题GBK和UTF-8的区别GBK编码：是指中国的中文字符，其它它包含了简体中文与繁体中文字符，另外还有一种字符“gb2312”，这种字符仅能存储简体中文字符。 UTF-8编码：它是一种全国家通过的一种编码，如果你的网站涉及到多个国家的语言，那么建议你选择UTF-8编码。 UTF8编码格式很强大，支持所有国家的语言，正是因为它的强大，才会导致它占用的空间大小要比GBK大，对于网站打开速">
 <meta property="og:image" content="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg">
+<meta property="og:image" content="https://www.w3school.com.cn/i/ajax.gif">
 <meta property="article:published_time" content="2020-03-12T09:32:22.000Z">
-<meta property="article:modified_time" content="2020-03-18T14:08:27.791Z">
+<meta property="article:modified_time" content="2020-03-21T06:22:55.754Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="语法">
 <meta name="twitter:card" content="summary">
@@ -299,8 +300,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-18T22:08:27+08:00">
-                2020-03-18
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-21T14:22:55+08:00">
+                2020-03-21
               </time>
             
           </span>
@@ -362,7 +363,7 @@
 <p>   　<a id="more"></a></p>
 <h3 id="说明"><a href="#说明" class="headerlink" title="#说明"></a>#说明</h3><ol>
 <li><p>#的涵义</p>
-<pre><code>#代表网页中的一个位置。其右面的字符，就是该位置的标识符。比如，http://www.example.com/index.html#print就代表网页index.html的print位置。浏览器读取这个URL后，会自动将print位置滚动至可视区域。</code></pre><p>　　为网页位置指定标识符，有两个方法。一是使用锚点，比如<a name="print"></a>，二是使用id属性，比如<div id="print">。</p>
+<pre><code>#代表网页中的一个位置。其右面的字符，就是该位置的标识符。比如，http://www.example.com/index.html#print就代表网页index.html的print位置。浏览器读取这个URL后，会自动将print位置滚动至可视区域。</code></pre><p> 　　为网页位置指定标识符，有两个方法。一是使用锚点，比如<a name="print"></a>，二是使用id属性，比如<div id="print">。</p>
 </li>
 </ol>
 <p>就比如说，我们想到达页面中的某一个指定的位置，可以通过#来实现，我们经常也能看到这样的情况。</p>
@@ -428,7 +429,186 @@
 <h3 id="PHP中问号-和冒号-的作用"><a href="#PHP中问号-和冒号-的作用" class="headerlink" title="PHP中问号?和冒号: 的作用"></a>PHP中问号?和冒号: 的作用</h3></li>
 </ol>
 <p><img src="https://wx2.sinaimg.cn/mw690/0061a6Ikly1gct8et1sosj30od09kt92.jpg" alt=""></p>
-<h2 id="Js语法"><a href="#Js语法" class="headerlink" title="Js语法"></a>Js语法</h2><h3 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h3><p>Window 对象属性</p>
+<h2 id="Js语法"><a href="#Js语法" class="headerlink" title="Js语法"></a>Js语法</h2><h3 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h3><p><strong>简介</strong></p>
+<p>AJAX = 异步 JavaScript 和 XML。</p>
+<p>AJAX 是一种用于创建快速动态网页的技术。</p>
+<p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>传统的网页（不使用 AJAX）如果需要更新内容，必需重载整个网页面。</p>
+<p>有很多使用 AJAX 的应用程序案例：新浪微博、Google 地图、开心网等等。</p>
+<p><strong>工作原理</strong></p>
+<p><img src="https://www.w3school.com.cn/i/ajax.gif" alt=""></p>
+<ol>
+<li>网页中发生一个事件（页面加载、按钮点击）</li>
+<li>由 JavaScript 创建 XMLHttpRequest 对象</li>
+<li>XMLHttpRequest 对象向 web 服务器发送请求</li>
+<li>服务器处理该请求</li>
+<li>服务器将响应发送回网页</li>
+<li>由 JavaScript 读取响应</li>
+<li>由 JavaScript 执行正确的动作（比如更新页面）</li>
+</ol>
+<p>Ajax 的核心是 XMLHttpRequest 对象,所有现代浏览器都支持 XMLHttpRequest 对象。XMLHttpRequest 对象用于同幕后服务器交换数据。这意味着可以更新网页的部分，而不需要重新加载整个页面。</p>
+<h4 id="XMLHttp"><a href="#XMLHttp" class="headerlink" title="XMLHttp"></a>XMLHttp</h4><p>ajax其实只需要用到一个对象：XMLHttpRequest，编写创建XMLHttpRequest对象的函数,创建 XMLHttpRequest 对象的语法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable=<span class="keyword">new</span> XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+
+<p>为了应对所有浏览器，包括 IE5 和 IE6，请检查浏览器是否支持 XMLHttpRequest 对象。如果支持，创建 XMLHttpRequest 对象，如果不支持，则创建 ActiveX 对象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhttp;</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.XMLHttpRequest) &#123;</span><br><span class="line">    <span class="comment">// 用于现代浏览器的代码</span></span><br><span class="line">    xhttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">     <span class="comment">// 应对老版本 IE 浏览器的代码</span></span><br><span class="line">     xhttp = <span class="keyword">new</span> ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="请求"><a href="#请求" class="headerlink" title="请求"></a>请求</h4><p>xmlHttp.send(null);参数为请求体，如果是GET请求，参数为null，如果传参数可能会造成部分浏览器无法发送</p>
+<p>如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xmlhttp.open(<span class="string">"GET"</span>,<span class="string">"ajax_info.txt"</span>,<span class="literal">true</span>);</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">open(<em>method</em>, <em>url</em>, <em>async</em>)</td>
+<td align="left">规定请求的类型<em>method</em>：请求的类型：GET 还是 POST<em>url</em>：服务器（文件）位置<em>async</em>：true（异步）或 false（同步）</td>
+</tr>
+<tr>
+<td align="left">send()</td>
+<td align="left">向服务器发送请求（用于 GET）</td>
+</tr>
+<tr>
+<td align="left">send(<em>string</em>)</td>
+<td align="left">向服务器发送请求（用于 POST）</td>
+</tr>
+</tbody></table>
+<h5 id="GET-还是-POST？"><a href="#GET-还是-POST？" class="headerlink" title="GET 还是 POST？"></a>GET 还是 POST？</h5><p>GET 比 POST 更简单更快，可用于大多数情况下。</p>
+<p>不过，请在以下情况始终使用 POST：</p>
+<ul>
+<li>缓存文件不是选项（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 无大小限制）</li>
+<li>发送用户输入（可包含未知字符），POST 比 GET 更强大更安全</li>
+</ul>
+<p>如需像 HTML 表单那样 POST 数据，请通过 setRequestHeader() 添加一个 HTTP 头部。请在 send() 方法中规定您需要发送的数据：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhttp.open(<span class="string">"POST"</span>, <span class="string">"ajax_test.asp"</span>, <span class="literal">true</span>);</span><br><span class="line">xhttp.setRequestHeader(<span class="string">"Content-type"</span>, <span class="string">"application/x-www-form-urlencoded"</span>);</span><br><span class="line">xhttp.send(<span class="string">"fname=Bill&amp;lname=Gates"</span>);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">setRequestHeader(<em>header</em>, <em>value</em>)</td>
+<td align="left">向请求添加 HTTP 头部<em>header</em>：规定头部名称  <em>value</em>：规定头部值</td>
+</tr>
+</tbody></table>
+<p><strong>url* - 服务器上的文件</strong></p>
+<p>open() 方法的 <em>url</em> 参数，是服务器上文件的地址：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_test.asp&quot;, true);</span><br></pre></td></tr></table></figure>
+
+<p>该文件可以是任何类型的文件，如 .txt 和 .xml，或服务器脚本文件，如 .asp 和 .php（它们可以在发送回响应之前在服务器执行操作）。</p>
+<h5 id="异步-ture-还是-false？"><a href="#异步-ture-还是-false？" class="headerlink" title="异步 - ture 还是 false？"></a>异步 - ture 还是 false？</h5><p>如需异步发送请求，open() 方法的 <em>async</em> 参数必须设置为 true：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_test.asp&quot;, true);</span><br></pre></td></tr></table></figure>
+
+<p>发送异步请求对 web 开发人员来说是一个巨大的进步。服务器上执行的许多任务都非常耗时。在 AJAX 之前，此操作可能会导致应用程序挂起或停止。</p>
+<p>通过异步发送，JavaScript 不必等待服务器响应，而是可以：</p>
+<ul>
+<li>在等待服务器响应时执行其他脚本</li>
+<li>当响应就绪时处理响应</li>
+</ul>
+<p><strong>onreadystatechange 属性</strong></p>
+<p>通过 XMLHttpRequest 对象，您可以定义当请求接收到应答时所执行的函数。</p>
+<p>这个函数是在 XMLHttpResponse 对象的 onreadystatechange 属性中定义的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">xhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.readyState == <span class="number">4</span> &amp;&amp; <span class="keyword">this</span>.status == <span class="number">200</span>) &#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = <span class="keyword">this</span>.responseText;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">xhttp.open(<span class="string">"GET"</span>, <span class="string">"ajax_info.txt"</span>, <span class="literal">true</span>);</span><br><span class="line">xhttp.send();</span><br></pre></td></tr></table></figure>
+
+<h5 id="同步请求"><a href="#同步请求" class="headerlink" title="同步请求"></a>同步请求</h5><p>如需执行同步的请求，请把 open() 方法中的第三个参数设置为 false：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, false);</span><br></pre></td></tr></table></figure>
+
+<p>有时 async = false 用于快速测试。你也会在更老的 JavaScript 代码中看到同步请求。</p>
+<p>由于代码将等待服务器完成，所以不需要 onreadystatechange 函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhttp.open(<span class="string">"GET"</span>, <span class="string">"ajax_info.txt"</span>, <span class="literal">false</span>);</span><br><span class="line">xhttp.send();</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = xhttp.responseText;</span><br></pre></td></tr></table></figure>
+
+<h4 id="响应"><a href="#响应" class="headerlink" title="响应"></a>响应</h4><h5 id="onreadystatechange-属性"><a href="#onreadystatechange-属性" class="headerlink" title="onreadystatechange 属性"></a>onreadystatechange 属性</h5><p>readyState 属性存留 XMLHttpRequest 的状态。</p>
+<p>onreadystatechange 属性定义当 readyState 发生变化时执行的函数。</p>
+<p>status 属性和 statusText 属性存有 XMLHttpRequest 对象的状态。</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">onreadystatechange</td>
+<td align="left">定义了当 readyState 属性发生改变时所调用的函数。</td>
+</tr>
+<tr>
+<td align="left">readyState</td>
+<td align="left">保存了 XMLHttpRequest 的状态。0: 请求未初始化1: 服务器连接已建立2: 请求已接收3: 正在处理请求4: 请求已完成且响应已就绪</td>
+</tr>
+<tr>
+<td align="left">status</td>
+<td align="left">200: “OK”403: “Forbidden”404: “Page not found”如需完整列表，请访问 <a href="https://www.w3school.com.cn/tags/ref_httpmessages.asp" target="_blank" rel="noopener">Http 消息参考手册</a></td>
+</tr>
+<tr>
+<td align="left">statusText</td>
+<td align="left">返回状态文本（例如 “OK” 或 “Not Found”）</td>
+</tr>
+</tbody></table>
+<p>每当 readyState 发生变化时就会调用 onreadystatechange 函数。</p>
+<p>当 readyState 为 4，status 为 200 时，响应就绪：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadDoc</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xhttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    xhttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.readyState == <span class="number">4</span> &amp;&amp; <span class="keyword">this</span>.status == <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML =</span><br><span class="line">            <span class="keyword">this</span>.responseText;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    xhttp.open(<span class="string">"GET"</span>, <span class="string">"ajax_info.txt"</span>, <span class="literal">true</span>);</span><br><span class="line">    xhttp.send(); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注释：</strong>onreadystatechange被触发五次（0-4），每次 <strong>readyState</strong> 都发生变化。</p>
+<h5 id="服务器响应属性"><a href="#服务器响应属性" class="headerlink" title="服务器响应属性"></a>服务器响应属性</h5><table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">responseText</td>
+<td align="left">获取字符串形式的响应数据</td>
+</tr>
+<tr>
+<td align="left">responseXML</td>
+<td align="left">获取 XML 数据形式的响应数据</td>
+</tr>
+</tbody></table>
+<h6 id="responseText-属性"><a href="#responseText-属性" class="headerlink" title="responseText 属性**"></a>responseText 属性**</h6><p>responseText 属性以 JavaScript 字符串的形式返回服务器响应，因此您可以这样使用它：</p>
+<p><strong>实例</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = xhttp.responseText;</span><br></pre></td></tr></table></figure>
+
+<h6 id="responseXML-属性"><a href="#responseXML-属性" class="headerlink" title="responseXML 属性"></a>responseXML 属性</h6><p>XML HttpRequest 对象有一个內建的 XML 解析器。ResponseXML 属性以 XML DOM 对象返回服务器响应。</p>
+<p>使用此属性，您可以把响应解析为 XML DOM 对象：</p>
+<p><strong>实例</strong></p>
+<p>请求文件 <a href="https://www.w3school.com.cn/demo/music_list.xml" target="_blank" rel="noopener">music_list.xml</a>，并对响应进行解析：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xmlDoc = xhttp.responseXML;</span><br><span class="line">txt = <span class="string">""</span>;</span><br><span class="line">x = xmlDoc.getElementsByTagName(<span class="string">"ARTIST"</span>);</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; x.length; i++) &#123;</span><br><span class="line">  txt += x[i].childNodes[<span class="number">0</span>].nodeValue + <span class="string">"&lt;br&gt;"</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = txt;</span><br><span class="line">xhttp.open(<span class="string">"GET"</span>,  <span class="string">"music_list.xml"</span>, <span class="literal">true</span>);</span><br><span class="line">xhttp.send();</span><br></pre></td></tr></table></figure>
+
+<h5 id="服务器响应方法"><a href="#服务器响应方法" class="headerlink" title="服务器响应方法"></a>服务器响应方法</h5><table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">getResponseHeader()</td>
+<td align="left">从服务器返回特定的头部信息</td>
+</tr>
+<tr>
+<td align="left">getAllResponseHeaders()</td>
+<td align="left">从服务器返回所有头部信息</td>
+</tr>
+</tbody></table>
+<h6 id="getAllResponseHeaders-方法"><a href="#getAllResponseHeaders-方法" class="headerlink" title="getAllResponseHeaders() 方法"></a>getAllResponseHeaders() 方法</h6><p>getAllResponseHeaders() 方法返回所有来自服务器响应的头部信息。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var xhttp &#x3D; new XMLHttpRequest();</span><br><span class="line">xhttp.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">  if (this.readyState &#x3D;&#x3D; 4 &amp;&amp; this.status &#x3D;&#x3D; 200) &#123;</span><br><span class="line">    document.getElementById(&quot;demo&quot;).innerHTML &#x3D; this.getAllResponseHeaders();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h6 id="getResponseHeader-方法"><a href="#getResponseHeader-方法" class="headerlink" title="getResponseHeader() 方法"></a>getResponseHeader() 方法</h6><p>getResponseHeader() 方法返回来自服务器响应的特定头部信息。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var xhttp &#x3D; new XMLHttpRequest();</span><br><span class="line">xhttp.onreadystatechange &#x3D; function() &#123;</span><br><span class="line">  if (this.readyState &#x3D;&#x3D; 4 &amp;&amp; this.status &#x3D;&#x3D; 200) &#123;</span><br><span class="line">    document.getElementById(&quot;demo&quot;).innerHTML &#x3D; this.getResponseHeader(&quot;Last-Modified&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">xhttp.open(&quot;GET&quot;, &quot;ajax_info.txt&quot;, true);</span><br><span class="line">xhttp.send();</span><br></pre></td></tr></table></figure>
+
+<h4 id="AJAX-PHP实例"><a href="#AJAX-PHP实例" class="headerlink" title="AJAX PHP实例"></a>AJAX PHP实例</h4><p><a href="https://www.w3school.com.cn/js/js_ajax_php.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/js/js_ajax_php.asp</a></p>
+<h3 id="Window-对象"><a href="#Window-对象" class="headerlink" title="Window 对象"></a>Window 对象</h3><p>Window 对象属性</p>
 <table>
 <thead>
 <tr>
@@ -1927,6 +2107,7 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Notice: Number cannot be larger than <span class="number">10</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="正则表达式-PCRE"><a href="#正则表达式-PCRE" class="headerlink" title="正则表达式(PCRE)"></a>正则表达式(PCRE)</h3><p>参考网址：<a href="https://www.runoob.com/regexp/regexp-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/regexp/regexp-tutorial.html</a></p>
+<p>视频教程：<a href="https://www.bilibili.com/video/av82168031?t=1534" target="_blank" rel="noopener">https://www.bilibili.com/video/av82168031?t=1534</a></p>
 <p>正则表达式(regular expression)描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种子串、将匹配的子串做替换或者从某个串中取出符合某个条件的子串等。</p>
 <table>
 <thead>
@@ -2195,6 +2376,118 @@
 
 <p>执行结果如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runoob</span><br></pre></td></tr></table></figure>
+
+<h2 id="HTML对象"><a href="#HTML对象" class="headerlink" title="HTML对象"></a>HTML对象</h2><h3 id="iframe对象"><a href="#iframe对象" class="headerlink" title="iframe对象"></a>iframe对象</h3><p>IFrame 对象代表一个 HTML 的内联框架。</p>
+<p>在 HTML 文档中 <code>&lt;iframe&gt;</code> 每出现一次，一个 IFrame 对象就会被创建。</p>
+<p><strong>IFrame 对象的属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_align.asp" target="_blank" rel="noopener">align</a></td>
+<td align="left">根据周围的文字排列 iframe。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_contentDocument.asp" target="_blank" rel="noopener">contentDocument</a></td>
+<td align="left">容纳框架的内容的文档。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_frameborder.asp" target="_blank" rel="noopener">frameBorder</a></td>
+<td align="left">设置或返回是否显示 iframe 周围的边框。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_height.asp" target="_blank" rel="noopener">height</a></td>
+<td align="left">设置或返回 iframe 的高度。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_id.asp" target="_blank" rel="noopener">id</a></td>
+<td align="left">设置或返回 iframe 的 id。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_longdesc.asp" target="_blank" rel="noopener">longDesc</a></td>
+<td align="left">设置或返回描述 iframe 内容的文档的 URL。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_marginheight.asp" target="_blank" rel="noopener">marginHeight</a></td>
+<td align="left">设置或返回 iframe 的顶部和底部的页空白。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_marginwidth.asp" target="_blank" rel="noopener">marginWidth</a></td>
+<td align="left">设置或返回 iframe 的左侧和右侧的页空白。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_name.asp" target="_blank" rel="noopener">name</a></td>
+<td align="left">设置或返回 iframe 的名称。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_scrolling.asp" target="_blank" rel="noopener">scrolling</a></td>
+<td align="left">设置或返回 iframe 是否可拥有滚动条。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_src.asp" target="_blank" rel="noopener">src</a></td>
+<td align="left">设置或返回应载入 iframe 中的文档的 URL。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_iframe_width.asp" target="_blank" rel="noopener">width</a></td>
+<td align="left">设置或返回 iframe 的宽度。</td>
+</tr>
+</tbody></table>
+<p><strong>标准属性</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_classname.asp" target="_blank" rel="noopener">className</a></td>
+<td align="left">设置或返回元素的 class 属性。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_dir.asp" target="_blank" rel="noopener">dir</a></td>
+<td align="left">设置或返回文本的方向。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_lang.asp" target="_blank" rel="noopener">lang</a></td>
+<td align="left">设置或返回元素的语言代码。</td>
+</tr>
+<tr>
+<td align="left"><a href="https://www.w3school.com.cn/jsref/prop_title.asp" target="_blank" rel="noopener">title</a></td>
+<td align="left">设置或返回元素的 title 属性。</td>
+</tr>
+</tbody></table>
+<h4 id="contentDocument-属性"><a href="#contentDocument-属性" class="headerlink" title="contentDocument 属性"></a>contentDocument 属性</h4><p><strong>定义和用法</strong></p>
+<p>contentDocument 属性能够以 HTML 对象来返回 iframe 中的文档。</p>
+<p>可以通过所有标准的 DOM 方法来处理被返回的对象。</p>
+<p>contentDocument 属性能够以 HTML 对象来返回 iframe 中的文档，可以通过所有标准的 DOM 方法来处理被返回的对象。</p>
+<p>　　用iframe嵌套页面时，如果父页面要获取子页面里面的内容，可以使用contentWindow或者contentDocument，其<strong>区别</strong>如下：</p>
+<p>　　1、contentWindow  这是个只读属性，返回指定的iframe的窗口对象。它虽然不是标准的一部分，但各个主流浏览器都支持。</p>
+<p>　　2、contentDocument  Firefox 支持，IE6，IE7都不支持，IE8开始支持,需要如此访问 document.frames[‘J_mainframe’].document。</p>
+<p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iframeObjectcontentDocument</span><br></pre></td></tr></table></figure>
+
+<p><code>document.getElementById(&quot;xx&quot;).contentWindow</code>得到iframe对象后，就可以通过<strong>contentWindow得到iframe包含页面的window对象</strong>，然后就可以正常访问页面元素了</p>
+<p><strong>实例</strong></p>
+<ol>
+<li><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ifr = <span class="built_in">document</span>.getElementById(<span class="string">"iframe"</span>);</span><br><span class="line">ifr.contentWindow.document.getElementById(<span class="string">"XXXXX"</span>)</span><br><span class="line"></span><br><span class="line">&lt;iframe src=<span class="string">"a.html"</span> id=<span class="string">""</span>&gt;&lt;<span class="regexp">/iframe&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><code>ifr.contentWindow</code> 这里，返回的是iframe的window对象，所以后面可以接着调用document方法，再接着调用getElementByTagName。那么就可以对iframe里面的元素进行操作了。</p>
+<ol start="2">
+<li>在iframe本页面，要操作这个iframe的父页面的DOM元素（即嵌套这个iframe的页面）可以用：</li>
+</ol>
+<p>window.parent、window.top(这里的TOP是获取的顶层，即有多层嵌套iframe的时候使用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var ifr &#x3D; document.getElementByTagName(&quot;iframe&quot;);</span><br><span class="line">ifr.parent.document.getElementById(&quot;XXXXX&quot;)</span><br><span class="line"></span><br><span class="line">&lt;iframe src&#x3D;&quot;a.html&quot; id&#x3D;&quot;&quot;&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<p>top.$(“iframe[name=’iframeWindow’]”)[0].<strong>contentWindow</strong>.$(“#inside_tableElement”)，这样才能获取到iframe里的元素，</p>
+<p><strong>注意</strong>：top.$(“iframe[name=’iframeWindow’]”).eq(0).$(“#inside_tableElement”)，是获取不到的</p>
+
       
     </div>
     
@@ -2372,7 +2665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础类型问题"><span class="nav-number">1.1.</span> <span class="nav-text">基础类型问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBK和UTF-8的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">GBK和UTF-8的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明"><span class="nav-number">1.1.2.</span> <span class="nav-text">#说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">基本类型和引用类型变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP中问号-和冒号-的作用"><span class="nav-number">1.1.4.</span> <span class="nav-text">PHP中问号?和冒号: 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Js语法"><span class="nav-number">1.2.</span> <span class="nav-text">Js语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window-location"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">window.location:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document对象"><span class="nav-number">1.2.2.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-domain"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write（）"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">document.write（）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.2.2.2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string对象"><span class="nav-number">1.2.3.</span> <span class="nav-text">string对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">substring() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ActiveXObject"><span class="nav-number">1.2.4.</span> <span class="nav-text">ActiveXObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.2.5.</span> <span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decodeURI"><span class="nav-number">1.2.6.</span> <span class="nav-text">decodeURI()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">1.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">String函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-函数"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">trim() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#md5-函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">md5() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stripos-函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">stripos() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-tags-函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">strip_tags() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addslashes-函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">addslashes() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#htmlspecialchars-函数"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">htmlspecialchars() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str-replace-函数"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">str_replace() 函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-object-函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">is_object()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-dump-函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">var_dump() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqli函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">mysqli函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysqli-real-escape-string"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">mysqli_real_escape_string()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error和logging函数"><span class="nav-number">1.3.6.</span> <span class="nav-text">Error和logging函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trigger-error函数"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">trigger_error函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式-PCRE"><span class="nav-number">1.3.7.</span> <span class="nav-text">正则表达式(PCRE)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分隔符"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.7.2.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preg-replace-函数"><span class="nav-number">1.3.7.3.</span> <span class="nav-text">preg_replace() 函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础类型问题"><span class="nav-number">1.1.</span> <span class="nav-text">基础类型问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBK和UTF-8的区别"><span class="nav-number">1.1.1.</span> <span class="nav-text">GBK和UTF-8的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#说明"><span class="nav-number">1.1.2.</span> <span class="nav-text">#说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型变量"><span class="nav-number">1.1.3.</span> <span class="nav-text">基本类型和引用类型变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP中问号-和冒号-的作用"><span class="nav-number">1.1.4.</span> <span class="nav-text">PHP中问号?和冒号: 的作用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Js语法"><span class="nav-number">1.2.</span> <span class="nav-text">Js语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AJAX"><span class="nav-number">1.2.1.</span> <span class="nav-text">AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#XMLHttp"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">XMLHttp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">请求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#GET-还是-POST？"><span class="nav-number">1.2.1.2.1.</span> <span class="nav-text">GET 还是 POST？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#异步-ture-还是-false？"><span class="nav-number">1.2.1.2.2.</span> <span class="nav-text">异步 - ture 还是 false？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#同步请求"><span class="nav-number">1.2.1.2.3.</span> <span class="nav-text">同步请求</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#响应"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">响应</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#onreadystatechange-属性"><span class="nav-number">1.2.1.3.1.</span> <span class="nav-text">onreadystatechange 属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器响应属性"><span class="nav-number">1.2.1.3.2.</span> <span class="nav-text">服务器响应属性</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#responseText-属性"><span class="nav-number">1.2.1.3.2.1.</span> <span class="nav-text">responseText 属性**</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#responseXML-属性"><span class="nav-number">1.2.1.3.2.2.</span> <span class="nav-text">responseXML 属性</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器响应方法"><span class="nav-number">1.2.1.3.3.</span> <span class="nav-text">服务器响应方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#getAllResponseHeaders-方法"><span class="nav-number">1.2.1.3.3.1.</span> <span class="nav-text">getAllResponseHeaders() 方法</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#getResponseHeader-方法"><span class="nav-number">1.2.1.3.3.2.</span> <span class="nav-text">getResponseHeader() 方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AJAX-PHP实例"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">AJAX PHP实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Window-对象"><span class="nav-number">1.2.2.</span> <span class="nav-text">Window 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window-location"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">window.location:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#document对象"><span class="nav-number">1.2.3.</span> <span class="nav-text">document对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#document-domain"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">document.domain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#document-write（）"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">document.write（）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.2.3.2.1.</span> <span class="nav-text"></span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#string对象"><span class="nav-number">1.2.4.</span> <span class="nav-text">string对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#substring-方法"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">substring() 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#substr"><span class="nav-number">1.2.4.2.</span> <span class="nav-text">substr()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">1.2.4.3.</span> <span class="nav-text">indexOf()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ActiveXObject"><span class="nav-number">1.2.5.</span> <span class="nav-text">ActiveXObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.2.6.</span> <span class="nav-text">eval()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#decodeURI"><span class="nav-number">1.2.7.</span> <span class="nav-text">decodeURI()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP语法"><span class="nav-number">1.3.</span> <span class="nav-text">PHP语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isset"><span class="nav-number">1.3.1.</span> <span class="nav-text">isset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String函数"><span class="nav-number">1.3.2.</span> <span class="nav-text">String函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trim-函数"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">trim() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#md5-函数"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">md5() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stripos-函数"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">stripos() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#strip-tags-函数"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">strip_tags() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#addslashes-函数"><span class="nav-number">1.3.2.5.</span> <span class="nav-text">addslashes() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#htmlspecialchars-函数"><span class="nav-number">1.3.2.6.</span> <span class="nav-text">htmlspecialchars() 函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#str-replace-函数"><span class="nav-number">1.3.2.7.</span> <span class="nav-text">str_replace() 函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#is-object-函数"><span class="nav-number">1.3.3.</span> <span class="nav-text">is_object()函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#var-dump-函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">var_dump() 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysqli函数"><span class="nav-number">1.3.5.</span> <span class="nav-text">mysqli函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#mysqli-real-escape-string"><span class="nav-number">1.3.5.1.</span> <span class="nav-text">mysqli_real_escape_string()</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error和logging函数"><span class="nav-number">1.3.6.</span> <span class="nav-text">Error和logging函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#trigger-error函数"><span class="nav-number">1.3.6.1.</span> <span class="nav-text">trigger_error函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式-PCRE"><span class="nav-number">1.3.7.</span> <span class="nav-text">正则表达式(PCRE)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分隔符"><span class="nav-number">1.3.7.1.</span> <span class="nav-text">分隔符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元字符"><span class="nav-number">1.3.7.2.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#preg-replace-函数"><span class="nav-number">1.3.7.3.</span> <span class="nav-text">preg_replace() 函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML对象"><span class="nav-number">1.4.</span> <span class="nav-text">HTML对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe对象"><span class="nav-number">1.4.1.</span> <span class="nav-text">iframe对象</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#contentDocument-属性"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">contentDocument 属性</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
