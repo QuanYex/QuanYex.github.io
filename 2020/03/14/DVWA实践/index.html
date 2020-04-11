@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="DVWA," />
 
 
 
@@ -79,21 +79,22 @@
 
 
 
-<meta name="description" content="title: DVWA实践date: 2020-03-14 15:14:39tags:  DVWAcategories:  学习实践 xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;scr">
+<meta name="description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DVWA实践">
 <meta property="og:url" content="http://yoursite.com/2020/03/14/DVWA%E5%AE%9E%E8%B7%B5/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="title: DVWA实践date: 2020-03-14 15:14:39tags:  DVWAcategories:  学习实践 xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;scr">
+<meta property="og:description" content="xss存储型xsslow查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞 name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为： 12&lt;script&gt;alert(&#x2F;xss&#x2F;)&lt;&#x2F;script&gt;&lt;img src&#x3D;2  onerror&#x3D;alert(&#x2F;xss&#x2F;)&gt;  message参数也是相同以上两种都适">
 <meta property="og:image" content="http://lulu.izliang.com/yty/11bbd74c9ab776532a4f84dd860195b.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/4c9040402a1505bdaa890ce28cb1afb.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/ea2a7976dda046eeabe1b582ab40a94.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/f2014522d434768aa62c8cb912c0a30.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/yanshiceshi1.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/yanshizhuru2.png">
-<meta property="article:published_time" content="2020-03-14T07:14:39.857Z">
-<meta property="article:modified_time" content="2020-04-11T03:23:56.477Z">
+<meta property="article:published_time" content="2020-03-14T07:14:39.000Z">
+<meta property="article:modified_time" content="2020-04-11T03:34:04.562Z">
 <meta property="article:author" content="QuanYex">
+<meta property="article:tag" content="DVWA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lulu.izliang.com/yty/11bbd74c9ab776532a4f84dd860195b.png">
 
@@ -303,12 +304,34 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T11:23:56+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T11:34:04+08:00">
                 2020-04-11
               </time>
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index">
+                    <span itemprop="name">学习实践</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -337,8 +360,7 @@
       
 
       
-        <p>title: DVWA实践<br>date: 2020-03-14 15:14:39<br>tags:  DVWA<br>categories:  学习实践</p>
-<h1 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h1><h2 id="存储型xss"><a href="#存储型xss" class="headerlink" title="存储型xss"></a>存储型xss</h2><h3 id="low"><a href="#low" class="headerlink" title="low"></a>low</h3><p>查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞</p>
+        <h1 id="xss"><a href="#xss" class="headerlink" title="xss"></a>xss</h1><h2 id="存储型xss"><a href="#存储型xss" class="headerlink" title="存储型xss"></a>存储型xss</h2><h3 id="low"><a href="#low" class="headerlink" title="low"></a>low</h3><p>查看服务端代码可以发现对name 和 message没有 进行过滤和检查，因此存在xss漏洞</p>
 <p>name参数输入时有字数限制，因此可以在F12中修改其长度或者抓包后改为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;alert(<span class="regexp">/xss/</span>)&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;img src=2  onerror=alert(/</span>xss/)&gt;</span><br></pre></td></tr></table></figure>
 
@@ -589,12 +611,11 @@
 <p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;3 --</code>存在</p>
 <p><code>1&#39; and length(substr((select user from users limit 0,1),1))&gt;4 --</code>存在</p>
 <p>说明第一个用户名长度为5</p>
-<p><strong>—————————————————————————————————————————————————–</strong></p>
 <h2 id="medium-5"><a href="#medium-5" class="headerlink" title="medium"></a>medium</h2><p>测试sleep函数<code>1&#39; and sleep(if(length(database())=4,5,0)) --</code></p>
 <p><img src="http://lulu.izliang.com/yty/yanshiceshi1.png" alt=""></p>
 <p>测试benchmark函数<code>1&#39; and benchmark(if(length(database())=4,5000000,0),md5(&#39;test&#39;)); --</code></p>
 <p><img src="http://lulu.izliang.com/yty/yanshizhuru2.png" alt=""></p>
-<h2 id="low-5"><a href="#low-5" class="headerlink" title="low"></a>low</h2>
+<h2 id="high-5"><a href="#high-5" class="headerlink" title="high"></a>high</h2>
       
     </div>
     
@@ -608,6 +629,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DVWA/" rel="tag"># DVWA</a>
+          
+        </div>
       
 
       
@@ -722,7 +749,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -733,7 +760,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -766,7 +793,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储型xss"><span class="nav-number">1.1.</span> <span class="nav-text">存储型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low"><span class="nav-number">1.1.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium"><span class="nav-number">1.1.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high"><span class="nav-number">1.1.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射型xss"><span class="nav-number">1.2.</span> <span class="nav-text">反射型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-注意"><span class="nav-number">1.2.1.</span> <span class="nav-text">low(注意)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM型xss"><span class="nav-number">1.3.</span> <span class="nav-text">DOM型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">high</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-2"><span class="nav-number">2.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-3"><span class="nav-number">2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-3"><span class="nav-number">2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQl回显注入"><span class="nav-number">3.</span> <span class="nav-text">SQl回显注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-3"><span class="nav-number">3.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入"><span class="nav-number">3.1.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">3.1.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-4"><span class="nav-number">3.2.</span> <span class="nav-text">medium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-4"><span class="nav-number">3.3.</span> <span class="nav-text">high</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL盲注"><span class="nav-number">4.</span> <span class="nav-text">SQL盲注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-4"><span class="nav-number">4.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-3"><span class="nav-number">4.1.1.</span> <span class="nav-text">手工注入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-5"><span class="nav-number">4.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#low-5"><span class="nav-number">4.3.</span> <span class="nav-text">low</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">1.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储型xss"><span class="nav-number">1.1.</span> <span class="nav-text">存储型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low"><span class="nav-number">1.1.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium"><span class="nav-number">1.1.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high"><span class="nav-number">1.1.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射型xss"><span class="nav-number">1.2.</span> <span class="nav-text">反射型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-注意"><span class="nav-number">1.2.1.</span> <span class="nav-text">low(注意)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-1"><span class="nav-number">1.2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM型xss"><span class="nav-number">1.3.</span> <span class="nav-text">DOM型xss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#low-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#medium-2"><span class="nav-number">1.3.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#high-2"><span class="nav-number">1.3.3.</span> <span class="nav-text">high</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">2.</span> <span class="nav-text">CSRF</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-2"><span class="nav-number">2.1.</span> <span class="nav-text">low</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-3"><span class="nav-number">2.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-3"><span class="nav-number">2.3.</span> <span class="nav-text">high</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQl回显注入"><span class="nav-number">3.</span> <span class="nav-text">SQl回显注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-3"><span class="nav-number">3.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入"><span class="nav-number">3.1.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">3.1.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-4"><span class="nav-number">3.2.</span> <span class="nav-text">medium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-4"><span class="nav-number">3.3.</span> <span class="nav-text">high</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">手工注入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">sqlmap</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL盲注"><span class="nav-number">4.</span> <span class="nav-text">SQL盲注</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#low-4"><span class="nav-number">4.1.</span> <span class="nav-text">low</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#手工注入-3"><span class="nav-number">4.1.1.</span> <span class="nav-text">手工注入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#medium-5"><span class="nav-number">4.2.</span> <span class="nav-text">medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#high-5"><span class="nav-number">4.3.</span> <span class="nav-text">high</span></a></li></ol></li></ol></div>
             
 
           </div>
