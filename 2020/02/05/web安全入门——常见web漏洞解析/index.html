@@ -94,8 +94,9 @@
 <meta property="og:image" content="http://lulu.izliang.com/yty/urltiaozhuan1.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/urltiaozhuan2.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/urltiaozhuan3.png">
+<meta property="og:image" content="http://yoursite.com/2020/02/05/web%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E5%B8%B8%E8%A7%81web%E6%BC%8F%E6%B4%9E%E8%A7%A3%E6%9E%90/lulu.izliang.com/yty/minglingzhuru2.png">
 <meta property="article:published_time" content="2020-02-05T11:01:01.000Z">
-<meta property="article:modified_time" content="2020-04-11T09:07:55.409Z">
+<meta property="article:modified_time" content="2020-04-13T08:13:33.349Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="白帽子讲web安全">
 <meta name="twitter:card" content="summary">
@@ -307,8 +308,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-11T17:07:55+08:00">
-                2020-04-11
+              <time title="更新于" itemprop="dateModified" datetime="2020-04-13T16:13:33+08:00">
+                2020-04-13
               </time>
             
           </span>
@@ -435,6 +436,14 @@
 <p><img src="http://lulu.izliang.com/yty/urltiaozhuan3.png" alt=""></p>
 <p>URL构造一般为：<code>http://www.xxx.com?url=xxxx</code> 前半部分为可信的官网后半部分为构造的恶意网址。</p>
 <p>URL跳转一般分为两种，一种为客户段跳转，另一种为服务器跳转。</p>
+<h1 id="命令注入"><a href="#命令注入" class="headerlink" title="命令注入"></a>命令注入</h1><p>windows系统的dos命令、Linux系统的bash命令</p>
+<p>dos命令查看ip配置：<code>ipconfig</code>；查看当前系统用户：<code>net user</code>；查看目录<code>dir &quot;./&quot;</code>; 管道符<code>|</code>能够将前面命令的输出作为后面命令的输入。</p>
+<p>命令注入的条件：①调用可执行系统命令的函数②函数或者函数的参数可控③拼接注入命令。</p>
+<p>&amp;&amp;：代表首先执行命令a在执行命令b，但是前提条件是命令a执行正确才会执行命令b，在a执行失败的情况下不会执行b命令。所以又被称为短路运算符。</p>
+<p>&amp;：代表首先执行命令a在执行命令b，如果a执行失败，还是会继续执行命令b。也就是说命令b的执行不会受到命令a的干扰，在执行效率上来说“&amp;&amp;”更加高效。</p>
+<p>||：代表首先执行a命令在执行b命令，如果a命令执行成功，就不会执行b命令，相反，如果a命令执行不成功，就会执行b命令。</p>
+<p>|：代表首先执行a命令，在a的结果上执行b命令。</p>
+<p><img src="http:lulu.izliang.com/yty/minglingzhuru2.png" alt="">也可以用DNS查询。</p>
 <h1 id="文件上传漏洞"><a href="#文件上传漏洞" class="headerlink" title="文件上传漏洞"></a>文件上传漏洞</h1>
       
     </div>
@@ -613,7 +622,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的安全问题"><span class="nav-number">1.</span> <span class="nav-text">常见的安全问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">2.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#xss是什么"><span class="nav-number">2.1.</span> <span class="nav-text">xss是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xss分类"><span class="nav-number">2.2.</span> <span class="nav-text">xss分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">3.</span> <span class="nav-text">CSRF</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ClickJacking"><span class="nav-number">4.</span> <span class="nav-text">ClickJacking</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-注入"><span class="nav-number">5.</span> <span class="nav-text">SQL 注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入过程"><span class="nav-number">5.1.</span> <span class="nav-text">SQL注入过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入的必备条件"><span class="nav-number">5.2.</span> <span class="nav-text">SQL注入的必备条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#URL跳转"><span class="nav-number">6.</span> <span class="nav-text">URL跳转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件上传漏洞"><span class="nav-number">7.</span> <span class="nav-text">文件上传漏洞</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的安全问题"><span class="nav-number">1.</span> <span class="nav-text">常见的安全问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xss"><span class="nav-number">2.</span> <span class="nav-text">xss</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#xss是什么"><span class="nav-number">2.1.</span> <span class="nav-text">xss是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#xss分类"><span class="nav-number">2.2.</span> <span class="nav-text">xss分类</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSRF"><span class="nav-number">3.</span> <span class="nav-text">CSRF</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ClickJacking"><span class="nav-number">4.</span> <span class="nav-text">ClickJacking</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL-注入"><span class="nav-number">5.</span> <span class="nav-text">SQL 注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入过程"><span class="nav-number">5.1.</span> <span class="nav-text">SQL注入过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL注入的必备条件"><span class="nav-number">5.2.</span> <span class="nav-text">SQL注入的必备条件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#URL跳转"><span class="nav-number">6.</span> <span class="nav-text">URL跳转</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令注入"><span class="nav-number">7.</span> <span class="nav-text">命令注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件上传漏洞"><span class="nav-number">8.</span> <span class="nav-text">文件上传漏洞</span></a></li></ol></div>
             
 
           </div>
