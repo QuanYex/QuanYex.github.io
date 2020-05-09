@@ -161,8 +161,39 @@
 <meta property="og:image" content="http://lulu.izliang.com/yty/luyougenzong2.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/luyougenzong3.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/luyougenzong4.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcptou1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcptou2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcpshuju1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcpshuju2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcpshuju3.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcpshuju4.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dhcpshuju5.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/zuyueneixuyue.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnstou.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsshuju1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsshuju2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnswenti.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsdigui1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsdigui2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsdigui3.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnsdigui4.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnschuansong1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnschuansong2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnschuansong3.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/dnschuansong4.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpliulan1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpliulan2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpliulan3.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpshangchuan1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpshangchuan2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/httpshangchuan3.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/twdenglu1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/twdenglu2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/twshangchuan1.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/twshangchuan2.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/twshangchuan3.png">
 <meta property="article:published_time" content="2020-05-08T12:02:59.000Z">
-<meta property="article:modified_time" content="2020-05-08T14:55:26.032Z">
+<meta property="article:modified_time" content="2020-05-09T04:44:19.100Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="wireshark">
 <meta name="twitter:card" content="summary">
@@ -374,8 +405,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-05-08T22:55:26+08:00">
-                2020-05-08
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-09T12:44:19+08:00">
+                2020-05-09
               </time>
             
           </span>
@@ -711,6 +742,89 @@
 <p><img src="http://lulu.izliang.com/yty/luyougenzong3.png" alt=""></p>
 <p><img src="http://lulu.izliang.com/yty/luyougenzong4.png" alt=""></p>
 <p>路由跟踪将TTL 自加1 的过程一直持续直到到达目的地4.2.2.1，与路径上每一个路由器进行 通信，从而画出前往目的地的路由图。</p>
+<h1 id="常见高层网络协议"><a href="#常见高层网络协议" class="headerlink" title="常见高层网络协议"></a>常见高层网络协议</h1><h2 id="1-动态主机配置协议DHCP"><a href="#1-动态主机配置协议DHCP" class="headerlink" title="1.动态主机配置协议DHCP"></a>1.动态主机配置协议DHCP</h2><p>（Dynamic HostConfiguration Protocol）</p>
+<p>​    （1）DHCP 头</p>
+<p><img src="http://lulu.izliang.com/yty/dhcptou1.png" alt=""></p>
+<p>操作代码OpCode：DHCP 请求或者DHCP 回复 </p>
+<p>硬件类型Hardware Type：10MB 以太网、IEEE802、ATM 等 </p>
+<p>硬件长度Hardware Length：硬件地址长度 </p>
+<p>跳数Hops：中继代理用来帮助寻找DHCP 服务器 </p>
+<p>事务ID：用来匹配请求和响应的一个随机数 </p>
+<p>消耗时间Seconds Elasped：客户端首次向服务器发出请求后的时间 </p>
+<p>标记Flags：客户端能够接受的流量类型（单播、广播以及其他） </p>
+<p>你的IP：服务器为客户端提供的I</p>
+<p><img src="http://lulu.izliang.com/yty/dhcptou2.png" alt=""></p>
+<p>​    （2）数据包分析</p>
+<p><img src="http://lulu.izliang.com/yty/dhcpshuju1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dhcpshuju2.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dhcpshuju3.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dhcpshuju4.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dhcpshuju5.png" alt=""></p>
+<p>​    （3）租约内续约</p>
+<p>当一个拥有了IP 的客户端在租约内重新启动，需要进行一次精简版的DORA 过程来重新认领它的IP，只需要完成请求和确认后两步就可以了。</p>
+<p><img src="http://lulu.izliang.com/yty/zuyueneixuyue.png" alt=""></p>
+<h2 id="2-域名系统DNS"><a href="#2-域名系统DNS" class="headerlink" title="2.域名系统DNS"></a>2.域名系统DNS</h2><p>（Domain Name System）</p>
+<p>​    （1）DNS 头</p>
+<p><img src="http://lulu.izliang.com/yty/dnstou.png" alt=""></p>
+<ul>
+<li><p>QR：查询/.响应 Query/Response，指明数据包是查询还是响应 </p>
+</li>
+<li><p>AA：权威应答 Authoritative Answer，表示由域内权威域名服务器发出的 </p>
+</li>
+<li><p>TC：截断 Truncation，指明响应太长，无法装入数据包而被截断 </p>
+</li>
+<li><p>RD：期望递归 Recursion Desired，表示客户端在目标服务器不含请求信息时要求递归查询 </p>
+</li>
+<li><p>RA：可用递归 Recursion Available，表示域名服务器支持递归查询</p>
+</li>
+<li><p>Z：保留</p>
+<p>（2）数据包分析</p>
+</li>
+</ul>
+<p><img src="http://lulu.izliang.com/yty/dnsshuju1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dnsshuju2.png" alt=""></p>
+<p>​    （3）DNS 问题类型</p>
+<p><img src="http://lulu.izliang.com/yty/dnswenti.png" alt=""></p>
+<p>​    （4）DNS 递归</p>
+<p>客户端捕获的DNS 数据包：</p>
+<p><img src="http://lulu.izliang.com/yty/dnsdigui1.png" alt=""></p>
+<p>内部DNS 服务器102 设置了期望递归查询：</p>
+<p><img src="http://lulu.izliang.com/yty/dnsdigui2.png" alt=""></p>
+<p>服务器端捕获的DNS 数据包：</p>
+<p><img src="http://lulu.izliang.com/yty/dnsdigui3.png" alt=""></p>
+<p>DNS 服务器进行了递归应答，内部DNS 服务器102 不知道nstarch.com 域名的IP， 由 </p>
+<p><img src="http://lulu.izliang.com/yty/dnsdigui4.png" alt=""></p>
+<p>​    （5）DNS 区域传送</p>
+<p>出于冗余备份的需要，在两台设备间传送区域数据。 </p>
+<ul>
+<li><p>完整区域传送AXFR：将整个区域在设备间进行传送。 </p>
+</li>
+<li><p>增量区域传送TXFR：仅传送区域信息的一部分。</p>
+</li>
+</ul>
+<p><img src="http://lulu.izliang.com/yty/dnschuansong1.png" alt=""></p>
+<p>DNS 在一些如区域传送的任务中仍会使用TCP 协议：</p>
+<p><img src="http://lulu.izliang.com/yty/dnschuansong2.png" alt=""></p>
+<p>前三个包是TCP 三次握手，第4 个包是164 和139 间进行区域传送，不包含DNS 信息， 请求数据由多个包发送，因此第4 包标记了“重组装PDU 的TCP 分片”，包5 是对数据包 4 的接收确认，包6 为DNS 完整区域传送请求。</p>
+<p><img src="http://lulu.izliang.com/yty/dnschuansong3.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/dnschuansong4.png" alt=""></p>
+<h2 id="3-超文本传输协议HTTP"><a href="#3-超文本传输协议HTTP" class="headerlink" title="3.超文本传输协议HTTP"></a>3.超文本传输协议HTTP</h2><p>（Hypertext Transfer Protocol）</p>
+<p>​    （1）使用HTTP 浏览</p>
+<p><img src="http://lulu.izliang.com/yty/httpliulan1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/httpliulan2.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/httpliulan3.png" alt=""></p>
+<p>​    （2）使用HTTP 上传数据</p>
+<p>用户向网站发表评论</p>
+<p><img src="http://lulu.izliang.com/yty/httpshangchuan1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/httpshangchuan2.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/httpshangchuan3.png" alt=""></p>
+<h1 id="基础的现实世界场景"><a href="#基础的现实世界场景" class="headerlink" title="基础的现实世界场景"></a>基础的现实世界场景</h1><h2 id="捕获Twitter-社交网络流量"><a href="#捕获Twitter-社交网络流量" class="headerlink" title="捕获Twitter 社交网络流量"></a>捕获Twitter 社交网络流量</h2><p>​    （1）登录过程</p>
+<p><img src="http://lulu.izliang.com/yty/twdenglu1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/twdenglu2.png" alt=""></p>
+<p>​    （2）上传数据</p>
+<p><img src="http://lulu.izliang.com/yty/twshangchuan1.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/twshangchuan2.png" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/twshangchuan3.png" alt=""></p>
 <p>参考：奇安信wireshark </p>
 
       
@@ -886,7 +1000,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据包分析基础"><span class="nav-number">1.</span> <span class="nav-text">数据包分析基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#监听网络线路"><span class="nav-number">2.</span> <span class="nav-text">监听网络线路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wireshark基础用法"><span class="nav-number">3.</span> <span class="nav-text">Wireshark基础用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-查找-Ctrl-F"><span class="nav-number">3.1.</span> <span class="nav-text">1.查找 Ctrl+F</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-标记：Ctrl-M-或右键菜单"><span class="nav-number">3.2.</span> <span class="nav-text">2.标记：Ctrl+M 或右键菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-时间显示格式"><span class="nav-number">3.3.</span> <span class="nav-text">3.时间显示格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-相对时间：Ctrl-T"><span class="nav-number">3.4.</span> <span class="nav-text">4.相对时间：Ctrl+T</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-捕获选项：Ctrl-K"><span class="nav-number">3.5.</span> <span class="nav-text">5.捕获选项：Ctrl+K</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-名字解析"><span class="nav-number">3.6.</span> <span class="nav-text">6.名字解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-协议解析"><span class="nav-number">3.7.</span> <span class="nav-text">7.协议解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-过滤器"><span class="nav-number">3.8.</span> <span class="nav-text">8.过滤器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量分析和图形化功能"><span class="nav-number">4.</span> <span class="nav-text">流量分析和图形化功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通用底层网络协议"><span class="nav-number">5.</span> <span class="nav-text">通用底层网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-地址解析协议ARP"><span class="nav-number">5.1.</span> <span class="nav-text">1.地址解析协议ARP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-IP-协议"><span class="nav-number">5.2.</span> <span class="nav-text">2.IP 协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-传输控制协议TCP"><span class="nav-number">5.3.</span> <span class="nav-text">3.传输控制协议TCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用户数据报协议UDP"><span class="nav-number">5.4.</span> <span class="nav-text">4.用户数据报协议UDP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-互联网控制消息协议ICMP"><span class="nav-number">5.5.</span> <span class="nav-text">5.互联网控制消息协议ICMP</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据包分析基础"><span class="nav-number">1.</span> <span class="nav-text">数据包分析基础</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#监听网络线路"><span class="nav-number">2.</span> <span class="nav-text">监听网络线路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wireshark基础用法"><span class="nav-number">3.</span> <span class="nav-text">Wireshark基础用法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-查找-Ctrl-F"><span class="nav-number">3.1.</span> <span class="nav-text">1.查找 Ctrl+F</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-标记：Ctrl-M-或右键菜单"><span class="nav-number">3.2.</span> <span class="nav-text">2.标记：Ctrl+M 或右键菜单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-时间显示格式"><span class="nav-number">3.3.</span> <span class="nav-text">3.时间显示格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-相对时间：Ctrl-T"><span class="nav-number">3.4.</span> <span class="nav-text">4.相对时间：Ctrl+T</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-捕获选项：Ctrl-K"><span class="nav-number">3.5.</span> <span class="nav-text">5.捕获选项：Ctrl+K</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-名字解析"><span class="nav-number">3.6.</span> <span class="nav-text">6.名字解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-协议解析"><span class="nav-number">3.7.</span> <span class="nav-text">7.协议解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-过滤器"><span class="nav-number">3.8.</span> <span class="nav-text">8.过滤器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#流量分析和图形化功能"><span class="nav-number">4.</span> <span class="nav-text">流量分析和图形化功能</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通用底层网络协议"><span class="nav-number">5.</span> <span class="nav-text">通用底层网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-地址解析协议ARP"><span class="nav-number">5.1.</span> <span class="nav-text">1.地址解析协议ARP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-IP-协议"><span class="nav-number">5.2.</span> <span class="nav-text">2.IP 协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-传输控制协议TCP"><span class="nav-number">5.3.</span> <span class="nav-text">3.传输控制协议TCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-用户数据报协议UDP"><span class="nav-number">5.4.</span> <span class="nav-text">4.用户数据报协议UDP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-互联网控制消息协议ICMP"><span class="nav-number">5.5.</span> <span class="nav-text">5.互联网控制消息协议ICMP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见高层网络协议"><span class="nav-number">6.</span> <span class="nav-text">常见高层网络协议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-动态主机配置协议DHCP"><span class="nav-number">6.1.</span> <span class="nav-text">1.动态主机配置协议DHCP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-域名系统DNS"><span class="nav-number">6.2.</span> <span class="nav-text">2.域名系统DNS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-超文本传输协议HTTP"><span class="nav-number">6.3.</span> <span class="nav-text">3.超文本传输协议HTTP</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础的现实世界场景"><span class="nav-number">7.</span> <span class="nav-text">基础的现实世界场景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#捕获Twitter-社交网络流量"><span class="nav-number">7.1.</span> <span class="nav-text">捕获Twitter 社交网络流量</span></a></li></ol></li></ol></div>
             
 
           </div>
