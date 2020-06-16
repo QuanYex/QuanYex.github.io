@@ -86,8 +86,10 @@
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
 <meta property="og:description" content="目录结构Bin：全称binary，含义是二进制。该目录中存储的都是一些二进制文件，文件都是可以被运行的。 Dev：该目录中主要存放的是外接设备，例如盘、其他光盘等。在其中的外接设备是不能直接被使用的，需要挂载（类似windows下的分配盘符）。 Etc：该目录主要存储一些配置文件。 Home：表示除了root用户以外的其他用户的家目录，类似于windows下的User&#x2F; 用户目录">
 <meta property="og:image" content="http://lulu.izliang.com/yty/hostname.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/ps-ef.png">
+<meta property="og:image" content="http://lulu.izliang.com/yty/top.png">
 <meta property="article:published_time" content="2020-06-03T10:54:20.000Z">
-<meta property="article:modified_time" content="2020-06-09T15:45:45.279Z">
+<meta property="article:modified_time" content="2020-06-16T13:07:58.626Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
@@ -299,8 +301,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-09T23:45:45+08:00">
-                2020-06-09
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-16T21:07:58+08:00">
+                2020-06-16
               </time>
             
           </span>
@@ -489,6 +491,28 @@
 <p>验证上述信息是否正确</p>
 <p>验证用户信息，通过文件/etc/passwd</p>
 <p>验证用户组信息，通过文件/etc/group</p>
+<h3 id="whoami指令"><a href="#whoami指令" class="headerlink" title="whoami指令"></a>whoami指令</h3><p>作用：显示当前的用户名，一般用于shell脚本，方便记录日志</p>
+<p>语法：whoami</p>
+<h3 id="ps-ef指令（重点）"><a href="#ps-ef指令（重点）" class="headerlink" title="ps -ef指令（重点）"></a>ps -ef指令（重点）</h3><p>ps指令： 用于查看服务器当前的进程信息，类似于任务管理器</p>
+<p>选项含义：</p>
+<p>​    -e：等价于“-A”，表示列出全部的进程</p>
+<p>​    -f：显示全部的列（显示全字段）</p>
+<p><img src="http://lulu.izliang.com/yty/ps-ef.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">uid：该进程执行用户的id；</span><br><span class="line"></span><br><span class="line">pid：进程id；</span><br><span class="line"></span><br><span class="line">PPID：该进程的父级进程（被调用），如果一个程序的父级进程找不到，该程序的进程称为僵尸进程；</span><br><span class="line"></span><br><span class="line">C：cpu占用率，其形式是百分比；</span><br><span class="line"></span><br><span class="line">STIME：进程的启动时间；</span><br><span class="line"></span><br><span class="line">TTY：终端设备（发起该进程的设备识别符号，显示？表示进程并不是由终端设备发起。）</span><br><span class="line"></span><br><span class="line">TIME：进程的执行时间；</span><br><span class="line"></span><br><span class="line">CMD：该进程的名称或者对应的路径</span><br></pre></td></tr></table></figure>
+
+<p>案例：在ps结果中过滤出想要查看的进程状态</p>
+<p>​    #ps -ef | grep 进程名<br>$$</p>
+<p>$$</p>
+<h3 id="top指令"><a href="#top指令" class="headerlink" title="top指令"></a>top指令</h3><p>作用：查看服务器的进程占的资源</p>
+<p>语法： 进入命令： #top        （动态显示）</p>
+<p>​            退出命令： 按下q键</p>
+<p><img src="http://lulu.izliang.com/yty/top.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">PID:进程id</span><br><span class="line">USER：该进程对应的用户</span><br><span class="line">PR：权重（优先级）</span><br><span class="line">VIRT：虚拟内存（申请了500mb，实际使用320MB，此时虚拟内存就是500MB）</span><br><span class="line">RES：常驻内存（申请了500mb，实际使用320MB，此时常驻内存就是320MB）</span><br><span class="line">SHR：共享内存（申请了500mb，实际使用320MB，但是其中还包含了对其他进程的调用开销，则需要扣除）</span><br><span class="line">		</span><br><span class="line">		计算一个进程实际使用的内存 &#x3D; RES - SHR</span><br><span class="line"></span><br><span class="line">S：表示进程的状态</span><br><span class="line">%CPU：表示CPU占用百分比；</span><br><span class="line">%MEM：表示内存的占用百分比；</span><br><span class="line">TIME+：执行的时间；</span><br><span class="line">COMMAND：进程的名称或者路径；</span><br></pre></td></tr></table></figure>
+
+<p>方便快捷键（进入命令之后，按下方便的快捷键）：  </p>
+<p>​    M：按照内存MEM从高到低进行降序排列；</p>
+<p>​    P：按照CPU使用率从高到低进行降序排列；</p>
+<p>​    1：当服务器拥有多个CPU时候可以使用“1”来切换是否展示显示各个CPU的详细信息。</p>
 
       
     </div>
@@ -612,7 +636,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -634,7 +658,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -667,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端命令"><span class="nav-number">2.</span> <span class="nav-text">终端命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考网址-man-linuxde-net"><span class="nav-number">2.1.</span> <span class="nav-text">参考网址   man.linuxde.net</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础指令"><span class="nav-number">2.2.</span> <span class="nav-text">基础指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls指令"><span class="nav-number">2.2.1.</span> <span class="nav-text">ls指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd指令"><span class="nav-number">2.2.2.</span> <span class="nav-text">pwd指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd命令"><span class="nav-number">2.2.3.</span> <span class="nav-text">cd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">2.2.4.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch指令"><span class="nav-number">2.2.5.</span> <span class="nav-text">touch指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp指令"><span class="nav-number">2.2.6.</span> <span class="nav-text">cp指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv指令"><span class="nav-number">2.2.7.</span> <span class="nav-text">mv指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm命令"><span class="nav-number">2.2.8.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim命令"><span class="nav-number">2.2.9.</span> <span class="nav-text">vim命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出重定向"><span class="nav-number">2.2.10.</span> <span class="nav-text">输出重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat指令"><span class="nav-number">2.2.11.</span> <span class="nav-text">cat指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶指令"><span class="nav-number">2.3.</span> <span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#df指令"><span class="nav-number">2.3.1.</span> <span class="nav-text">df指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#free指令"><span class="nav-number">2.3.2.</span> <span class="nav-text">free指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head指令"><span class="nav-number">2.3.3.</span> <span class="nav-text">head指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail指令"><span class="nav-number">2.3.4.</span> <span class="nav-text">tail指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#less命令"><span class="nav-number">2.3.5.</span> <span class="nav-text">less命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc指令"><span class="nav-number">2.3.6.</span> <span class="nav-text">wc指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#date指令"><span class="nav-number">2.3.7.</span> <span class="nav-text">date指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cal指令"><span class="nav-number">2.3.8.</span> <span class="nav-text">cal指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear-ctrl-L-指令"><span class="nav-number">2.3.9.</span> <span class="nav-text">clear&#x2F;ctrl +L 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管道"><span class="nav-number">2.3.10.</span> <span class="nav-text">管道</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级指令"><span class="nav-number">2.4.</span> <span class="nav-text">高级指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hostname指令"><span class="nav-number">2.4.1.</span> <span class="nav-text">hostname指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id指令"><span class="nav-number">2.4.2.</span> <span class="nav-text">id指令</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录结构"><span class="nav-number">1.</span> <span class="nav-text">目录结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#终端命令"><span class="nav-number">2.</span> <span class="nav-text">终端命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#参考网址-man-linuxde-net"><span class="nav-number">2.1.</span> <span class="nav-text">参考网址   man.linuxde.net</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础指令"><span class="nav-number">2.2.</span> <span class="nav-text">基础指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls指令"><span class="nav-number">2.2.1.</span> <span class="nav-text">ls指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pwd指令"><span class="nav-number">2.2.2.</span> <span class="nav-text">pwd指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd命令"><span class="nav-number">2.2.3.</span> <span class="nav-text">cd命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir"><span class="nav-number">2.2.4.</span> <span class="nav-text">mkdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch指令"><span class="nav-number">2.2.5.</span> <span class="nav-text">touch指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp指令"><span class="nav-number">2.2.6.</span> <span class="nav-text">cp指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mv指令"><span class="nav-number">2.2.7.</span> <span class="nav-text">mv指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm命令"><span class="nav-number">2.2.8.</span> <span class="nav-text">rm命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim命令"><span class="nav-number">2.2.9.</span> <span class="nav-text">vim命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出重定向"><span class="nav-number">2.2.10.</span> <span class="nav-text">输出重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cat指令"><span class="nav-number">2.2.11.</span> <span class="nav-text">cat指令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶指令"><span class="nav-number">2.3.</span> <span class="nav-text">进阶指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#df指令"><span class="nav-number">2.3.1.</span> <span class="nav-text">df指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#free指令"><span class="nav-number">2.3.2.</span> <span class="nav-text">free指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head指令"><span class="nav-number">2.3.3.</span> <span class="nav-text">head指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail指令"><span class="nav-number">2.3.4.</span> <span class="nav-text">tail指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#less命令"><span class="nav-number">2.3.5.</span> <span class="nav-text">less命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc指令"><span class="nav-number">2.3.6.</span> <span class="nav-text">wc指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#date指令"><span class="nav-number">2.3.7.</span> <span class="nav-text">date指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cal指令"><span class="nav-number">2.3.8.</span> <span class="nav-text">cal指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear-ctrl-L-指令"><span class="nav-number">2.3.9.</span> <span class="nav-text">clear&#x2F;ctrl +L 指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#管道"><span class="nav-number">2.3.10.</span> <span class="nav-text">管道</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级指令"><span class="nav-number">2.4.</span> <span class="nav-text">高级指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hostname指令"><span class="nav-number">2.4.1.</span> <span class="nav-text">hostname指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#id指令"><span class="nav-number">2.4.2.</span> <span class="nav-text">id指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whoami指令"><span class="nav-number">2.4.3.</span> <span class="nav-text">whoami指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-ef指令（重点）"><span class="nav-number">2.4.4.</span> <span class="nav-text">ps -ef指令（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#top指令"><span class="nav-number">2.4.5.</span> <span class="nav-text">top指令</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

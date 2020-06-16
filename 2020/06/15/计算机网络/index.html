@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ELK,日志采集分析," />
+  <meta name="keywords" content="计算机网络," />
 
 
 
@@ -79,17 +79,16 @@
 
 
 
-<meta name="description" content="1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es 2.ELK日志协议栈 e：elasticsearch 全文检索的框架，基于lucene l：logstash   日志数据收集采集框架，类似于flume k：kibana 报表展示工具，类似于echarts 使用">
+<meta name="description" content="计算机网络概述基本概念 计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络  计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。 注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ELK学习">
-<meta property="og:url" content="http://yoursite.com/2020/06/05/ELK%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="计算机网络">
+<meta property="og:url" content="http://yoursite.com/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es 2.ELK日志协议栈 e：elasticsearch 全文检索的框架，基于lucene l：logstash   日志数据收集采集框架，类似于flume k：kibana 报表展示工具，类似于echarts 使用">
-<meta property="article:published_time" content="2020-06-05T10:57:06.000Z">
-<meta property="article:modified_time" content="2020-06-08T03:21:32.452Z">
+<meta property="og:description" content="计算机网络概述基本概念 计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络  计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。 注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）">
+<meta property="article:published_time" content="2020-06-15T13:48:16.000Z">
+<meta property="article:modified_time" content="2020-06-15T16:33:01.614Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="ELK">
-<meta property="article:tag" content="日志采集分析">
+<meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/05/ELK学习/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/15/计算机网络/"/>
 
 
 
 
 
-  <title>ELK学习 | QuanYex's Blog</title>
+  <title>计算机网络 | QuanYex's Blog</title>
   
 
 
@@ -253,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/05/ELK%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QuanYex">
@@ -270,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ELK学习</h1>
+          <h1 class="post-title" itemprop="name headline">计算机网络</h1>
         
 
         <div class="post-meta">
@@ -282,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-05T18:57:06+08:00">
-                2020-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-15T21:48:16+08:00">
+                2020-06-15
               </time>
             
 
@@ -298,8 +297,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-08T11:21:32+08:00">
-                2020-06-08
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-16T00:33:01+08:00">
+                2020-06-16
               </time>
             
           </span>
@@ -319,17 +318,6 @@
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
                     <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index">
-                    <span itemprop="name">工作</span>
                   </a>
                 </span>
 
@@ -365,26 +353,59 @@
       
 
       
-        <p>1.全文检索的需求：因为数据库已经解决不了海量数据的快速查询，所以引入了全文检索。最原生的是lucene，经过封装出现solr，solr在建立索引的时候，检索能力就会下降。后来出现了es</p>
-<p>2.ELK日志协议栈</p>
-<p>e：elasticsearch 全文检索的框架，基于lucene</p>
-<p>l：logstash   日志数据收集采集框架，类似于flume</p>
-<p>k：kibana 报表展示工具，类似于echarts</p>
-<p>使用logstash采集数据，采集的数据全部存储到es里面去，使用kubana展示es索引库当中的数据。</p>
+        <h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
+<li><p>计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络</p>
+</li>
+<li><p>计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。</p>
+<p>注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）</p>
+</li>
+</ol>
 <a id="more"></a>
 
-<h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1><p>elk中文手册：<a href="https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html" target="_blank" rel="noopener">https://www.elastic.co/guide/cn/elasticsearch/guide/current/index.html</a></p>
-<p>elk中文社区：<a href="https://elasticsearch.cn/" target="_blank" rel="noopener">https://elasticsearch.cn/</a></p>
-<h2 id="ES介绍"><a href="#ES介绍" class="headerlink" title="ES介绍"></a>ES介绍</h2><h3 id="es与传统关系型数据库："><a href="#es与传统关系型数据库：" class="headerlink" title="es与传统关系型数据库："></a>es与传统关系型数据库：</h3><p>Relational DB -&gt;  Databases -&gt; Tables -&gt; Rows -&gt; Columns;</p>
-<p>Elasticsearch -&gt;   Indexes -&gt;      Types -&gt; Documents -&gt;Fields </p>
-<h3 id="es核心概念"><a href="#es核心概念" class="headerlink" title="es核心概念"></a>es核心概念</h3><p>1、索引index一个索引就是一个拥有几分相似特征的文档的集合。比如说，你可以有一个客户数据的索引，另一个产品目录的索引，还有一个订单数据的索引。一个索引由一个名字来标识（必须全部是小写字母的），并且当我们要对对应于这个索引中的文档进行索引、搜索、更新和删除的时候，都要使用到这个名字。在一个集群中，可以定义任意多的索引。</p>
-<p>2、类型type在一个索引中，你可以定义一种或多种类型。一个类型是你的索引的一个逻辑上的分类/分区，其语义完全由你来定。通常，会为具有一组共同字段的文档定义一个类型。比如说，我们假设你运营一个博客平台并且将你所有的数据存储到一个索引中。在这个索引中，你可以为用户数据定义一个类型，为博客数据定义另一个类型，当然，也可以为评论数据定义另一个类型。</p>
-<p>3、字段Field相当于是数据表的字段，对文档数据根据不同属性进行的分类标识</p>
-<p>4、映射mappingmapping是处理数据的方式和规则方面做一些限制，如某个字段的数据类型、默认值、分析器、是否被索引等等，这些都是映射里面可以设置的，其它就是处理es里面数据的一些使用规则设置也叫做映射，按着最优规则处理数据对性能提高很大，因此才需要建立映射，并且需要思考如何建立映射才能对性能更好。</p>
-<p>5、文档document一个文档是一个可被索引的基础信息单元。比如，你可以拥有某一个客户的文档，某一个产品的一个文档，当然，也可以拥有某个订单的一个文档。文档以JSON格式来表示，而JSON是一个到处存在的互联网数据交互格式。在一个index/type里面，你可以存储任意多的文档。注意，尽管一个文档，物理上存在于一个索引之中，文档必须被索引/赋予一个索引的type。</p>
-<p>6、集群cluster一个集群就是由一个或多个节点组织在一起，它们共同持有整个的数据，并一起提供索引和搜索功能。一个集群由一个唯一的名字标识，这个名字默认就是“elasticsearch”。这个名字是重要的，因为一个节点只能通过指定某个集群的名字，来加入这个集群</p>
-<p>7、节点node一个节点是集群中的一个服务器，作为集群的一部分，它存储数据，参与集群的索引和搜索功能。和集群类似，一个节点也是由一个名字来标识的，默认情况下，这个名字是一个随机的漫威漫画角色的名字，这个名字会在启动的时候赋予节点。这个名字对于管理工作来说挺重要的，因为在这个管理过程中，你会去确定网络中的哪些服务器对应于Elasticsearch集群中的哪些节点。一个节点可以通过配置集群名称的方式来加入一个指定的集群。默认情况下，每个节点都会被安排加入到一个叫做“elasticsearch”的集群中，这意味着，如果你在你的网络中启动了若干个节点，并假定它们能够相互发现彼此，它们将会自动地形成并加入到一个叫做“elasticsearch”的集群中。在一个集群里，只要你想，可以拥有任意多个节点。而且，如果当前你的网络中没有运行任何Elasticsearch节点，这时启动一个节点，会默认创建并加入一个叫做“elasticsearch”的集群。</p>
-<p>8、分片和复制shards&amp;replicas一个索引可以存储超出单个结点硬件限制的大量数据。比如，一个具有10亿文档的索引占据1TB的磁盘空间，而任一节点都没有这样大的磁盘空间；或者单个节点处理搜索请求，响应太慢。为了解决这个问题，Elasticsearch提供了将索引划分成多份的能力，这些份就叫做分片。当你创建一个索引的时候，你可以指定你想要的分片的数量。每个分片本身也是一个功能完善并且独立的“索引”，这个“索引”可以被放置到集群中的任何节点上。分片很重要，主要有两方面的原因：1）允许你水平分割/扩展你的内容容量。2）允许你在分片（潜在地，位于多个节点上）之上进行分布式的、并行的操作，进而提高性能/吞吐量。至于一个分片怎样分布，它的文档怎样聚合回搜索请求，是完全由Elasticsearch管理的，对于作为用户的你来说，这些都是透明的。在一个网络/云的环境里，失败随时都可能发生，在某个分片/节点不知怎么的就处于离线状态，或者由于任何原因消失了，这种情况下，有一个故障转移机制是非常有用并且是强烈推荐的。为此目的，Elasticsearch允许你创建分片的一份或多份拷贝，这些拷贝叫做复制分片，或者直接叫复制。复制之所以重要，有两个主要原因：在分片/节点失败的情况下，提供了高可用性。因为这个原因，注意到复制分片从不与原/主要（original/primary）分片置于同一节点上是非常重要的。扩展你的搜索量/吞吐量，因为搜索可以在所有的复制上并行运行。总之，每个索引可以被分成多个分片。一个索引也可以被复制0次（意思是没有复制）或多次。一旦复制了，每个索引就有了主分片（作为复制源的原来的分片）和复制分片（主分片的拷贝）之别。分片和复制的数量可以在索引创建的时候指定。在索引创建之后，你可以在任何时候动态地改变复制的数量，但是你事后不能改变分片的数量。默认情况下，Elasticsearch中的每个索引被分片5个主分片和1个复制，这意味着，如果你的集群中至少有两个节点，你的索引将会有5个主分片和另外5个复制分片（1个完全拷贝），这样的话每个索引总共就有10个分片。</p>
+<ol start="3">
+<li><p>internet是全球最大的互联网络,是数以百万计的互连的计算设备集合：</p>
+<p>主机（host）=端系统（end system）</p>
+<p>通信链路：光纤、卫星、铜缆、无线电……</p>
+<p>分组交换：转发分组（数据包） 路由器（routers）和交换机（switches）</p>
+<p>问题：仅有硬件（主机、链路、路由器……）internet能否顺畅运行？能保证数据有序交付吗？</p>
+<p>​                        不能，需要协议。</p>
+</li>
+<li><p>硬件是计算机网络的基础，计算机网络数据交换必须遵守规则，如同交通系统一样，这些规则就是协议。</p>
+</li>
+<li><p>网络协议（network protocol）规定了通信实体之间所交换的消息的格式、意义、顺序以及针对收到信息或发生的事件采取的“动作”</p>
+</li>
+<li><p>协议三要素：</p>
+<p>语法：结构或格式、信号电平</p>
+<p>语义：需要发出何种控制信息、完成何种动作以及做出何种响应、差错控制</p>
+<p>时序：时间顺序</p>
+</li>
+<li><p>计算机网络结构：</p>
+<ol>
+<li>网络边缘：主机、网络应用</li>
+<li>接入网络，物理介质：有线或无线通信链路</li>
+<li>网络核心（核心网络）：互联的路由器、网络之网络。</li>
+</ol>
+</li>
+<li><p>网络边缘：</p>
+<p>主机：位于网络边缘、运行网络应用程序</p>
+<p>客户/服务器（client/sever）应用模型：客户发送请求，接收服务器响应</p>
+<p>对等（peer-peer，p2p）应用模型：无（或不依赖）专用服务器、通信在对等实体之间直接进行。如：QQ，Skype</p>
+</li>
+<li><p>接入网络：</p>
+<p>如何将网络边缘介入核心网？</p>
+<p>A：接入网络：住宅（家庭0、机构（学校、企业）、移动接入网络</p>
+<p>​    DSL：数字用户线路（数据通信通过DSL电话线接入Internet） </p>
+<p>​    电缆网络：    和DSL相同采用频分多路复用技术。</p>
+<p>​    HFC：混合光纤同轴电缆。共享电缆头端</p>
+<p>​    无线接入网络：无线局域网、广域无线接入（移动通信）</p>
+</li>
+<li><p>网络核心：</p>
+<p>关键功能：路由+转发。    </p>
+<p>​    路由：确定分组从源到目的的传输路径（路由算法生成本地转发表）</p>
+<p>​    转发：将分组从路由器的输入端口交换至正确的输出端口。通过数据交换实现网络核心从源主机到达目的主机。</p>
+<p>   N²链路问题  主机数为n 没两个主机能连接需要n(n-1)/2，技术很难实现，所以引入了交换设备，为了适应不同的网络规模，所以将交换设备连接成网络。</p>
+</li>
+</ol>
 
       
     </div>
@@ -402,9 +423,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ELK/" rel="tag"># ELK</a>
-          
-            <a href="/tags/%E6%97%A5%E5%BF%97%E9%87%87%E9%9B%86%E5%88%86%E6%9E%90/" rel="tag"># 日志采集分析</a>
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
           
         </div>
       
@@ -417,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/03/Linux%E5%AD%A6%E4%B9%A0/" rel="next" title="Linux学习">
-                <i class="fa fa-chevron-left"></i> Linux学习
+              <a href="/2020/06/10/%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%B1%87%E6%80%BB/" rel="next" title="任意密码重置汇总">
+                <i class="fa fa-chevron-left"></i> 任意密码重置汇总
               </a>
             
           </div>
@@ -426,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/10/%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%B1%87%E6%80%BB/" rel="prev" title="任意密码重置汇总">
-                任意密码重置汇总 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -565,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ElasticSearch"><span class="nav-number">1.</span> <span class="nav-text">ElasticSearch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES介绍"><span class="nav-number">1.1.</span> <span class="nav-text">ES介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#es与传统关系型数据库："><span class="nav-number">1.1.1.</span> <span class="nav-text">es与传统关系型数据库：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#es核心概念"><span class="nav-number">1.1.2.</span> <span class="nav-text">es核心概念</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络概述"><span class="nav-number">1.</span> <span class="nav-text">计算机网络概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li></ol></li></ol></div>
             
 
           </div>
