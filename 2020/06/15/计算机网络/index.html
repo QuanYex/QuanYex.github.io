@@ -86,8 +86,13 @@
 <meta property="og:site_name" content="QuanYex&#39;s Blog">
 <meta property="og:description" content="计算机网络概述基本概念 计算机网络视通信技术与计算机技术紧密结合的产物，计算机网络就是一种通信网络  计算机网络是互连（互联互通 ——通过通信链路）的、自治（无主从关系）的计算机集合。 注意：当距离很大时通过交换网络互联主机，交换节点（路由器或交换机）">
 <meta property="og:image" content="http://lulu.izliang.com/yty/dns.jpg">
+<meta property="og:image" content="http://lulu.izliang.com/yty/TCPduanjiegou.jpg">
+<meta property="og:image" content="http://lulu.izliang.com/yty/ACK.jpg">
+<meta property="og:image" content="http://lulu.izliang.com/yty/TCPlianjie.jpg">
+<meta property="og:image" content="http://lulu.izliang.com/yty/TCPchongchuan1.jpg">
+<meta property="og:image" content="http://lulu.izliang.com/yty/TCPchongchuan2.jpg">
 <meta property="article:published_time" content="2020-06-15T13:48:16.000Z">
-<meta property="article:modified_time" content="2020-10-12T15:29:01.175Z">
+<meta property="article:modified_time" content="2020-10-13T15:24:03.718Z">
 <meta property="article:author" content="QuanYex">
 <meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
@@ -299,8 +304,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-10-12T23:29:01+08:00">
-                2020-10-12
+              <time title="更新于" itemprop="dateModified" datetime="2020-10-13T23:24:03+08:00">
+                2020-10-13
               </time>
             
           </span>
@@ -525,6 +530,76 @@ DNS是多层命名服务器构成的分布式数据库，一般用来
 <p>这种重传机制的rdt协议称为ARQ（Automatic Repeat Request）协议</p>
 <p>rdt2.1中应对ACK/NAK破坏    通过序列号0  1解决</p>
 <p>rdt2.2中  无NAK</p>
+<h3 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h3><h4 id="TCP简介"><a href="#TCP简介" class="headerlink" title="TCP简介"></a>TCP简介</h4><ul>
+<li>点对点：一个发送方，一个接收方</li>
+<li>可靠的、按序的字节流</li>
+<li>流水线机制（TCP拥塞控制、流量控制机制）</li>
+<li>面向连接：通信前建立连接、只在连接两端中维护、连接包括两台主机上的缓存 连接状态变量、socket</li>
+<li>双向通信</li>
+</ul>
+<p>段结构</p>
+<p><img src="http://lulu.izliang.com/yty/TCPduanjiegou.jpg" alt=""></p>
+<p>序列号：</p>
+<ul>
+<li>​    序列号指的是segment中的第一个字节的编号，而不是segment的编号。</li>
+<li>简历TCP时，双方随机选择序列号。</li>
+</ul>
+<p>ACK：</p>
+<ul>
+<li>希望接收到的下一个字节的序列号。</li>
+<li>累计确认机制，该序号之前的所有字节均已正确接收</li>
+</ul>
+<p>TCP接收方如何处理乱序到达的segment：没有规定，是由TCP实现者（程序制作人）实现。</p>
+<p>RTT：Round trip time</p>
+<p>TCP发送方事件：</p>
+<ul>
+<li>创建segment</li>
+<li>序号是segment中第一个字节编号</li>
+<li>开启计时器</li>
+<li>设置超时事件：time out interval</li>
+</ul>
+<p>超时：重传引起超时的segment、重启定时器</p>
+<p>收到ACK：确认此前未确认的Segment、更新sendbase、如果窗口中还有位被确认的分组，重启定时器。</p>
+<p>快速重传（在定时器超时之前机进行快速重传）：</p>
+<ol>
+<li>TCP实现中，如果发生超时，超时时间间隔经重新设置，即将超时时间间隔加倍。导致其很大，重发丢失的分组之前需要等待很长时间。</li>
+<li>通过重复ACK检测分组丢失。如果分组丢失，可能会引发多个重复的ACK。</li>
+<li>如果sender收到对同一个数据的3个ACK，则假定该数据之后的段已经丢失。</li>
+</ol>
+<p><strong>为什么是三次握手</strong><br>为了实现可靠数据传输， TCP协议的通信双方，都必须维护一个序列号，以标识发送出去的数据包中，哪些是已经被对方收到的。三次握手的过程即是通信双方相互告知序列号起始值，并确认对方已经收到了序列号起始值的必经步骤<br>如果只是两次握手，至多只有连接发起方的起始序列号能被确认，另一方选择的序列号则得不到确认</p>
+<h4 id="TCP流量控制（通过buffer）"><a href="#TCP流量控制（通过buffer）" class="headerlink" title="TCP流量控制（通过buffer）"></a>TCP流量控制（通过buffer）</h4><p>上层应用可能处理buffer中数据速较慢，因此flow control使得发送方不会传输的太多、太快以至于淹没接收方buffer</p>
+<h4 id="TCP拥塞控制（没看会）"><a href="#TCP拥塞控制（没看会）" class="headerlink" title="TCP拥塞控制（没看会）"></a>TCP拥塞控制（没看会）</h4><h4 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h4><p>TCP发送方和接受方在传输数据前需要建立连接。</p>
+<p>初始化TCP变量：seq、buffer和流量控制信息。</p>
+<p><strong>三次握手</strong></p>
+<ol>
+<li>第一阶段：发送syn报文段：<ul>
+<li>syn标志位为1</li>
+<li>客户机初始化序列号（一般随机）</li>
+<li>不携带数据</li>
+</ul>
+</li>
+<li>第二阶段：答复SYN-ACK报文段：<ul>
+<li>分配缓存</li>
+<li>服务器初始序列号告知客户端</li>
+</ul>
+</li>
+<li>第三阶段：客户机收到后答复ACK报文段<ul>
+<li>syn标志位不再为1</li>
+<li>可包含数据</li>
+</ul>
+</li>
+</ol>
+<p><img src="http://lulu.izliang.com/yty/ACK.jpg" alt=""></p>
+<p><strong>四次挥手</strong></p>
+<ol>
+<li>客户端向server发送FIN控制segment</li>
+<li>收到FIN，回复ACK关闭连接，发送FIN</li>
+<li>收到FIN，回复ACK，进入等待，如果收到FIN会重新发送ACK</li>
+<li>收到ACK关闭</li>
+</ol>
+<p><img src="http://lulu.izliang.com/yty/TCPlianjie.jpg" alt=""></p>
+<h4 id="TCP重传"><a href="#TCP重传" class="headerlink" title="TCP重传"></a>TCP重传</h4><p><img src="http://lulu.izliang.com/yty/TCPchongchuan1.jpg" alt=""></p>
+<p><img src="http://lulu.izliang.com/yty/TCPchongchuan2.jpg" alt=""></p>
 
       
     </div>
@@ -703,7 +778,7 @@ DNS是多层命名服务器构成的分布式数据库，一般用来
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络概述"><span class="nav-number">1.</span> <span class="nav-text">计算机网络概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Socket"><span class="nav-number">1.1.1.</span> <span class="nav-text">Socket</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层"><span class="nav-number">1.2.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层"><span class="nav-number">1.3.</span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多路复用-分用"><span class="nav-number">1.3.1.</span> <span class="nav-text">多路复用&#x2F;分用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP（User-Datagram-Protocol）"><span class="nav-number">1.3.2.</span> <span class="nav-text">UDP（User Datagram Protocol）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可靠数据传输rdt"><span class="nav-number">1.3.3.</span> <span class="nav-text">可靠数据传输rdt</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络概述"><span class="nav-number">1.</span> <span class="nav-text">计算机网络概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Socket"><span class="nav-number">1.1.1.</span> <span class="nav-text">Socket</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层"><span class="nav-number">1.2.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层"><span class="nav-number">1.3.</span> <span class="nav-text">传输层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多路复用-分用"><span class="nav-number">1.3.1.</span> <span class="nav-text">多路复用&#x2F;分用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP（User-Datagram-Protocol）"><span class="nav-number">1.3.2.</span> <span class="nav-text">UDP（User Datagram Protocol）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可靠数据传输rdt"><span class="nav-number">1.3.3.</span> <span class="nav-text">可靠数据传输rdt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP"><span class="nav-number">1.3.4.</span> <span class="nav-text">TCP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP简介"><span class="nav-number">1.3.4.1.</span> <span class="nav-text">TCP简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP流量控制（通过buffer）"><span class="nav-number">1.3.4.2.</span> <span class="nav-text">TCP流量控制（通过buffer）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP拥塞控制（没看会）"><span class="nav-number">1.3.4.3.</span> <span class="nav-text">TCP拥塞控制（没看会）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP连接管理"><span class="nav-number">1.3.4.4.</span> <span class="nav-text">TCP连接管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP重传"><span class="nav-number">1.3.4.5.</span> <span class="nav-text">TCP重传</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
